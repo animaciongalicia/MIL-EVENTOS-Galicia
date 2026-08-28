@@ -1,36 +1,46 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { EMAIL_CONTACTO } from "@/data/contacto";
 
 type FormularioContactoProps = {
   copyEnvio?: string;
 };
 
-type EstadoEnvio = "idle" | "enviando" | "ok" | "error";
-
+// Sin backend: construye un mailto: con los datos ya redactados y lo abre en
+// el cliente de correo del usuario. Lo envía él, desde su propia cuenta, con
+// copia automática para él y llegada directa a info@mileventosgalicia.com.
 export default function FormularioContacto({
   copyEnvio = "Enviar",
 }: FormularioContactoProps) {
-  const [estado, setEstado] = useState<EstadoEnvio>("idle");
+  const [enviado, setEnviado] = useState(false);
 
-  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+  function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setEstado("enviando");
 
     const formData = new FormData(event.currentTarget);
-    const payload = Object.fromEntries(formData.entries());
+    const nombre = String(formData.get("nombre") ?? "");
+    const telefono = String(formData.get("telefono") ?? "");
+    const email = String(formData.get("email") ?? "");
+    const mensaje = String(formData.get("mensaje") ?? "");
 
-    try {
-      const respuesta = await fetch("/api/contacto", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
+    const asunto = `Presupuesto / contacto — ${nombre}`;
+    const cuerpo = [
+      `Nombre: ${nombre}`,
+      `Email: ${email}`,
+      telefono && `Teléfono: ${telefono}`,
+      "",
+      mensaje,
+    ]
+      .filter(Boolean)
+      .join("\n");
 
-      setEstado(respuesta.ok ? "ok" : "error");
-    } catch {
-      setEstado("error");
-    }
+    const mailtoUrl = `mailto:${EMAIL_CONTACTO}?subject=${encodeURIComponent(
+      asunto
+    )}&body=${encodeURIComponent(cuerpo)}`;
+
+    window.location.href = mailtoUrl;
+    setEnviado(true);
   }
 
   return (
@@ -60,6 +70,17 @@ export default function FormularioContacto({
         />
       </div>
       <div>
+        <label htmlFor="telefono" className="block text-sm font-medium">
+          Teléfono <span className="text-slate-400">(opcional)</span>
+        </label>
+        <input
+          id="telefono"
+          name="telefono"
+          type="tel"
+          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2"
+        />
+      </div>
+      <div>
         <label htmlFor="mensaje" className="block text-sm font-medium">
           Cuéntanos tu evento
         </label>
@@ -73,16 +94,14 @@ export default function FormularioContacto({
       </div>
       <button
         type="submit"
-        disabled={estado === "enviando"}
-        className="rounded-full bg-slate-900 px-6 py-3 font-semibold text-white disabled:opacity-60"
+        className="rounded-full bg-slate-900 px-6 py-3 font-semibold text-white"
       >
-        {estado === "enviando" ? "Enviando..." : copyEnvio}
+        {copyEnvio}
       </button>
-      {estado === "ok" && (
-        <p className="text-sm text-green-700">Mensaje enviado. Te contestamos en breve.</p>
-      )}
-      {estado === "error" && (
-        <p className="text-sm text-red-700">Algo ha fallado. Inténtalo de nuevo.</p>
+      {enviado && (
+        <p className="text-sm text-slate-600">
+          Se abre tu app de correo con el mensaje ya redactado — solo tienes que darle a enviar.
+        </p>
       )}
     </form>
   );

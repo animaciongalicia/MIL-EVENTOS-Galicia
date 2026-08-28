@@ -4,14 +4,17 @@ import matter from "gray-matter";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
-// TODO: confirmar con el cliente las 6 categorías definitivas del blog (CLAUDE.md §10).
+// Categorías confirmadas — mapeadas 1:1 con páginas pilar para evitar
+// ambigüedad en el enlazado interno obligatorio (CLAUDE.md §9) y canibalización
+// de keyword entre categoría y pilar (p.ej. "outdoor" competía entre
+// /eventos-empresa/jornadas-outdoor y /actividades/outdoor).
 export const CATEGORIAS_BLOG = [
   "team-building",
   "incentivos",
-  "outdoor",
+  "jornadas-outdoor",
+  "congresos-y-convenciones",
   "gastronomia-y-vinos",
-  "espacios-y-eventos",
-  "celebraciones",
+  "espacios-y-recursos",
 ] as const;
 
 export type CategoriaBlog = (typeof CATEGORIAS_BLOG)[number];

@@ -23,7 +23,7 @@ Este archivo es el contexto de proyecto para Claude Code. Léelo antes de tocar 
 - **Despliegue:** Vercel.
 - **Repositorio:** GitHub.
 - **Contenido:** archivos (Markdown/MDX o JSON), sin CMS ni base de datos en la primera fase. Los posts de blog viven como archivos `.mdx` en el repo.
-- **Formularios:** el formulario de `/contacto` debe enviar a un endpoint simple (API route de Next.js) que reenvíe por email o a un servicio externo (a decidir — dejar el componente desacoplado del proveedor final).
+- **Formularios:** el formulario de `/contacto` no usa backend ni proveedor externo. Construye un `mailto:` con los datos ya redactados (`data/contacto.ts` centraliza el email, teléfono y enlace de WhatsApp) y lo abre en el cliente de correo del usuario — lo envía él mismo desde su cuenta a `info@mileventosgalicia.com`, con copia automática para él. Teléfono/WhatsApp de contacto: +34 678 288 284.
 - **Analítica:** no instalada por defecto. Si en el futuro se activa (Vercel Analytics o Google Analytics), se usará para alimentar el bloque "Más leídos" del blog (ver sección 4 y sección 10, pendiente abierto).
 - **Sin backend propio, sin login, sin panel de administración** en esta fase. Los contenidos se editan directamente en el repo.
 
@@ -200,7 +200,7 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 - Naming de carpetas y rutas en minúsculas, con guiones (`kebab-case`), igual que las URLs del sitemap.
 - Componentes en `PascalCase`, un componente por archivo.
 - Datos de "ejemplos" dentro de páginas pilar (los 4-6 bloques de `GridEjemplos`) deben vivir en un archivo de datos separado (`data/actividades-outdoor.ts`, etc.), no hardcodeados en el JSX de la página — así se pueden editar sin tocar el componente.
-- Posts de blog: un archivo `.mdx` por post en `/content/blog/`, con frontmatter que incluya `categoria` (una de las 6 definidas).
+- Posts de blog: un archivo `.mdx` por post en `/content/blog/`, con frontmatter que incluya `categoria` (una de las 6 definidas en `lib/blog.ts`: `team-building`, `incentivos`, `jornadas-outdoor`, `congresos-y-convenciones`, `gastronomia-y-vinos`, `espacios-y-recursos`). Cada categoría mapea 1:1 con una página pilar para que el enlazado interno del post nunca sea ambiguo.
 - Antes de añadir una página pilar nueva o una categoría nueva de blog, actualizar tanto este `CLAUDE.md` como `sitemap-definitivo.md`.
 
 ---
@@ -208,5 +208,5 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 ## 11. Pendientes / decisiones abiertas
 
 - **Bloque "Más leídos" del blog:** requiere analítica conectada (Vercel Analytics o Google Analytics) para ser un ranking real. Hasta que se decida, se implementa como `BloqueDestacados` (curado a mano por el cliente) en el mismo espacio visual. No implementar un ranking falso ni simulado.
-- **Proveedor del formulario de contacto:** a definir (envío por email vs. servicio externo tipo Resend/Formspree). El componente `FormularioContacto` debe construirse desacoplado del proveedor final.
 - **Espacios y Recursos con sidebar:** queda como landing simple (patrón `LandingCategoria`) por ahora; si el volumen de contenido crece, valorar darle el mismo tratamiento de hub con sidebar que `/actividades`.
+- ~~Proveedor del formulario de contacto~~ — decidido: `mailto:` sin backend (ver sección 2).
