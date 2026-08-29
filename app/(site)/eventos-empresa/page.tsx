@@ -32,7 +32,6 @@ const sublandings = [
   },
 ];
 
-// TODO: copy real en tono Rentabilista pendiente (CLAUDE.md §5).
 export default function EventosEmpresaPage() {
   return (
     <>
@@ -40,8 +39,22 @@ export default function EventosEmpresaPage() {
         titulo="Eventos para empresas en Galicia"
         subtitulo="Más de 15 años haciendo que las cosas sucedan."
       />
+
+      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-slate-700">
+        <p>
+          Cada evento de empresa tiene un objetivo distinto, aunque a veces se organicen todos
+          igual: unir un equipo no es lo mismo que premiar a un comercial, y desconectar un día no
+          es lo mismo que producir un congreso para trescientas personas.
+        </p>
+        <p className="mt-4">
+          Por eso no vendemos un formato único. Cuatro maneras de mover a tu empresa, cada una
+          pensada para lo que de verdad quieres conseguir.
+        </p>
+      </section>
+
       <LandingCategoria intro="Cuatro formas de mover a tu equipo." sublandings={sublandings} />
-      <CTAFinal titulo="¿Empezamos a planificar?" />
+
+      <CTAFinal titulo="¿Cuál de las cuatro necesitas? Empecemos por ahí." />
     </>
   );
 }
