@@ -16,7 +16,7 @@ export default function TeamBuildingPage() {
     <>
       <Hero titulo="Team building" subtitulo="Actividades que unen equipos de verdad." />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-slate-700">
+      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           El team building de manual ya no engaña a nadie. Tu equipo ha hecho el escape room, la
           gymkhana de preguntas y el taller de cócteles genérico. Y sigue sin hablarse bien entre

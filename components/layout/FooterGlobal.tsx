@@ -11,10 +11,10 @@ import {
 
 export default function FooterGlobal() {
   return (
-    <footer className="border-t border-slate-200 bg-slate-50">
+    <footer className="border-t border-sand-200 bg-cream-100">
       <TiraLogos logos={logosClientes} />
-      <div className="mx-auto max-w-5xl px-6 py-8 text-sm text-slate-600">
-        <p className="font-semibold text-slate-900">
+      <div className="mx-auto max-w-5xl px-6 py-8 text-sm text-ink-600">
+        <p className="font-semibold text-atlantico-700">
           Más de 15 años haciendo que las cosas sucedan.
         </p>
         <div className="mt-4 flex flex-wrap gap-4">

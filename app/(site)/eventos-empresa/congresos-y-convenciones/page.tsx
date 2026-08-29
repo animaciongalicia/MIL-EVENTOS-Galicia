@@ -16,7 +16,7 @@ export default function CongresosYConvencionesPage() {
     <>
       <Hero titulo="Congresos y convenciones" subtitulo="Eventos corporativos a gran escala." />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-slate-700">
+      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Un congreso mal producido se nota en los primeros cinco minutos: el micrófono que
           falla, el ponente que no encuentra su sitio, la sala que se queda pequeña.

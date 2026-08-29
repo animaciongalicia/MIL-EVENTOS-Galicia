@@ -12,7 +12,7 @@ export default function ActividadesAMedidaPage() {
   return (
     <>
       <h1 className="text-2xl font-bold">A medida</h1>
-      <p className="mt-3 text-slate-700">
+      <p className="mt-3 text-ink-700">
         Hay eventos que no encajan en ninguna categoría de esta web. Para esos, no tenemos
         catálogo — tenemos una conversación.
       </p>

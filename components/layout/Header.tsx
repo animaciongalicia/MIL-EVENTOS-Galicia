@@ -11,7 +11,7 @@ const enlaces = [
 
 export default function Header() {
   return (
-    <header className="border-b border-slate-200">
+    <header className="border-b border-sand-200">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
         <Link href="/" className="font-bold">
           Mil Eventos Galicia
@@ -19,7 +19,9 @@ export default function Header() {
         <ul className="flex gap-6 text-sm">
           {enlaces.map((enlace) => (
             <li key={enlace.href}>
-              <Link href={enlace.href}>{enlace.nombre}</Link>
+              <Link href={enlace.href} className="transition hover:text-atlantico-700">
+                {enlace.nombre}
+              </Link>
             </li>
           ))}
         </ul>

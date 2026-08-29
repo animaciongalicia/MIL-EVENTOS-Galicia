@@ -32,7 +32,7 @@ export default function HomePage() {
         ctaHref="/contacto"
       />
 
-      <section className="mx-auto max-w-3xl px-6 py-16 text-lg leading-relaxed text-slate-700">
+      <section className="mx-auto max-w-3xl px-6 py-16 text-lg leading-relaxed text-ink-700">
         <p>
           Team building genérico. La cena de Navidad en el mismo restaurante de siempre. Una
           convención que nadie recuerda al día siguiente — ni tú, ni tu equipo.

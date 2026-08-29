@@ -27,15 +27,15 @@ export default function PostPage({ params }: PostPageProps) {
 
   return (
     <article>
-      <span className="text-xs uppercase text-slate-500">{post.categoria}</span>
+      <span className="text-xs uppercase text-ink-500">{post.categoria}</span>
       <h1 className="mt-1 text-3xl font-bold">{post.title}</h1>
-      <time className="mt-2 block text-sm text-slate-400">{post.fecha}</time>
+      <time className="mt-2 block text-sm text-ink-500">{post.fecha}</time>
       <div className="prose mt-8 max-w-none">
         <MDXRemote source={post.content} />
       </div>
       {relacionados.length > 0 && (
         <div className="mt-12 space-y-2">
-          <h2 className="text-sm font-semibold uppercase text-slate-500">Relacionados</h2>
+          <h2 className="text-sm font-semibold uppercase text-ink-500">Relacionados</h2>
           {relacionados.map((relacionado) => (
             <Link key={relacionado.slug} href={`/blog/${relacionado.slug}`} className="block underline">
               {relacionado.title}

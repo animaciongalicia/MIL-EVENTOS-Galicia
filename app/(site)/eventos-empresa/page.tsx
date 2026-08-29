@@ -40,7 +40,7 @@ export default function EventosEmpresaPage() {
         subtitulo="Más de 15 años haciendo que las cosas sucedan."
       />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-slate-700">
+      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Cada evento de empresa tiene un objetivo distinto, aunque a veces se organicen todos
           igual: unir un equipo no es lo mismo que premiar a un comercial, y desconectar un día no

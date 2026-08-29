@@ -210,3 +210,15 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 - **Bloque "Más leídos" del blog:** requiere analítica conectada (Vercel Analytics o Google Analytics) para ser un ranking real. Hasta que se decida, se implementa como `BloqueDestacados` (curado a mano por el cliente) en el mismo espacio visual. No implementar un ranking falso ni simulado.
 - **Espacios y Recursos con sidebar:** queda como landing simple (patrón `LandingCategoria`) por ahora; si el volumen de contenido crece, valorar darle el mismo tratamiento de hub con sidebar que `/actividades`.
 - ~~Proveedor del formulario de contacto~~ — decidido: `mailto:` sin backend (ver sección 2).
+- **Redirecciones desde la web anterior:** mileventosgalicia.com ya existe en producción, con posts y páginas indexados. Antes de lanzar este sitio hay que mapear las URLs antiguas a las nuevas (`next.config.js` → `redirects()`) para no perder el posicionamiento. Pendiente de que el cliente aporte el listado de URLs actuales (sitemap.xml, export de Google Search Console, o acceso directo).
+- **SUUNIA / Sea Galicia / Luxe Galicia:** de momento no existen como webs propias — solo se enlazan como marcas hermanas (`data/ecosistema-marcas.ts`, `BannerEcosistema`, footer). Cuando se construyan, deberían heredar el sistema de diseño de la sección 12 (misma tipografía y escala, cada una con su propio color de acento) en vez de partir de cero.
+
+---
+
+## 12. Sistema visual
+
+- **Paleta** (`tailwind.config.ts`, tokens `cream` / `sand` / `ink` / `atlantico` / `terracota`): fondo crema cálido, texto en tinta cálida (nunca negro puro), acento principal verde-azulado "Atlántico" (botones, enlaces activos, titulares destacados del sitio corporativo) y acento terracota reservado a `/celebraciones`. Ningún bloque de página va a fondo oscuro a sangre completa — el color de marca se usa en texto y botones, no como wash de sección entera (ver Hero y CTAFinal).
+- **Nunca usar directamente** los colores por defecto de Tailwind (`slate-*`, `amber-*`, `gray-*`...) en JSX nuevo — usar siempre los tokens de marca (`bg-cream-100`, `text-ink-700`, `border-sand-200`, `bg-atlantico-700`, `text-terracota-900`, etc.), para que un cambio de paleta futuro se haga en un único sitio (`tailwind.config.ts`).
+- **Tipografía**: `Fraunces` (serif, cargada vía `next/font/google`) para todo `h1`/`h2`/`h3` — aplicado automáticamente en `app/globals.css`, no hace falta añadir `font-serif` a mano. `Inter` para el resto del texto (`font-sans`, por defecto).
+- Ambos layouts raíz (`app/(site)/layout.tsx` y `app/(celebraciones)/celebraciones/layout.tsx`) cargan las mismas dos fuentes de forma independiente, porque son root layouts separados (ver sección 8). Si se añade un tercer root layout, replicar el mismo bloque de `next/font/google`.
+- `/celebraciones` comparte el mismo sistema (misma tipografía, misma escala, mismos componentes base) pero con la paleta `terracota` en vez de `atlantico` — más cálida, nunca literalmente otra marca visual (CLAUDE.md §8).

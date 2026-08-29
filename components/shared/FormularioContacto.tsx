@@ -5,6 +5,7 @@ import { EMAIL_CONTACTO } from "@/data/contacto";
 
 type FormularioContactoProps = {
   copyEnvio?: string;
+  variante?: "corporativa" | "celebraciones";
 };
 
 // Sin backend: construye un mailto: con los datos ya redactados y lo abre en
@@ -12,7 +13,9 @@ type FormularioContactoProps = {
 // copia automática para él y llegada directa a info@mileventosgalicia.com.
 export default function FormularioContacto({
   copyEnvio = "Enviar",
+  variante = "corporativa",
 }: FormularioContactoProps) {
+  const esCelebraciones = variante === "celebraciones";
   const [enviado, setEnviado] = useState(false);
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -54,7 +57,7 @@ export default function FormularioContacto({
           name="nombre"
           type="text"
           required
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2"
+          className="mt-1 w-full rounded-md border border-sand-300 px-3 py-2"
         />
       </div>
       <div>
@@ -66,18 +69,18 @@ export default function FormularioContacto({
           name="email"
           type="email"
           required
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2"
+          className="mt-1 w-full rounded-md border border-sand-300 px-3 py-2"
         />
       </div>
       <div>
         <label htmlFor="telefono" className="block text-sm font-medium">
-          Teléfono <span className="text-slate-400">(opcional)</span>
+          Teléfono <span className="text-ink-500">(opcional)</span>
         </label>
         <input
           id="telefono"
           name="telefono"
           type="tel"
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2"
+          className="mt-1 w-full rounded-md border border-sand-300 px-3 py-2"
         />
       </div>
       <div>
@@ -89,17 +92,21 @@ export default function FormularioContacto({
           name="mensaje"
           rows={5}
           required
-          className="mt-1 w-full rounded-md border border-slate-300 px-3 py-2"
+          className="mt-1 w-full rounded-md border border-sand-300 px-3 py-2"
         />
       </div>
       <button
         type="submit"
-        className="rounded-full bg-slate-900 px-6 py-3 font-semibold text-white"
+        className={
+          esCelebraciones
+            ? "rounded-full bg-terracota-600 px-6 py-3 font-semibold text-white transition hover:bg-terracota-900"
+            : "rounded-full bg-atlantico-700 px-6 py-3 font-semibold text-white transition hover:bg-atlantico-800"
+        }
       >
         {copyEnvio}
       </button>
       {enviado && (
-        <p className="text-sm text-slate-600">
+        <p className="text-sm text-ink-600">
           Se abre tu app de correo con el mensaje ya redactado — solo tienes que darle a enviar.
         </p>
       )}

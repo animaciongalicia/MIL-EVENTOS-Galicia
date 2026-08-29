@@ -14,7 +14,7 @@ export default function ActividadesOutdoorPage() {
   return (
     <>
       <h1 className="text-2xl font-bold">Outdoor</h1>
-      <p className="mt-3 text-slate-700">
+      <p className="mt-3 text-ink-700">
         Naturaleza gallega como escenario, no como decorado. Actividades para sacar al equipo del
         asfalto y ponerlo a decidir, coordinarse y — a veces — mojarse.
       </p>

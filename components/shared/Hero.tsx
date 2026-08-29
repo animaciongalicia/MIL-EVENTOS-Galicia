@@ -21,19 +21,27 @@ export default function Hero({
     <section
       className={
         esCelebraciones
-          ? "bg-amber-50 px-6 py-20 text-center"
-          : "bg-slate-900 px-6 py-20 text-center text-white"
+          ? "bg-terracota-50 px-6 py-20 text-center"
+          : "bg-cream-100 px-6 py-20 text-center"
       }
     >
-      <h1 className="text-3xl font-bold sm:text-5xl">{titulo}</h1>
-      <p className="mx-auto mt-4 max-w-2xl text-lg opacity-90">{subtitulo}</p>
+      <h1
+        className={
+          esCelebraciones
+            ? "text-3xl font-bold text-terracota-900 sm:text-5xl"
+            : "text-3xl font-bold text-atlantico-700 sm:text-5xl"
+        }
+      >
+        {titulo}
+      </h1>
+      <p className="mx-auto mt-4 max-w-2xl text-lg text-ink-600">{subtitulo}</p>
       {ctaTexto && ctaHref && (
         <a
           href={ctaHref}
           className={
             esCelebraciones
-              ? "mt-8 inline-block rounded-full bg-amber-600 px-6 py-3 font-semibold text-white"
-              : "mt-8 inline-block rounded-full bg-white px-6 py-3 font-semibold text-slate-900"
+              ? "mt-8 inline-block rounded-full bg-terracota-600 px-6 py-3 font-semibold text-white transition hover:bg-terracota-900"
+              : "mt-8 inline-block rounded-full bg-atlantico-700 px-6 py-3 font-semibold text-white transition hover:bg-atlantico-800"
           }
         >
           {ctaTexto}

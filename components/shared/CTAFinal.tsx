@@ -12,11 +12,13 @@ export default function CTAFinal({
   ctaHref = "/contacto",
 }: CTAFinalProps) {
   return (
-    <section className="bg-slate-900 px-6 py-16 text-center text-white">
-      <h2 className="text-2xl font-bold sm:text-3xl">{titulo}</h2>
+    <section className="bg-cream-200 px-6 py-16 text-center">
+      <h2 className="mx-auto max-w-2xl text-2xl font-bold text-atlantico-700 sm:text-3xl">
+        {titulo}
+      </h2>
       <Link
         href={ctaHref}
-        className="mt-6 inline-block rounded-full bg-white px-6 py-3 font-semibold text-slate-900"
+        className="mt-6 inline-block rounded-full bg-atlantico-700 px-6 py-3 font-semibold text-white transition hover:bg-atlantico-800"
       >
         {ctaTexto}
       </Link>

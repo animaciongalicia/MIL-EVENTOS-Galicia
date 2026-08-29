@@ -16,7 +16,7 @@ export default function TrasladosPage() {
     <>
       <Hero titulo="Traslados" subtitulo="Logística sin fricciones." />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-slate-700">
+      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Nada rompe un evento como cincuenta personas esperando un autobús que no llega, o
           intentando aparcar en un sitio sin plazas.

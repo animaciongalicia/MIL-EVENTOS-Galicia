@@ -16,7 +16,7 @@ export default function JornadasOutdoorPage() {
     <>
       <Hero titulo="Jornadas outdoor" subtitulo="Salir de la oficina, con propósito." />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-slate-700">
+      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Salir de la oficina un día no arregla nada si el día se parece a estar en la oficina,
           solo que con mosquitos.

@@ -16,7 +16,7 @@ export default function AlojamientoPage() {
     <>
       <Hero titulo="Alojamiento" subtitulo="Descanso a la altura del evento." />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-slate-700">
+      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Un evento no termina cuando se apaga la luz de la sala. Si parte del equipo se queda a
           dormir, el alojamiento forma parte de la experiencia — para bien o para mal.

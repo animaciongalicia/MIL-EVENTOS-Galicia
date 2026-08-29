@@ -14,7 +14,7 @@ export default function ActividadesGastronomiaYVinosPage() {
   return (
     <>
       <h1 className="text-2xl font-bold">Gastronomía y vinos</h1>
-      <p className="mt-3 text-slate-700">
+      <p className="mt-3 text-ink-700">
         Galicia se explica mejor con un tenedor en la mano. El producto local como excusa para
         reunir a la gente — y para que el evento se recuerde por el sabor.
       </p>

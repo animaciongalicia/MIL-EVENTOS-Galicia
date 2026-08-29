@@ -34,7 +34,7 @@ export default function EspaciosYRecursosPage() {
         subtitulo="Todo lo que rodea al evento, resuelto."
       />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-slate-700">
+      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           El sitio, cómo llega la gente y dónde duerme si el evento dura más de un día — tres
           decisiones que no tienen nada que ver con la actividad en sí, y que aun así deciden si

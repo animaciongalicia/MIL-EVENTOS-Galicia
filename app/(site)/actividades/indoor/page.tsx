@@ -12,7 +12,7 @@ export default function ActividadesIndoorPage() {
   return (
     <>
       <h1 className="text-2xl font-bold">Indoor</h1>
-      <p className="mt-3 text-slate-700">
+      <p className="mt-3 text-ink-700">
         Cuando el tiempo no acompaña — o simplemente prefieres tener el evento bajo control — el
         indoor no es el plan B. Es otro tipo de experiencia.
       </p>
