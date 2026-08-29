@@ -26,7 +26,6 @@ const sublandings = [
   },
 ];
 
-// TODO: copy real en tono Rentabilista pendiente (CLAUDE.md §5).
 export default function EspaciosYRecursosPage() {
   return (
     <>
@@ -34,8 +33,21 @@ export default function EspaciosYRecursosPage() {
         titulo="Espacios y recursos para tu evento"
         subtitulo="Todo lo que rodea al evento, resuelto."
       />
+
+      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-slate-700">
+        <p>
+          El sitio, cómo llega la gente y dónde duerme si el evento dura más de un día — tres
+          decisiones que no tienen nada que ver con la actividad en sí, y que aun así deciden si
+          el evento sale bien.
+        </p>
+        <p className="mt-4">
+          Las resolvemos por separado o juntas, según lo que ya tengas cerrado y lo que te falte.
+        </p>
+      </section>
+
       <LandingCategoria intro="Tres piezas que hacen que todo encaje." sublandings={sublandings} />
-      <CTAFinal titulo="¿Buscamos el espacio?" />
+
+      <CTAFinal titulo="¿Buscamos el espacio, el traslado, o las tres piezas a la vez?" />
     </>
   );
 }
