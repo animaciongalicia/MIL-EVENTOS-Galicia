@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   description: "Cuéntanos tu evento y te preparamos una propuesta.",
 };
 
-// TODO: copy real en tono Rentabilista pendiente (CLAUDE.md §5).
 export default function ContactoPage() {
   return (
     <>
@@ -21,6 +20,10 @@ export default function ContactoPage() {
           WhatsApp
         </a>
       </div>
+      <p className="mx-auto mt-6 max-w-xl px-6 text-center text-sm text-slate-500">
+        Sin formularios eternos ni esperas de una semana. Cuéntanos qué necesitas y te
+        respondemos con una propuesta, no con un cuestionario.
+      </p>
       <FormularioContacto />
     </>
   );
