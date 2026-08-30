@@ -93,6 +93,9 @@ const nextConfig = {
       { source: "/recursos", destination: "/espacios-y-recursos", permanent: true },
       { source: "/localizacion-de-espacios/:path*", destination: "/espacios-y-recursos/localizacion-espacios", permanent: true },
       { source: "/alquiler-de-locales-para-eventos/:path*", destination: "/espacios-y-recursos/localizacion-espacios", permanent: true },
+      // Servicio de alquiler de locales en Vigo descontinuado — se manda a la
+      // página genérica de localización de espacios (sin mención a Vigo en el
+      // copy) en vez de reconstruir esa oferta específica. Ver CLAUDE.md §11.
       { source: "/locales-en-vigo/:path*", destination: "/espacios-y-recursos/localizacion-espacios", permanent: true },
       { source: "/recursos/alquiler-de-locales/:path*", destination: "/espacios-y-recursos/localizacion-espacios", permanent: true },
       { source: "/locales-fiestas-y-eventos/:path*", destination: "/espacios-y-recursos/localizacion-espacios", permanent: true },

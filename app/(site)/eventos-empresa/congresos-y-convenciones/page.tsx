@@ -19,13 +19,30 @@ export default function CongresosYConvencionesPage() {
       <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Un congreso mal producido se nota en los primeros cinco minutos: el micrófono que
-          falla, el ponente que no encuentra su sitio, la sala que se queda pequeña.
+          falla, el ponente que no encuentra su sitio, la sala que se queda pequeña porque el
+          aforo real no coincidía con el que prometió el espacio.
         </p>
-        <p className="mt-4">Cuanta más gente convocas, menos margen tienes para improvisar.</p>
+        <p className="mt-4">
+          Cuanta más gente convocas, menos margen tienes para improvisar. Un fallo que en una
+          reunión de doce personas pasa desapercibido, delante de trescientas se convierte en la
+          anécdota que todos recuerdan — y no por lo bueno.
+        </p>
         <p className="mt-4">
           Nos ocupamos de la producción técnica, los espacios, los ponentes y la logística de
-          quien viene de fuera — para que tu convención se recuerde por el contenido, no por los
-          fallos.
+          quien viene de fuera — traslados, alojamiento, acreditaciones — para que tu convención
+          se recuerde por el contenido, no por los fallos. Tanto si es la convención anual de toda
+          la empresa como el lanzamiento de un producto ante clientes y prensa.
+        </p>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-6 pb-12 text-ink-700">
+        <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
+        <p className="mt-3 leading-relaxed">
+          Empezamos por el aforo real y el formato (presencial, híbrido, con streaming) — de ahí
+          sale el espacio, no al revés. Coordinamos sonido, iluminación, escenario y grabación con
+          un único proveedor técnico, gestionamos la agenda y las fichas técnicas de los
+          ponentes, y cerramos traslados y alojamiento para los asistentes que vienen de fuera de
+          Galicia. Un solo interlocutor para todo el evento, de principio a fin.
         </p>
       </section>
 

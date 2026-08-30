@@ -20,12 +20,38 @@ export default function TeamBuildingPage() {
         <p>
           El team building de manual ya no engaña a nadie. Tu equipo ha hecho el escape room, la
           gymkhana de preguntas y el taller de cócteles genérico. Y sigue sin hablarse bien entre
-          departamentos.
+          departamentos, o el nuevo de marketing sigue sin saber quién es el de contabilidad.
         </p>
-        <p className="mt-4">El problema no es la actividad. Es que la eligió alguien que no conoce a tu equipo.</p>
         <p className="mt-4">
-          Nosotros preguntamos primero: cuántos sois, qué tensiones hay, qué queréis conseguir.
-          Después diseñamos la actividad — no al revés.
+          El problema casi nunca es la actividad en sí. Es que la eligió alguien que no conoce a
+          tu equipo — un catálogo genérico, pensado para cualquiera, aplicado al tuyo sin
+          preguntar. Y así es imposible que funcione: no es lo mismo un equipo de 12 personas que
+          lleva años trabajando junto que uno de 80 recién fusionado tras una integración, o un
+          departamento comercial que necesita competir entre sí para un equipo técnico que
+          necesita justo lo contrario.
+        </p>
+        <p className="mt-4">
+          Nosotros preguntamos primero: cuántos sois, qué tensiones hay realmente (no las que se
+          dicen en la encuesta de clima), qué queréis conseguir y cuánto tiempo tenéis. Después
+          diseñamos la actividad — no al revés. Si lo que necesitáis no encaja con nada de lo de
+          abajo, se diseña desde cero.
+        </p>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-6 pb-12 text-ink-700">
+        <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
+        <p className="mt-3 leading-relaxed">
+          Una llamada de 20 minutos para entender el equipo, el objetivo y el presupuesto. Te
+          proponemos dos o tres formatos concretos — no un catálogo de veinte para que elijas a
+          ciegas. Cerramos espacio, proveedores y horario. El día del evento, tú participas: la
+          logística, los imprevistos y el &ldquo;plan B si llueve&rdquo; los llevamos nosotros.
+        </p>
+        <p className="mt-4 leading-relaxed">
+          Y una cosa que preferimos decir antes de que la descubras después: el team building no
+          arregla un equipo roto en una tarde, y cualquiera que te prometa eso te está vendiendo
+          humo. Lo que sí hace, bien planteado, es dar el primer empujón — romper el hielo entre
+          departamentos, integrar a la gente nueva, o simplemente recordarle a todos que trabajan
+          con personas, no con un nombre en un chat de Slack.
         </p>
       </section>
 

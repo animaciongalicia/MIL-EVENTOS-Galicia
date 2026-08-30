@@ -50,6 +50,13 @@ export default function EventosEmpresaPage() {
           Por eso no vendemos un formato único. Cuatro maneras de mover a tu empresa, cada una
           pensada para lo que de verdad quieres conseguir.
         </p>
+        <p className="mt-4">
+          Si organizas eventos de empresa sabes lo que cuesta hacerlo bien mientras sigues con tu
+          trabajo del día a día: proveedores que no responden, presupuestos que se disparan,
+          imprevistos que caen encima tuyo el mismo día del evento. Llevamos más de 15 años
+          quitándole ese peso a responsables de RRHH y dirección en toda Galicia — tú decides el
+          objetivo y el presupuesto, nosotros nos ocupamos de que salga bien.
+        </p>
       </section>
 
       <LandingCategoria intro="Cuatro formas de mover a tu equipo." sublandings={sublandings} />
