@@ -60,12 +60,19 @@ Sitemap de referencia: `sitemap-definitivo.md` (debe mantenerse sincronizado con
 /contacto                                 Formulario único (contacto + presupuesto)
 
 /celebraciones                            Página única, FUERA del menú principal
+
+/nosotros                                 Institucional — solo en footer
+/aviso-legal                              Institucional — solo en footer
+/politica-de-privacidad                   Institucional — solo en footer
+/politica-de-cookies                      Institucional — solo en footer
 ```
 
-**Menú principal (top nav):** `Inicio | Empresas ▾ | Actividades ▾ | Espacios ▾ | Blog | Contacto`
+**Menú principal (top nav):** `Inicio | Empresas ▾ | Actividades ▾ | Espacios ▾ | Blog | Contacto`, con desplegable en Empresas/Actividades/Espacios enlazando a sus 3-4 páginas pilar (implementado en `components/layout/Header.tsx`).
 (Los nombres de menú van acortados; las rutas y los `<title>` mantienen el nombre completo para SEO. Ver tabla de equivalencias en sección 9.)
 
 **Celebraciones nunca aparece en el menú principal.** Solo se enlaza desde el footer global.
+
+**Nosotros y las 3 páginas legales tampoco van en el menú principal** — solo en `FooterGlobal`, igual que Celebraciones. No estaban en el sitemap original; se añadieron al portar la web anterior (existían en mileventosgalicia.com con tráfico real — ver sección 11).
 
 Estructura de carpetas sugerida en `/app`:
 ```
@@ -210,7 +217,9 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 - **Bloque "Más leídos" del blog:** requiere analítica conectada (Vercel Analytics o Google Analytics) para ser un ranking real. Hasta que se decida, se implementa como `BloqueDestacados` (curado a mano por el cliente) en el mismo espacio visual. No implementar un ranking falso ni simulado.
 - **Espacios y Recursos con sidebar:** queda como landing simple (patrón `LandingCategoria`) por ahora; si el volumen de contenido crece, valorar darle el mismo tratamiento de hub con sidebar que `/actividades`.
 - ~~Proveedor del formulario de contacto~~ — decidido: `mailto:` sin backend (ver sección 2).
-- **Redirecciones desde la web anterior:** mileventosgalicia.com ya existe en producción, con posts y páginas indexados. Antes de lanzar este sitio hay que mapear las URLs antiguas a las nuevas (`next.config.js` → `redirects()`) para no perder el posicionamiento. Pendiente de que el cliente aporte el listado de URLs actuales (sitemap.xml, export de Google Search Console, o acceso directo).
+- ~~Redirecciones desde la web anterior~~ — mapeadas en `next.config.js` → `redirects()` a partir del export de Search Console (Coverage + Performance) y GA4 aportado por el cliente. Cubre las URLs con tráfico/impresiones reales, no el sitemap completo (que incluye ~400 páginas de adjuntos de imagen de WordPress sin valor). **Revisar contra el `sitemap.xml` real antes de lanzar**, por si queda alguna URL indexada sin cubrir.
+- **Aviso legal / Política de privacidad:** las páginas existen (`/aviso-legal`, `/politica-de-privacidad`) pero con datos de la empresa (razón social, NIF/CIF, domicilio social, registro) como placeholder — no se han inventado. Pendiente de que el cliente los aporte antes de lanzar.
+- **Quiénes somos:** página mínima con los únicos hechos verificados (CLAUDE.md §1 y §6). Pendiente de que el cliente aporte la historia real de la agencia y el equipo para ampliarla.
 - **SUUNIA / Sea Galicia / Luxe Galicia:** de momento no existen como webs propias — solo se enlazan como marcas hermanas (`data/ecosistema-marcas.ts`, `BannerEcosistema`, footer). Cuando se construyan, deberían heredar el sistema de diseño de la sección 12 (misma tipografía y escala, cada una con su propio color de acento) en vez de partir de cero.
 
 ---

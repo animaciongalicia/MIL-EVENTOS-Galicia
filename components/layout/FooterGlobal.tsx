@@ -29,6 +29,12 @@ export default function FooterGlobal() {
             </a>
           ))}
           <Link href="/celebraciones">Celebraciones</Link>
+          <Link href="/nosotros">Quiénes somos</Link>
+        </div>
+        <div className="mt-4 flex flex-wrap gap-4 text-xs text-ink-500">
+          <Link href="/aviso-legal">Aviso legal</Link>
+          <Link href="/politica-de-privacidad">Política de privacidad</Link>
+          <Link href="/politica-de-cookies">Política de cookies</Link>
         </div>
       </div>
     </footer>

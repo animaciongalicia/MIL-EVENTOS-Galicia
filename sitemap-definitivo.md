@@ -29,15 +29,20 @@ Mapa de rutas de referencia. Debe mantenerse sincronizado con la sección 3 de `
 /contacto                                 Formulario único (contacto + presupuesto)
 
 /celebraciones                            Página única, FUERA del menú principal
+
+/nosotros                                 Institucional, solo en footer
+/aviso-legal                              Institucional, solo en footer
+/politica-de-privacidad                   Institucional, solo en footer
+/politica-de-cookies                      Institucional, solo en footer
 ```
 
 ## Menú principal (top nav)
 
-`Inicio | Empresas ▾ | Actividades ▾ | Espacios ▾ | Blog | Contacto`
+`Inicio | Empresas ▾ | Actividades ▾ | Espacios ▾ | Blog | Contacto`, con desplegable en Empresas/Actividades/Espacios hacia sus páginas pilar.
 
 Los nombres de menú van acortados; las rutas y los `<title>` mantienen el nombre completo para SEO (ver tabla de equivalencias en la sección 9 de `CLAUDE.md`).
 
-**Celebraciones nunca aparece en el menú principal.** Solo se enlaza desde el `FooterGlobal`.
+**Celebraciones, Nosotros y las páginas legales nunca aparecen en el menú principal.** Solo se enlazan desde el `FooterGlobal`.
 
 ## Reglas de mantenimiento
 
