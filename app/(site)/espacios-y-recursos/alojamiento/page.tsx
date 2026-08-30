@@ -27,6 +27,17 @@ export default function AlojamientoPage() {
         </p>
       </section>
 
+      <section className="bg-cream-200 py-12">
+        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+          <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
+          <p className="mt-3 leading-relaxed">
+            Negociamos bloques de habitaciones a precio de grupo, gestionamos el reparto
+            (individuales, dobles, quién va con quién) y hacemos seguimiento con el hotel para que
+            el check-in de 40 personas no se convierta en una cola de 40 minutos.
+          </p>
+        </div>
+      </section>
+
       <GridEjemplos ejemplos={alojamientoEjemplos} />
 
       <BannerEcosistema marca={SUUNIA} />

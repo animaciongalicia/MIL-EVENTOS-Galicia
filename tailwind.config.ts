@@ -14,8 +14,10 @@ const config: Config = {
         // verde-azulado "Atlántico" (acento principal) y terracota (acento
         // cálido de /celebraciones). Ver README de diseño en CLAUDE.md §12.
         cream: {
+          50: "#FFFFFF",
           100: "#F8F5EF",
           200: "#F1ECE1",
+          300: "#E8E0D2",
         },
         sand: {
           200: "#E3DACB",

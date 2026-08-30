@@ -20,7 +20,7 @@ export default function LandingCategoria({ intro, sublandings }: LandingCategori
           <Link
             key={item.href}
             href={item.href}
-            className="rounded-lg border border-sand-200 p-6 transition hover:border-sand-400"
+            className="rounded-lg border border-sand-200 bg-cream-50 p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-atlantico-600 hover:shadow-md"
           >
             <h3 className="font-semibold">{item.titulo}</h3>
             <p className="mt-2 text-sm text-ink-600">{item.descripcion}</p>

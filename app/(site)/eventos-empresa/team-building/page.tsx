@@ -38,21 +38,23 @@ export default function TeamBuildingPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12 text-ink-700">
-        <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
-        <p className="mt-3 leading-relaxed">
-          Una llamada de 20 minutos para entender el equipo, el objetivo y el presupuesto. Te
-          proponemos dos o tres formatos concretos — no un catálogo de veinte para que elijas a
-          ciegas. Cerramos espacio, proveedores y horario. El día del evento, tú participas: la
-          logística, los imprevistos y el &ldquo;plan B si llueve&rdquo; los llevamos nosotros.
-        </p>
-        <p className="mt-4 leading-relaxed">
-          Y una cosa que preferimos decir antes de que la descubras después: el team building no
-          arregla un equipo roto en una tarde, y cualquiera que te prometa eso te está vendiendo
-          humo. Lo que sí hace, bien planteado, es dar el primer empujón — romper el hielo entre
-          departamentos, integrar a la gente nueva, o simplemente recordarle a todos que trabajan
-          con personas, no con un nombre en un chat de Slack.
-        </p>
+      <section className="bg-cream-200 py-12">
+        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+          <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
+          <p className="mt-3 leading-relaxed">
+            Una llamada de 20 minutos para entender el equipo, el objetivo y el presupuesto. Te
+            proponemos dos o tres formatos concretos — no un catálogo de veinte para que elijas a
+            ciegas. Cerramos espacio, proveedores y horario. El día del evento, tú participas: la
+            logística, los imprevistos y el &ldquo;plan B si llueve&rdquo; los llevamos nosotros.
+          </p>
+          <p className="mt-4 leading-relaxed">
+            Y una cosa que preferimos decir antes de que la descubras después: el team building no
+            arregla un equipo roto en una tarde, y cualquiera que te prometa eso te está vendiendo
+            humo. Lo que sí hace, bien planteado, es dar el primer empujón — romper el hielo entre
+            departamentos, integrar a la gente nueva, o simplemente recordarle a todos que trabajan
+            con personas, no con un nombre en un chat de Slack.
+          </p>
+        </div>
       </section>
 
       <GridEjemplos ejemplos={teamBuildingEjemplos} />

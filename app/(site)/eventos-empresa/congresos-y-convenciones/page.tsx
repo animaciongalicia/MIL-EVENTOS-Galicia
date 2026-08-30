@@ -35,15 +35,17 @@ export default function CongresosYConvencionesPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12 text-ink-700">
-        <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
-        <p className="mt-3 leading-relaxed">
-          Empezamos por el aforo real y el formato (presencial, híbrido, con streaming) — de ahí
-          sale el espacio, no al revés. Coordinamos sonido, iluminación, escenario y grabación con
-          un único proveedor técnico, gestionamos la agenda y las fichas técnicas de los
-          ponentes, y cerramos traslados y alojamiento para los asistentes que vienen de fuera de
-          Galicia. Un solo interlocutor para todo el evento, de principio a fin.
-        </p>
+      <section className="bg-cream-200 py-12">
+        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+          <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
+          <p className="mt-3 leading-relaxed">
+            Empezamos por el aforo real y el formato (presencial, híbrido, con streaming) — de ahí
+            sale el espacio, no al revés. Coordinamos sonido, iluminación, escenario y grabación con
+            un único proveedor técnico, gestionamos la agenda y las fichas técnicas de los
+            ponentes, y cerramos traslados y alojamiento para los asistentes que vienen de fuera de
+            Galicia. Un solo interlocutor para todo el evento, de principio a fin.
+          </p>
+        </div>
       </section>
 
       <GridEjemplos ejemplos={congresosYConvencionesEjemplos} />

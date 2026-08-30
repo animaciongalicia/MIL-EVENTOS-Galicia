@@ -42,6 +42,8 @@ export default function EspaciosYRecursosPage() {
         </p>
         <p className="mt-4">
           Las resolvemos por separado o juntas, según lo que ya tengas cerrado y lo que te falte.
+          Si ya tienes el espacio pero necesitas coordinar los traslados de cien personas desde el
+          aeropuerto, empezamos por ahí. Si no tienes nada todavía, empezamos por el principio.
         </p>
       </section>
 

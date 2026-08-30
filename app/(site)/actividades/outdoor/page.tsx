@@ -14,10 +14,33 @@ export default function ActividadesOutdoorPage() {
   return (
     <>
       <h1 className="text-2xl font-bold">Outdoor</h1>
-      <p className="mt-3 text-ink-700">
+      <p className="mt-3 leading-relaxed text-ink-700">
         Naturaleza gallega como escenario, no como decorado. Actividades para sacar al equipo del
         asfalto y ponerlo a decidir, coordinarse y — a veces — mojarse.
       </p>
+      <p className="mt-3 leading-relaxed text-ink-700">
+        Cada una de estas actividades se puede montar suelta — como el cierre de una jornada
+        outdoor, por ejemplo — o combinarla con otras dentro de un programa más largo. Son el
+        contenido que le da forma a las páginas de{" "}
+        <a href="/eventos-empresa/jornadas-outdoor" className="text-atlantico-700 underline">
+          jornadas outdoor
+        </a>{" "}
+        y{" "}
+        <a href="/eventos-empresa/team-building" className="text-atlantico-700 underline">
+          team building
+        </a>
+        .
+      </p>
+
+      <div className="mt-6 rounded-lg bg-cream-200 p-6">
+        <h2 className="font-semibold text-atlantico-700">Cómo lo planteamos</h2>
+        <p className="mt-2 text-sm leading-relaxed text-ink-700">
+          Nivel de esfuerzo físico, duración y edad del grupo son las tres variables que ajustamos
+          antes de proponerte nada — no todo el mundo quiere, ni puede, hacer rápel. Si hace falta
+          material técnico o un guía titulado, lo incluimos sin que tengas que buscarlo tú.
+        </p>
+      </div>
+
       <GridEjemplos ejemplos={actividadesOutdoor} />
       <BannerEcosistema marca={SEA_GALICIA} />
       <CTAFinal titulo="El asfalto no enseña a nadie a trabajar en equipo. La naturaleza, sí." ctaTexto="Sácanos de la oficina" />

@@ -43,9 +43,9 @@ const enlaces: EnlaceMenu[] = [
 
 export default function Header() {
   return (
-    <header className="border-b border-sand-200">
+    <header className="sticky top-0 z-20 border-b border-sand-300 bg-cream-50/95 backdrop-blur">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-bold">
+        <Link href="/" className="font-bold text-atlantico-700">
           Mil Eventos Galicia
         </Link>
         <ul className="flex gap-6 text-sm">
@@ -59,7 +59,7 @@ export default function Header() {
                 {enlace.submenu && <span aria-hidden="true">▾</span>}
               </Link>
               {enlace.submenu && (
-                <ul className="invisible absolute left-0 top-full z-10 min-w-[220px] rounded-lg border border-sand-200 bg-cream-100 py-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
+                <ul className="invisible absolute left-0 top-full z-10 min-w-[220px] rounded-lg border border-sand-200 bg-cream-50 py-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">
                   {enlace.submenu.map((sub) => (
                     <li key={sub.href}>
                       <Link

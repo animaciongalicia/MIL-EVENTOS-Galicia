@@ -27,6 +27,17 @@ export default function TrasladosPage() {
         </p>
       </section>
 
+      <section className="bg-cream-200 py-12">
+        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+          <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
+          <p className="mt-3 leading-relaxed">
+            Coordinamos los horarios con el resto del evento, no al revés: si la comida se
+            retrasa, el autobús espera. Un único punto de contacto para toda la logística de
+            movimiento, desde el primer vuelo que aterriza hasta el último coche que sale.
+          </p>
+        </div>
+      </section>
+
       <GridEjemplos ejemplos={trasladosEjemplos} />
 
       <BannerEcosistema marca={LUXE_GALICIA} />

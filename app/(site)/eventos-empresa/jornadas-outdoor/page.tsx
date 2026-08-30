@@ -38,14 +38,16 @@ export default function JornadasOutdoorPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12 text-ink-700">
-        <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
-        <p className="mt-3 leading-relaxed">
-          Diseñamos el día completo: hora de salida, actividad principal, ritmo de la jornada,
-          comida y cierre. Nos ocupamos del transporte si hace falta, del plan alternativo si el
-          tiempo no acompaña, y de que nadie tenga que estar pendiente del reloj — tú apareces y
-          participas, el resto está resuelto antes de que llegues.
-        </p>
+      <section className="bg-cream-200 py-12">
+        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+          <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
+          <p className="mt-3 leading-relaxed">
+            Diseñamos el día completo: hora de salida, actividad principal, ritmo de la jornada,
+            comida y cierre. Nos ocupamos del transporte si hace falta, del plan alternativo si el
+            tiempo no acompaña, y de que nadie tenga que estar pendiente del reloj — tú apareces y
+            participas, el resto está resuelto antes de que llegues.
+          </p>
+        </div>
       </section>
 
       <GridEjemplos ejemplos={jornadasOutdoorEjemplos} />

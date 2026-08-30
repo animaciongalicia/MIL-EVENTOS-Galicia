@@ -26,6 +26,18 @@ export default function LocalizacionEspaciosPage() {
         </p>
       </section>
 
+      <section className="bg-cream-200 py-12">
+        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+          <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
+          <p className="mt-3 leading-relaxed">
+            Te enseñamos dos o tres espacios que ya hemos visitado nosotros, con el aforo real
+            verificado — no el que aparece en su propia web, que casi nunca cuenta con la barra, el
+            escenario o la pista de baile ocupando sitio. Nos encargamos de la negociación, el
+            contrato y de encajar el timing con el resto de proveedores del evento.
+          </p>
+        </div>
+      </section>
+
       <GridEjemplos ejemplos={localizacionEspaciosEjemplos} />
 
       <CTAFinal

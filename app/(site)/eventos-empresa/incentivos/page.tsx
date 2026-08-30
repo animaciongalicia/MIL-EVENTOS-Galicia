@@ -33,20 +33,22 @@ export default function IncentivosPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12 text-ink-700">
-        <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
-        <p className="mt-3 leading-relaxed">
-          Nos cuentas el objetivo (retener, motivar, premiar resultados concretos), a quién va
-          dirigido y el presupuesto por persona. Diseñamos el programa — desde una cena bien
-          elegida hasta un viaje de incentivo de varios días con alojamiento y actividades
-          incluidas — y nos encargamos de la logística completa, incluida la entrega o el momento
-          de reconocimiento si quieres que forme parte del propio evento.
-        </p>
-        <p className="mt-4 leading-relaxed">
-          Si el programa incluye desplazamiento o alojamiento para el equipo, lo coordinamos con
-          nuestras marcas hermanas (ver más abajo) para que sea un único interlocutor, no tres
-          proveedores distintos que hay que sincronizar tú mismo.
-        </p>
+      <section className="bg-cream-200 py-12">
+        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+          <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
+          <p className="mt-3 leading-relaxed">
+            Nos cuentas el objetivo (retener, motivar, premiar resultados concretos), a quién va
+            dirigido y el presupuesto por persona. Diseñamos el programa — desde una cena bien
+            elegida hasta un viaje de incentivo de varios días con alojamiento y actividades
+            incluidas — y nos encargamos de la logística completa, incluida la entrega o el momento
+            de reconocimiento si quieres que forme parte del propio evento.
+          </p>
+          <p className="mt-4 leading-relaxed">
+            Si el programa incluye desplazamiento o alojamiento para el equipo, lo coordinamos con
+            nuestras marcas hermanas (ver más abajo) para que sea un único interlocutor, no tres
+            proveedores distintos que hay que sincronizar tú mismo.
+          </p>
+        </div>
       </section>
 
       <GridEjemplos ejemplos={incentivosEjemplos} />
