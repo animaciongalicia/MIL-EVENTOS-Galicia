@@ -37,6 +37,7 @@ const config: Config = {
         },
         terracota: {
           50: "#FBF3EA",
+          100: "#F6E7D6",
           200: "#EDD3B8",
           600: "#C1653A",
           900: "#7A3A1F",

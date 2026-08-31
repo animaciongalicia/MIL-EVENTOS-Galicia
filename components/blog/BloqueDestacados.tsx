@@ -1,6 +1,7 @@
 import type { Post } from "@/lib/blog";
 import TarjetaPost from "@/components/blog/TarjetaPost";
 import { postsDestacadosSlugs } from "@/data/posts-destacados";
+import { gridColsClass } from "@/components/shared/gridCols";
 
 type BloqueDestacadosProps = {
   posts: Post[];
@@ -16,7 +17,7 @@ export default function BloqueDestacados({ posts }: BloqueDestacadosProps) {
   return (
     <section>
       <h2 className="text-xl font-bold">Destacados</h2>
-      <div className="mt-4 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className={`mt-4 grid gap-6 ${gridColsClass(destacados.length)}`}>
         {destacados.map((post) => (
           <TarjetaPost key={post.slug} post={post} />
         ))}

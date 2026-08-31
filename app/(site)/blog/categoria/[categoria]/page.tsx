@@ -1,5 +1,6 @@
 import { getPostsByCategoria } from "@/lib/blog";
 import TarjetaPost from "@/components/blog/TarjetaPost";
+import { gridColsClass } from "@/components/shared/gridCols";
 
 type CategoriaPageProps = {
   params: { categoria: string };
@@ -11,7 +12,7 @@ export default function CategoriaPage({ params }: CategoriaPageProps) {
   return (
     <div>
       <h1 className="text-2xl font-bold capitalize">{params.categoria.replace(/-/g, " ")}</h1>
-      <div className="mt-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className={`mt-6 grid gap-6 ${gridColsClass(posts.length)}`}>
         {posts.map((post) => (
           <TarjetaPost key={post.slug} post={post} />
         ))}

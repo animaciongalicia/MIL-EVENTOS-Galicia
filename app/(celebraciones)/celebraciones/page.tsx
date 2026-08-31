@@ -26,15 +26,17 @@ export default function CelebracionesPage() {
 
       <GridEjemplos ejemplos={cumpleanosEjemplos} />
 
-      <section className="mx-auto max-w-3xl px-6 py-12">
-        <h2 className="text-2xl font-bold text-terracota-900">Fincas y espacios especiales</h2>
-        <p className="mt-3 text-lg leading-relaxed text-ink-700">
-          Hay sitios que ya ponen el ambiente antes de que llegue el primer invitado. Buscamos el
-          tuyo — con jardín, piscina, carpa o vistas — y nos encargamos de que esté listo.
-        </p>
-      </section>
+      <div className="bg-terracota-100">
+        <section className="mx-auto max-w-3xl px-6 py-12">
+          <h2 className="text-2xl font-bold text-terracota-900">Fincas y espacios especiales</h2>
+          <p className="mt-3 text-lg leading-relaxed text-ink-700">
+            Hay sitios que ya ponen el ambiente antes de que llegue el primer invitado. Buscamos
+            el tuyo — con jardín, piscina, carpa o vistas — y nos encargamos de que esté listo.
+          </p>
+        </section>
 
-      <GridEjemplos ejemplos={fincasEjemplos} />
+        <GridEjemplos ejemplos={fincasEjemplos} />
+      </div>
 
       <section className="mx-auto max-w-3xl px-6 py-12">
         <h2 className="text-2xl font-bold text-terracota-900">Otros eventos especiales</h2>

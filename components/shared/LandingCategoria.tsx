@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { placeholderImage } from "@/lib/placeholder-image";
+import { gridColsClass } from "@/components/shared/gridCols";
 
 export type SublandingLink = {
   titulo: string;
@@ -17,7 +18,7 @@ export default function LandingCategoria({ intro, sublandings }: LandingCategori
   return (
     <section className="mx-auto max-w-5xl px-6 py-12">
       <p className="max-w-2xl text-lg text-ink-700">{intro}</p>
-      <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-2">
+      <div className={`mt-8 grid gap-6 ${gridColsClass(sublandings.length)}`}>
         {sublandings.map((item) => (
           <Link
             key={item.href}

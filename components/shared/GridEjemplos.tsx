@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { placeholderImage } from "@/lib/placeholder-image";
+import { gridColsClass } from "@/components/shared/gridCols";
 
 export type Ejemplo = {
   nombre: string;
@@ -12,7 +13,9 @@ type GridEjemplosProps = {
 
 export default function GridEjemplos({ ejemplos }: GridEjemplosProps) {
   return (
-    <section className="mx-auto grid max-w-5xl grid-cols-1 gap-6 px-6 py-12 sm:grid-cols-2 lg:grid-cols-3">
+    <section
+      className={`mx-auto grid max-w-5xl gap-6 px-6 py-12 ${gridColsClass(ejemplos.length)}`}
+    >
       {ejemplos.map((ejemplo) => (
         <div
           key={ejemplo.nombre}
