@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { placeholderImage } from "@/lib/placeholder-image";
+
 export type Ejemplo = {
   nombre: string;
   descripcion: string;
@@ -13,10 +16,21 @@ export default function GridEjemplos({ ejemplos }: GridEjemplosProps) {
       {ejemplos.map((ejemplo) => (
         <div
           key={ejemplo.nombre}
-          className="rounded-lg border border-sand-200 bg-cream-50 p-6 shadow-sm transition hover:shadow-md"
+          className="overflow-hidden rounded-lg border border-sand-200 bg-cream-50 shadow-sm transition hover:shadow-md"
         >
-          <h3 className="font-semibold">{ejemplo.nombre}</h3>
-          <p className="mt-2 text-sm text-ink-600">{ejemplo.descripcion}</p>
+          <div className="relative aspect-video w-full">
+            <Image
+              src={placeholderImage(ejemplo.nombre)}
+              alt=""
+              fill
+              className="object-cover"
+              sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="font-semibold">{ejemplo.nombre}</h3>
+            <p className="mt-2 text-sm text-ink-600">{ejemplo.descripcion}</p>
+          </div>
         </div>
       ))}
     </section>

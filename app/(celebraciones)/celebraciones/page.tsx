@@ -12,6 +12,7 @@ export default function CelebracionesPage() {
         variante="celebraciones"
         titulo="Celebraciones especiales en Galicia"
         subtitulo="Cumpleaños, fincas y momentos que merecen su propia fiesta."
+        imagenSeed="celebraciones-galicia"
       />
 
       <section className="mx-auto max-w-3xl px-6 py-12">

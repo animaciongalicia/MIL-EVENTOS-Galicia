@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { placeholderImage } from "@/lib/placeholder-image";
+
 type HeroVariant = "corporativa" | "celebraciones";
 
 type HeroProps = {
@@ -6,6 +9,7 @@ type HeroProps = {
   ctaTexto?: string;
   ctaHref?: string;
   variante?: HeroVariant;
+  imagenSeed?: string;
 };
 
 export default function Hero({
@@ -14,6 +18,7 @@ export default function Hero({
   ctaTexto,
   ctaHref,
   variante = "corporativa",
+  imagenSeed,
 }: HeroProps) {
   const esCelebraciones = variante === "celebraciones";
 
@@ -46,6 +51,18 @@ export default function Hero({
         >
           {ctaTexto}
         </a>
+      )}
+      {imagenSeed && (
+        <div className="relative mx-auto mt-12 aspect-[21/9] w-full max-w-4xl overflow-hidden rounded-xl shadow-lg">
+          <Image
+            src={placeholderImage(imagenSeed, 1400, 600)}
+            alt=""
+            fill
+            priority
+            className="object-cover"
+            sizes="(min-width: 1024px) 896px, 100vw"
+          />
+        </div>
       )}
     </section>
   );

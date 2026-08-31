@@ -2,6 +2,18 @@
 const nextConfig = {
   reactStrictMode: true,
 
+  // picsum.photos: fotografía de stock placeholder mientras no hay fotos
+  // reales (ver lib/placeholder-image.ts y CLAUDE.md §11). Quitar este bloque
+  // cuando se sustituyan todas las imágenes por las reales del cliente.
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "picsum.photos",
+      },
+    ],
+  },
+
   // Redirecciones desde mileventosgalicia.com (WordPress) construidas a partir
   // del export de Google Search Console (Coverage + Performance) y de Google
   // Analytics 4 aportados por el cliente (30/08/2026). Cubren las URLs reales

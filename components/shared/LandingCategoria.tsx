@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { placeholderImage } from "@/lib/placeholder-image";
 
 export type SublandingLink = {
   titulo: string;
@@ -20,10 +22,21 @@ export default function LandingCategoria({ intro, sublandings }: LandingCategori
           <Link
             key={item.href}
             href={item.href}
-            className="rounded-lg border border-sand-200 bg-cream-50 p-6 shadow-sm transition hover:-translate-y-0.5 hover:border-atlantico-600 hover:shadow-md"
+            className="block overflow-hidden rounded-lg border border-sand-200 bg-cream-50 shadow-sm transition hover:-translate-y-0.5 hover:border-atlantico-600 hover:shadow-md"
           >
-            <h3 className="font-semibold">{item.titulo}</h3>
-            <p className="mt-2 text-sm text-ink-600">{item.descripcion}</p>
+            <div className="relative aspect-video w-full">
+              <Image
+                src={placeholderImage(item.titulo)}
+                alt=""
+                fill
+                className="object-cover"
+                sizes="(min-width: 640px) 50vw, 100vw"
+              />
+            </div>
+            <div className="p-6">
+              <h3 className="font-semibold">{item.titulo}</h3>
+              <p className="mt-2 text-sm text-ink-600">{item.descripcion}</p>
+            </div>
           </Link>
         ))}
       </div>

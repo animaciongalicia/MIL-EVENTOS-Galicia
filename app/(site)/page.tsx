@@ -30,6 +30,7 @@ export default function HomePage() {
         subtitulo="Más de 15 años haciendo que las cosas sucedan."
         ctaTexto="Cuéntanos tu evento"
         ctaHref="/contacto"
+        imagenSeed="mil-eventos-galicia-home"
       />
 
       <section className="mx-auto max-w-3xl px-6 py-16 text-lg leading-relaxed text-ink-700">
