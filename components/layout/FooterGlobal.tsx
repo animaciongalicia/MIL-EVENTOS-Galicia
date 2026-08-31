@@ -3,6 +3,7 @@ import TiraLogos from "@/components/shared/TiraLogos";
 import { logosClientes } from "@/data/logos-clientes";
 import { ecosistemaMarcas } from "@/data/ecosistema-marcas";
 import {
+  DIRECCION_CONTACTO,
   EMAIL_CONTACTO,
   TELEFONO_CONTACTO,
   TELEFONO_CONTACTO_TEL_HREF,
@@ -18,7 +19,7 @@ export default function FooterGlobal() {
         </div>
       )}
       <div className="bg-atlantico-800 px-6 py-12 text-sm text-cream-200">
-        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 sm:grid-cols-3">
+        <div className="mx-auto grid max-w-5xl grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <p className="font-semibold text-white">Mil Eventos Galicia</p>
             <p className="mt-2 leading-relaxed">Más de 15 años haciendo que las cosas sucedan.</p>
@@ -45,9 +46,6 @@ export default function FooterGlobal() {
                   {marca.nombre}
                 </a>
               ))}
-              <Link href="/celebraciones" className="transition hover:text-white">
-                Celebraciones
-              </Link>
             </div>
           </div>
 
@@ -56,6 +54,9 @@ export default function FooterGlobal() {
               Enlaces
             </p>
             <div className="mt-3 flex flex-col gap-2">
+              <Link href="/celebraciones" className="transition hover:text-white">
+                Celebraciones
+              </Link>
               <Link href="/nosotros" className="transition hover:text-white">
                 Quiénes somos
               </Link>
@@ -66,6 +67,13 @@ export default function FooterGlobal() {
                 Contacto
               </Link>
             </div>
+          </div>
+
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-wide text-cream-300/80">
+              Dirección
+            </p>
+            <p className="mt-3 leading-relaxed">{DIRECCION_CONTACTO}</p>
           </div>
         </div>
 
