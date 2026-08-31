@@ -2,6 +2,7 @@ import Link from "next/link";
 import TiraLogos from "@/components/shared/TiraLogos";
 import { logosClientes } from "@/data/logos-clientes";
 import { ecosistemaMarcas } from "@/data/ecosistema-marcas";
+import { IconMail, IconMapPin, IconPhone, IconWhatsApp } from "@/components/shared/icons";
 import {
   DIRECCION_CONTACTO,
   EMAIL_CONTACTO,
@@ -24,13 +25,25 @@ export default function FooterGlobal() {
             <p className="font-semibold text-white">Mil Eventos Galicia</p>
             <p className="mt-2 leading-relaxed">Más de 15 años haciendo que las cosas sucedan.</p>
             <div className="mt-4 flex flex-col gap-2">
-              <a href={TELEFONO_CONTACTO_TEL_HREF} className="transition hover:text-white">
+              <a
+                href={TELEFONO_CONTACTO_TEL_HREF}
+                className="flex items-center gap-2 transition hover:text-white"
+              >
+                <IconPhone className="h-4 w-4 shrink-0" />
                 {TELEFONO_CONTACTO}
               </a>
-              <a href={WHATSAPP_CONTACTO_HREF} className="transition hover:text-white">
+              <a
+                href={WHATSAPP_CONTACTO_HREF}
+                className="flex items-center gap-2 transition hover:text-white"
+              >
+                <IconWhatsApp className="h-4 w-4 shrink-0" />
                 WhatsApp
               </a>
-              <a href={`mailto:${EMAIL_CONTACTO}`} className="transition hover:text-white">
+              <a
+                href={`mailto:${EMAIL_CONTACTO}`}
+                className="flex items-center gap-2 transition hover:text-white"
+              >
+                <IconMail className="h-4 w-4 shrink-0" />
                 {EMAIL_CONTACTO}
               </a>
             </div>
@@ -73,7 +86,10 @@ export default function FooterGlobal() {
             <p className="text-xs font-semibold uppercase tracking-wide text-cream-300/80">
               Dirección
             </p>
-            <p className="mt-3 leading-relaxed">{DIRECCION_CONTACTO}</p>
+            <p className="mt-3 flex items-start gap-2 leading-relaxed">
+              <IconMapPin className="mt-0.5 h-4 w-4 shrink-0" />
+              {DIRECCION_CONTACTO}
+            </p>
           </div>
         </div>
 

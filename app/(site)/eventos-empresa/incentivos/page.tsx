@@ -3,6 +3,7 @@ import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
+import PasosTrabajo from "@/components/shared/PasosTrabajo";
 import { incentivosEjemplos } from "@/data/eventos-empresa-incentivos";
 import { SUUNIA } from "@/data/ecosistema-marcas";
 
@@ -36,14 +37,27 @@ export default function IncentivosPage() {
       <section className="bg-cream-200 py-12">
         <div className="mx-auto max-w-3xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
-          <p className="mt-3 leading-relaxed">
-            Nos cuentas el objetivo (retener, motivar, premiar resultados concretos), a quién va
-            dirigido y el presupuesto por persona. Diseñamos el programa — desde una cena bien
-            elegida hasta un viaje de incentivo de varios días con alojamiento y actividades
-            incluidas — y nos encargamos de la logística completa, incluida la entrega o el momento
-            de reconocimiento si quieres que forme parte del propio evento.
-          </p>
-          <p className="mt-4 leading-relaxed">
+          <PasosTrabajo
+            pasos={[
+              {
+                titulo: "Nos cuentas el objetivo",
+                descripcion: "Retener, motivar, premiar resultados concretos — y a quién va dirigido.",
+              },
+              {
+                titulo: "Fijamos el presupuesto por persona",
+                descripcion: "Desde un reconocimiento puntual hasta un viaje de varios días.",
+              },
+              {
+                titulo: "Diseñamos el programa",
+                descripcion: "Cena, experiencia o viaje — con la producción incluida.",
+              },
+              {
+                titulo: "Coordinamos la entrega",
+                descripcion: "Incluido el momento de reconocimiento, si quieres que forme parte del evento.",
+              },
+            ]}
+          />
+          <p className="mt-6 leading-relaxed">
             Si el programa incluye desplazamiento o alojamiento para el equipo, lo coordinamos con
             nuestras marcas hermanas (ver más abajo) para que sea un único interlocutor, no tres
             proveedores distintos que hay que sincronizar tú mismo.

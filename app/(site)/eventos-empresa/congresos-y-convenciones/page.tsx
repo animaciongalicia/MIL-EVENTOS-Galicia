@@ -3,6 +3,7 @@ import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
+import PasosTrabajo from "@/components/shared/PasosTrabajo";
 import { congresosYConvencionesEjemplos } from "@/data/eventos-empresa-congresos-y-convenciones";
 import { LUXE_GALICIA } from "@/data/ecosistema-marcas";
 
@@ -38,13 +39,26 @@ export default function CongresosYConvencionesPage() {
       <section className="bg-cream-200 py-12">
         <div className="mx-auto max-w-3xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
-          <p className="mt-3 leading-relaxed">
-            Empezamos por el aforo real y el formato (presencial, híbrido, con streaming) — de ahí
-            sale el espacio, no al revés. Coordinamos sonido, iluminación, escenario y grabación con
-            un único proveedor técnico, gestionamos la agenda y las fichas técnicas de los
-            ponentes, y cerramos traslados y alojamiento para los asistentes que vienen de fuera de
-            Galicia. Un solo interlocutor para todo el evento, de principio a fin.
-          </p>
+          <PasosTrabajo
+            pasos={[
+              {
+                titulo: "Definimos aforo y formato",
+                descripcion: "Presencial, híbrido o con streaming — de ahí sale el espacio.",
+              },
+              {
+                titulo: "Coordinamos la producción técnica",
+                descripcion: "Sonido, iluminación, escenario y grabación con un único proveedor.",
+              },
+              {
+                titulo: "Gestionamos ponentes",
+                descripcion: "Agenda y fichas técnicas, sin que se te escape ningún detalle.",
+              },
+              {
+                titulo: "Cerramos la logística de fuera",
+                descripcion: "Traslados y alojamiento para quien viene de fuera de Galicia.",
+              },
+            ]}
+          />
         </div>
       </section>
 

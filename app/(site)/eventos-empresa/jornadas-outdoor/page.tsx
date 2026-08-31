@@ -3,6 +3,7 @@ import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
+import PasosTrabajo from "@/components/shared/PasosTrabajo";
 import { jornadasOutdoorEjemplos } from "@/data/eventos-empresa-jornadas-outdoor";
 import { SEA_GALICIA } from "@/data/ecosistema-marcas";
 
@@ -41,12 +42,26 @@ export default function JornadasOutdoorPage() {
       <section className="bg-cream-200 py-12">
         <div className="mx-auto max-w-3xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
-          <p className="mt-3 leading-relaxed">
-            Diseñamos el día completo: hora de salida, actividad principal, ritmo de la jornada,
-            comida y cierre. Nos ocupamos del transporte si hace falta, del plan alternativo si el
-            tiempo no acompaña, y de que nadie tenga que estar pendiente del reloj — tú apareces y
-            participas, el resto está resuelto antes de que llegues.
-          </p>
+          <PasosTrabajo
+            pasos={[
+              {
+                titulo: "Definimos el objetivo del día",
+                descripcion: "Desconectar, integrar a un equipo nuevo, cerrar un proyecto.",
+              },
+              {
+                titulo: "Elegimos el ritmo",
+                descripcion: "Esfuerzo físico, duración y tipo de grupo, antes de proponer nada.",
+              },
+              {
+                titulo: "Montamos el día completo",
+                descripcion: "Actividad, transporte, comida y cierre — todo encadenado.",
+              },
+              {
+                titulo: "Tú apareces",
+                descripcion: "El plan alternativo si el tiempo no acompaña ya está resuelto.",
+              },
+            ]}
+          />
         </div>
       </section>
 

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { IconChevronDown } from "@/components/shared/icons";
 
 type EnlaceMenu = {
   nombre: string;
@@ -56,7 +57,7 @@ export default function Header() {
                 className="flex items-center gap-1 py-2 transition hover:text-atlantico-700"
               >
                 {enlace.nombre}
-                {enlace.submenu && <span aria-hidden="true">▾</span>}
+                {enlace.submenu && <IconChevronDown className="h-3 w-3" />}
               </Link>
               {enlace.submenu && (
                 <ul className="invisible absolute left-0 top-full z-10 min-w-[220px] rounded-lg border border-sand-200 bg-cream-50 py-2 opacity-0 shadow-lg transition group-hover:visible group-hover:opacity-100 group-focus-within:visible group-focus-within:opacity-100">

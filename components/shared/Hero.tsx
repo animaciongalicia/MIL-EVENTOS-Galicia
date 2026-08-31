@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { placeholderImage } from "@/lib/placeholder-image";
+import { IconArrowRight } from "@/components/shared/icons";
 
 type HeroVariant = "corporativa" | "celebraciones";
 
@@ -45,11 +46,12 @@ export default function Hero({
           href={ctaHref}
           className={
             esCelebraciones
-              ? "mt-8 inline-block rounded-full bg-terracota-600 px-6 py-3 font-semibold text-white transition hover:bg-terracota-900"
-              : "mt-8 inline-block rounded-full bg-atlantico-700 px-6 py-3 font-semibold text-white transition hover:bg-atlantico-800"
+              ? "mt-8 inline-flex items-center gap-2 rounded-full bg-terracota-600 px-6 py-3 font-semibold text-white transition hover:bg-terracota-900"
+              : "mt-8 inline-flex items-center gap-2 rounded-full bg-atlantico-700 px-6 py-3 font-semibold text-white transition hover:bg-atlantico-800"
           }
         >
           {ctaTexto}
+          <IconArrowRight className="h-4 w-4" />
         </a>
       )}
       {imagenSeed && (

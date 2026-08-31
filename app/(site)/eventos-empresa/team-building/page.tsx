@@ -3,6 +3,7 @@ import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
+import PasosTrabajo from "@/components/shared/PasosTrabajo";
 import { teamBuildingEjemplos } from "@/data/eventos-empresa-team-building";
 import { SEA_GALICIA } from "@/data/ecosistema-marcas";
 
@@ -41,13 +42,28 @@ export default function TeamBuildingPage() {
       <section className="bg-cream-200 py-12">
         <div className="mx-auto max-w-3xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
-          <p className="mt-3 leading-relaxed">
-            Una llamada de 20 minutos para entender el equipo, el objetivo y el presupuesto. Te
-            proponemos dos o tres formatos concretos — no un catálogo de veinte para que elijas a
-            ciegas. Cerramos espacio, proveedores y horario. El día del evento, tú participas: la
-            logística, los imprevistos y el &ldquo;plan B si llueve&rdquo; los llevamos nosotros.
-          </p>
-          <p className="mt-4 leading-relaxed">
+          <PasosTrabajo
+            pasos={[
+              {
+                titulo: "Cuéntanos tu equipo",
+                descripcion: "Una llamada de 20 minutos: cuántos sois, el objetivo, el presupuesto.",
+              },
+              {
+                titulo: "Te proponemos 2-3 formatos",
+                descripcion: "No un catálogo de veinte actividades para que elijas a ciegas.",
+              },
+              {
+                titulo: "Cerramos todo",
+                descripcion: "Espacio, proveedores y horario, sin que tengas que llamar a nadie.",
+              },
+              {
+                titulo: "El día del evento",
+                descripcion:
+                  "Tú participas. La logística y el “plan B si llueve” los llevamos nosotros.",
+              },
+            ]}
+          />
+          <p className="mt-6 leading-relaxed">
             Y una cosa que preferimos decir antes de que la descubras después: el team building no
             arregla un equipo roto en una tarde, y cualquiera que te prometa eso te está vendiendo
             humo. Lo que sí hace, bien planteado, es dar el primer empujón — romper el hielo entre
