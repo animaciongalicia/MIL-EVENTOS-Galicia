@@ -11,7 +11,7 @@ Mapa de rutas de referencia. Debe mantenerse sincronizado con la sección 3 de `
   /eventos-empresa/jornadas-outdoor
   /eventos-empresa/congresos-y-convenciones
 
-/actividades                              Hub con sidebar fijo
+/actividades                              Landing de categoría
   /actividades/outdoor
   /actividades/indoor
   /actividades/gastronomia-y-vinos

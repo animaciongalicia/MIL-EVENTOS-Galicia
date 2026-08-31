@@ -42,7 +42,7 @@ Sitemap de referencia: `sitemap-definitivo.md` (debe mantenerse sincronizado con
   /eventos-empresa/jornadas-outdoor
   /eventos-empresa/congresos-y-convenciones
 
-/actividades                              Hub con sidebar fijo
+/actividades                              Landing de categoría
   /actividades/outdoor
   /actividades/indoor
   /actividades/gastronomia-y-vinos
@@ -83,7 +83,7 @@ Estructura de carpetas sugerida en `/app`:
   /eventos-empresa/incentivos/page.tsx
   /eventos-empresa/jornadas-outdoor/page.tsx
   /eventos-empresa/congresos-y-convenciones/page.tsx
-  /actividades/layout.tsx                → layout con sidebar persistente
+  /actividades/page.tsx
   /actividades/outdoor/page.tsx
   /actividades/indoor/page.tsx
   /actividades/gastronomia-y-vinos/page.tsx
@@ -109,8 +109,7 @@ No dupliques markup entre páginas parecidas. Estos son los componentes base que
 | Componente | Uso |
 |---|---|
 | `Hero` | Cabecera de cada página (título + subtítulo + CTA). Variantes: corporativa, celebraciones. |
-| `LandingCategoria` | Patrón compartido por `/eventos-empresa` y `/espacios-y-recursos`: intro + tarjetas de acceso a sublandings. |
-| `SidebarActividades` | Sidebar persistente del hub `/actividades`, con los 4 enlaces pilar. |
+| `LandingCategoria` | Patrón compartido por `/eventos-empresa`, `/actividades` y `/espacios-y-recursos`: intro + tarjetas de acceso a sublandings. |
 | `SidebarBlog` | Sidebar persistente de `/blog`, con las 6 categorías. |
 | `GridEjemplos` | Grid de 4-6 tarjetas de ejemplo dentro de una página pilar (nombre + 2 líneas, sin link a página propia). |
 | `TarjetaPost` | Tarjeta de post para listados de blog (imagen, categoría, título, extracto, fecha). |
@@ -215,7 +214,7 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 ## 11. Pendientes / decisiones abiertas
 
 - **Bloque "Más leídos" del blog:** requiere analítica conectada (Vercel Analytics o Google Analytics) para ser un ranking real. Hasta que se decida, se implementa como `BloqueDestacados` (curado a mano por el cliente) en el mismo espacio visual. No implementar un ranking falso ni simulado.
-- **Espacios y Recursos con sidebar:** queda como landing simple (patrón `LandingCategoria`) por ahora; si el volumen de contenido crece, valorar darle el mismo tratamiento de hub con sidebar que `/actividades`.
+- ~~Actividades con sidebar~~ — descartado: la barra lateral no aportaba nada. `/actividades` es ahora una landing de categoría igual que `/eventos-empresa` y `/espacios-y-recursos` (patrón `LandingCategoria`), y sus 4 páginas pilar llevan `Hero` completo en vez del `h1` suelto que tenían dentro del layout con sidebar.
 - ~~Proveedor del formulario de contacto~~ — decidido: `mailto:` sin backend (ver sección 2).
 - ~~Redirecciones desde la web anterior~~ — mapeadas en `next.config.js` → `redirects()` a partir del export de Search Console (Coverage + Performance) y GA4 aportado por el cliente. Cubre las URLs con tráfico/impresiones reales, no el sitemap completo (que incluye ~400 páginas de adjuntos de imagen de WordPress sin valor). **Revisar contra el `sitemap.xml` real antes de lanzar**, por si queda alguna URL indexada sin cubrir.
 - **Aviso legal / Política de privacidad:** las páginas existen (`/aviso-legal`, `/politica-de-privacidad`) pero con datos de la empresa (razón social, NIF/CIF, domicilio social, registro) como placeholder — no se han inventado. Pendiente de que el cliente los aporte antes de lanzar.
