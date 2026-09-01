@@ -21,4 +21,8 @@ export const luxeGaliciaEjemplos: Ejemplo[] = [
     nombre: "Transporte para grupos grandes",
     descripcion: "Varios vehículos sincronizados para que trescientas personas lleguen a la vez.",
   },
+  {
+    nombre: "Traslado nocturno tras la cena de gala",
+    descripcion: "Vuelta al hotel escalonada por turnos, sin que nadie tenga que esperar de más.",
+  },
 ];

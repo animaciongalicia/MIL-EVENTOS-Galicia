@@ -21,4 +21,8 @@ export const seaGaliciaEjemplos: Ejemplo[] = [
     nombre: "Paddle surf en grupo",
     descripcion: "Actividad de menor exigencia física, ideal como cierre de una jornada más intensa.",
   },
+  {
+    nombre: "Regata a vela para varios equipos",
+    descripcion: "Distintas tripulaciones compitiendo a la vez, cada una con su propio patrón.",
+  },
 ];

@@ -21,4 +21,8 @@ export const suuniaEjemplos: Ejemplo[] = [
     nombre: "Check-in coordinado para grupos grandes",
     descripcion: "Reparto de habitaciones resuelto antes de que el grupo llegue al hotel.",
   },
+  {
+    nombre: "Desayuno de trabajo antes de la sesión",
+    descripcion: "Producto local servido con horario ajustado al arranque del programa del día.",
+  },
 ];
