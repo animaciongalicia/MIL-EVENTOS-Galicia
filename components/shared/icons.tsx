@@ -50,6 +50,14 @@ export function IconArrowRight({ className }: IconProps) {
   );
 }
 
+export function IconCheck({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={`${base} ${className ?? "h-4 w-4"}`} {...strokeProps}>
+      <path d="M5 12.5 9.5 17 19 7" />
+    </svg>
+  );
+}
+
 export function IconChevronDown({ className }: IconProps) {
   return (
     <svg viewBox="0 0 24 24" className={`${base} ${className ?? "h-3 w-3"}`} {...strokeProps}>

@@ -7,9 +7,9 @@ type PasosTrabajoProps = {
   pasos: Paso[];
 };
 
-// Bloque "Cómo trabajamos" con pasos numerados — reservado a las páginas
-// pilar de /eventos-empresa (prioridad de negocio, CLAUDE.md §11) para que
-// destaquen visualmente sobre el resto del catálogo de páginas pilar.
+// Bloque "Cómo trabajamos" con pasos numerados — reservado a Home y a las
+// páginas pilar de /eventos-empresa (prioridad de negocio, CLAUDE.md §11)
+// para que destaquen visualmente sobre el resto del catálogo de páginas pilar.
 export default function PasosTrabajo({ pasos }: PasosTrabajoProps) {
   return (
     <ol className="mt-4 grid grid-cols-1 gap-x-8 gap-y-6 sm:grid-cols-2">

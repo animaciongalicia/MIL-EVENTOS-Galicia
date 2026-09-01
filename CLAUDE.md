@@ -120,6 +120,10 @@ No dupliques markup entre páginas parecidas. Estos son los componentes base que
 | `FormularioContacto` | Formulario único reutilizado en `/contacto` (y embebido al final de `/celebraciones` con copy propio). |
 | `CTAFinal` | Bloque de cierre de página con botón de contacto/presupuesto. |
 | `TiraLogos` | Tira de 8-10 logos de clientes, usada en Home y footer. |
+| `CifrasDestacadas` | Fila de 2-3 cifras reales en formato caja (ver regla de prueba social, sección 6) — rompe la prosa con un bloque numérico. |
+| `CitaDestacada` | Caja de cita/afirmación aislada (borde lateral + texto en serif itálica) para destacar una frase dentro de un tramo largo de contenido. |
+| `TarjetasTexto` | Tarjetas de título + texto corto sin imagen (icono opcional), para razones, comparativas o listados que no encajan en `GridEjemplos` ni en `PasosTrabajo`. |
+| `PasosTrabajo` | Bloque "Cómo trabajamos" con pasos numerados — reservado a Home y a las 4 páginas pilar de `/eventos-empresa` (ver sección 12). |
 
 **Regla:** antes de crear un componente nuevo, comprueba si uno de estos ya cubre el caso. Si una página pilar necesita algo distinto de `GridEjemplos`, es más probable que el contenido esté mal planteado que que haga falta un componente nuevo — consúltalo.
 
@@ -236,4 +240,5 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 - Ambos layouts raíz (`app/(site)/layout.tsx` y `app/(celebraciones)/celebraciones/layout.tsx`) cargan las mismas dos fuentes de forma independiente, porque son root layouts separados (ver sección 8). Si se añade un tercer root layout, replicar el mismo bloque de `next/font/google`.
 - `/celebraciones` comparte el mismo sistema (misma tipografía, misma escala, mismos componentes base) pero con la paleta `terracota` en vez de `atlantico` — más cálida, nunca literalmente otra marca visual (CLAUDE.md §8).
 - **Iconos**: set propio dibujado a mano en `components/shared/icons.tsx` (teléfono, WhatsApp, email, ubicación, flecha, chevron) — sin librería externa. Se usan en contacto (footer, `/contacto`), en el desplegable del menú y en los botones de CTA (`Hero`, `CTAFinal`). Cualquier icono nuevo sigue el mismo estilo: trazo 1.5, sin relleno, `viewBox="0 0 24 24"`.
-- **`PasosTrabajo`** (`components/shared/PasosTrabajo.tsx`): bloque "Cómo trabajamos" con pasos numerados (círculo + título + descripción corta), reservado a las 4 páginas pilar de `/eventos-empresa` — la prioridad de negocio (CLAUDE.md §11) tiene también prioridad visual sobre el resto del catálogo de páginas pilar, que sigue con el bloque en prosa simple.
+- **`PasosTrabajo`** (`components/shared/PasosTrabajo.tsx`): bloque "Cómo trabajamos" con pasos numerados (círculo + título + descripción corta), reservado a Home y a las 4 páginas pilar de `/eventos-empresa` — la prioridad de negocio (CLAUDE.md §11) tiene también prioridad visual sobre el resto del catálogo de páginas pilar, que sigue con el bloque en prosa simple.
+- **Evitar bloques largos de texto corrido.** Cualquier página de más de 2-3 párrafos seguidos debe alternar formato: `CifrasDestacadas`, `CitaDestacada`, `TarjetasTexto`, `GridEjemplos` o `PasosTrabajo` en vez de encadenar más párrafos de prosa. Un párrafo de contexto o cierre está bien; media docena seguidos no. Regla aplicada por primera vez en `/` (Home) — extender al resto de páginas pilar en su revisión "una por una".
