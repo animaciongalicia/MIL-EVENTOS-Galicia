@@ -21,4 +21,8 @@ export const actividadesAMedida: Ejemplo[] = [
     nombre: "Formatos imposibles de catalogar",
     descripcion: "Si lo que tienes en la cabeza no está en esta web, es justo el tipo de proyecto que nos gusta.",
   },
+  {
+    nombre: "Celebraciones corporativas fuera de lo habitual",
+    descripcion: "Un cierre de ronda, un hito de facturación — momentos que no encajan en ningún formato estándar.",
+  },
 ];
