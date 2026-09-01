@@ -42,9 +42,9 @@ export default function ActividadesPage() {
       <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Ninguna de estas actividades se vende suelta como un producto de catálogo — son las
-          piezas con las que construimos tu evento, dentro de{" "}
+          piezas con las que construimos tu{" "}
           <a href="/eventos-empresa" className="text-atlantico-700 underline">
-            /eventos-empresa
+            evento de empresa
           </a>
           . Aquí las agrupamos por tipo para que veas de un vistazo lo que es posible.
         </p>

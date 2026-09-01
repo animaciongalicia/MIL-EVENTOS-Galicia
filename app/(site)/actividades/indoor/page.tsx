@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import CTAFinal from "@/components/shared/CTAFinal";
+import CitaDestacada from "@/components/shared/CitaDestacada";
 import { actividadesIndoor } from "@/data/actividades-indoor";
 
 export const metadata: Metadata = {
@@ -32,8 +33,10 @@ export default function ActividadesIndoorPage() {
           <p className="mt-3 leading-relaxed">
             Vemos el espacio antes (o sus planos, si no puedes enseñárnoslo) para que la actividad
             encaje en los metros cuadrados reales, no en los que aparecen en la web del hotel.
-            Llevamos el material; tú pones la sala.
           </p>
+          <div className="mt-6">
+            <CitaDestacada texto="Llevamos el material; tú pones la sala." />
+          </div>
         </div>
       </section>
 

@@ -3,6 +3,7 @@ import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
+import CitaDestacada from "@/components/shared/CitaDestacada";
 import { actividadesGastronomia } from "@/data/actividades-gastronomia";
 import { SUUNIA } from "@/data/ecosistema-marcas";
 
@@ -35,10 +36,12 @@ export default function ActividadesGastronomiaYVinosPage() {
         <div className="mx-auto max-w-3xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo lo planteamos</h2>
           <p className="mt-3 leading-relaxed">
-            Te preguntamos por restricciones alimentarias y presupuesto por persona antes de
-            proponer menú — no al final. Y si el evento dura más de un día, coordinamos comidas
-            con SUUNIA para que no tengas que gestionar un proveedor de catering aparte.
+            Y si el evento dura más de un día, coordinamos comidas con SUUNIA para que no tengas
+            que gestionar un proveedor de catering aparte.
           </p>
+          <div className="mt-6">
+            <CitaDestacada texto="Te preguntamos por restricciones alimentarias y presupuesto por persona antes de proponer menú — no al final." />
+          </div>
         </div>
       </section>
 

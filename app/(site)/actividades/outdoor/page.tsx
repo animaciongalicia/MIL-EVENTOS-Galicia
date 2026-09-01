@@ -3,6 +3,7 @@ import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
+import TarjetasTexto from "@/components/shared/TarjetasTexto";
 import { actividadesOutdoor } from "@/data/actividades-outdoor";
 import { SEA_GALICIA } from "@/data/ecosistema-marcas";
 
@@ -40,8 +41,20 @@ export default function ActividadesOutdoorPage() {
         <div className="mx-auto max-w-3xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo lo planteamos</h2>
           <p className="mt-3 leading-relaxed">
-            Nivel de esfuerzo físico, duración y edad del grupo son las tres variables que
-            ajustamos antes de proponerte nada — no todo el mundo quiere, ni puede, hacer rápel.
+            Tres variables que ajustamos antes de proponerte nada — no todo el mundo quiere, ni
+            puede, hacer rápel.
+          </p>
+          <div className="mt-6">
+            <TarjetasTexto
+              icono={false}
+              items={[
+                { titulo: "Esfuerzo físico", texto: "Del paseo guiado al rápel, según quién viene." },
+                { titulo: "Duración", texto: "De un cierre de tarde a una jornada completa." },
+                { titulo: "Edad del grupo", texto: "El ritmo se decide antes de elegir actividad." },
+              ]}
+            />
+          </div>
+          <p className="mt-6 leading-relaxed">
             Si hace falta material técnico o un guía titulado, lo incluimos sin que tengas que
             buscarlo tú.
           </p>
