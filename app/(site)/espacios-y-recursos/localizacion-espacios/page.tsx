@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import CTAFinal from "@/components/shared/CTAFinal";
+import TarjetasTexto from "@/components/shared/TarjetasTexto";
 import { localizacionEspaciosEjemplos } from "@/data/espacios-localizacion-espacios";
 
 export const metadata: Metadata = {
@@ -30,11 +31,28 @@ export default function LocalizacionEspaciosPage() {
         <div className="mx-auto max-w-3xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
           <p className="mt-3 leading-relaxed">
-            Te enseñamos dos o tres espacios que ya hemos visitado nosotros, con el aforo real
-            verificado — no el que aparece en su propia web, que casi nunca cuenta con la barra, el
-            escenario o la pista de baile ocupando sitio. Nos encargamos de la negociación, el
-            contrato y de encajar el timing con el resto de proveedores del evento.
+            Te enseñamos dos o tres espacios que ya hemos visitado nosotros — no una lista sacada
+            de una web de reservas.
           </p>
+          <div className="mt-6">
+            <TarjetasTexto
+              icono={false}
+              items={[
+                {
+                  titulo: "Aforo real verificado",
+                  texto: "No el que aparece en su propia web, sin la barra o el escenario ocupando sitio.",
+                },
+                {
+                  titulo: "Negociación y contrato",
+                  texto: "Nos encargamos nosotros, no tú directamente con el espacio.",
+                },
+                {
+                  titulo: "Timing con el resto del evento",
+                  texto: "El espacio encaja con proveedores, horarios y transporte, no al revés.",
+                },
+              ]}
+            />
+          </div>
         </div>
       </section>
 

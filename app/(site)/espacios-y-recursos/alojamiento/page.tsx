@@ -3,6 +3,7 @@ import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
+import TarjetasTexto from "@/components/shared/TarjetasTexto";
 import { alojamientoEjemplos } from "@/data/espacios-alojamiento";
 import { SUUNIA } from "@/data/ecosistema-marcas";
 
@@ -31,10 +32,18 @@ export default function AlojamientoPage() {
         <div className="mx-auto max-w-3xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
           <p className="mt-3 leading-relaxed">
-            Negociamos bloques de habitaciones a precio de grupo, gestionamos el reparto
-            (individuales, dobles, quién va con quién) y hacemos seguimiento con el hotel para que
-            el check-in de 40 personas no se convierta en una cola de 40 minutos.
+            Para que el check-in de 40 personas no se convierta en una cola de 40 minutos.
           </p>
+          <div className="mt-6">
+            <TarjetasTexto
+              icono={false}
+              items={[
+                { titulo: "Precio de grupo", texto: "Negociamos bloques de habitaciones, no reservas sueltas." },
+                { titulo: "Reparto de habitaciones", texto: "Individuales, dobles, quién va con quién." },
+                { titulo: "Seguimiento con el hotel", texto: "Hasta el check-in, para que no haya sorpresas." },
+              ]}
+            />
+          </div>
         </div>
       </section>
 

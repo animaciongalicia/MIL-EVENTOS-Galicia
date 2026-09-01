@@ -3,6 +3,7 @@ import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
+import CitaDestacada from "@/components/shared/CitaDestacada";
 import { trasladosEjemplos } from "@/data/espacios-traslados";
 import { LUXE_GALICIA } from "@/data/ecosistema-marcas";
 
@@ -31,10 +32,12 @@ export default function TrasladosPage() {
         <div className="mx-auto max-w-3xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
           <p className="mt-3 leading-relaxed">
-            Coordinamos los horarios con el resto del evento, no al revés: si la comida se
-            retrasa, el autobús espera. Un único punto de contacto para toda la logística de
-            movimiento, desde el primer vuelo que aterriza hasta el último coche que sale.
+            Un único punto de contacto para toda la logística de movimiento, desde el primer vuelo
+            que aterriza hasta el último coche que sale.
           </p>
+          <div className="mt-6">
+            <CitaDestacada texto="Coordinamos los horarios con el resto del evento, no al revés: si la comida se retrasa, el autobús espera." />
+          </div>
         </div>
       </section>
 
