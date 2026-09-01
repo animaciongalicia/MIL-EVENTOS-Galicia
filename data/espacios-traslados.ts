@@ -21,4 +21,8 @@ export const trasladosEjemplos: Ejemplo[] = [
     nombre: "Logística multi-día",
     descripcion: "Traslados encadenados sin que se pierda ni una furgoneta.",
   },
+  {
+    nombre: "Acceso a espacios rurales o de difícil llegada",
+    descripcion: "Pazos y fincas alejadas del centro, con vehículo adaptado al camino.",
+  },
 ];
