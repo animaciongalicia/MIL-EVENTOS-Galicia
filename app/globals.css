@@ -41,4 +41,84 @@
   .post-content blockquote {
     @apply mt-6 border-l-4 border-atlantico-600 bg-cream-50 py-4 pl-6 pr-4 font-serif text-xl italic text-ink-900 shadow-sm;
   }
+
+  /* Bloques de "maquetación rica" dentro de un post: caja de resumen con
+     checks, checklist numerado tipo timeline, grid de comparativa y FAQ en
+     <details>. Se escriben como JSX/HTML directo dentro del .mdx. */
+  .post-content .caja-resumen {
+    @apply mt-8 rounded-lg border border-atlantico-600/30 bg-atlantico-700/5 p-6;
+  }
+  .post-content .caja-resumen > p:first-child {
+    @apply mt-0 text-xs font-semibold uppercase tracking-wide text-atlantico-700;
+  }
+  .post-content .caja-resumen ul {
+    @apply mt-3 list-none space-y-2 pl-0 text-base;
+  }
+  .post-content .caja-resumen li {
+    @apply flex items-start gap-2;
+  }
+  .post-content .caja-resumen li::before {
+    content: "✓";
+    font-weight: 700;
+    margin-top: 0.125rem;
+    color: theme("colors.atlantico.700");
+  }
+
+  .post-content .caja-pasos > p:first-child {
+    @apply mt-8 text-xs font-semibold uppercase tracking-wide text-atlantico-700;
+  }
+  .post-content .caja-pasos ol {
+    @apply mt-3 list-none space-y-3 pl-0 text-base;
+    counter-reset: paso;
+  }
+  .post-content .caja-pasos li {
+    @apply relative rounded-lg border border-sand-200 bg-cream-50 py-3 pl-12 pr-4 shadow-sm;
+    counter-increment: paso;
+  }
+  .post-content .caja-pasos li::before {
+    content: counter(paso);
+    @apply absolute left-3 top-3 flex h-6 w-6 items-center justify-center rounded-full bg-atlantico-700 text-xs font-bold text-white;
+  }
+
+  /* Sin conteo dinámico disponible aquí (contenido MDX escrito a mano), así
+     que el número de columnas se elige explícitamente por post con un
+     modificador, replicando las reglas de gridCols.ts para no dejar nunca
+     una tarjeta huérfana en la última fila. */
+  .post-content .grid-comparativa {
+    @apply mt-6 grid gap-4;
+  }
+  .post-content .grid-comparativa-2 {
+    @apply grid-cols-1 sm:grid-cols-2;
+  }
+  .post-content .grid-comparativa-3 {
+    @apply grid-cols-1 md:grid-cols-3;
+  }
+  .post-content .grid-comparativa-6 {
+    @apply grid-cols-1 sm:grid-cols-2 lg:grid-cols-3;
+  }
+  .post-content .grid-comparativa > div {
+    @apply rounded-lg border border-sand-200 bg-cream-50 p-5 shadow-sm;
+  }
+  .post-content .grid-comparativa h4 {
+    @apply font-bold text-ink-900;
+  }
+  .post-content .grid-comparativa p {
+    @apply mt-2 text-sm leading-relaxed text-ink-600;
+  }
+
+  .post-content details {
+    @apply mt-3 rounded-lg border border-sand-200 bg-cream-50 p-4 shadow-sm;
+  }
+  .post-content details + details {
+    @apply mt-2;
+  }
+  .post-content summary {
+    @apply cursor-pointer text-lg font-semibold text-ink-900;
+  }
+  .post-content details p {
+    @apply mt-2 text-base;
+  }
+  .post-content .faq > p:first-child {
+    @apply mt-10 text-xs font-semibold uppercase tracking-wide text-atlantico-700;
+  }
 }
