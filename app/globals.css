@@ -9,3 +9,36 @@
     font-family: var(--font-fraunces), Georgia, serif;
   }
 }
+
+@layer components {
+  /* Estilos del cuerpo de un post de blog (MDX renderizado). No usamos
+     @tailwindcss/typography: sus grises por defecto violarían la regla de
+     "solo tokens de marca" (CLAUDE.md §12), así que se define a mano. */
+  .post-content > :first-child {
+    margin-top: 0;
+  }
+  .post-content h2 {
+    @apply mt-10 text-2xl font-bold text-atlantico-700;
+  }
+  .post-content h3 {
+    @apply mt-8 text-xl font-bold text-atlantico-700;
+  }
+  .post-content p {
+    @apply mt-4 text-lg leading-relaxed text-ink-700;
+  }
+  .post-content ul {
+    @apply mt-4 list-disc space-y-2 pl-6 text-lg leading-relaxed text-ink-700;
+  }
+  .post-content ol {
+    @apply mt-4 list-decimal space-y-2 pl-6 text-lg leading-relaxed text-ink-700;
+  }
+  .post-content a {
+    @apply text-atlantico-700 underline underline-offset-2 transition hover:text-atlantico-800;
+  }
+  .post-content strong {
+    @apply font-semibold text-ink-900;
+  }
+  .post-content blockquote {
+    @apply mt-6 border-l-4 border-atlantico-600 bg-cream-50 py-4 pl-6 pr-4 font-serif text-xl italic text-ink-900 shadow-sm;
+  }
+}

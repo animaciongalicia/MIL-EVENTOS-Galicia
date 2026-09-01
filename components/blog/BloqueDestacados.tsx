@@ -16,7 +16,7 @@ export default function BloqueDestacados({ posts }: BloqueDestacadosProps) {
 
   return (
     <section>
-      <h2 className="text-xl font-bold">Destacados</h2>
+      <h2 className="text-xl font-bold text-atlantico-700">Destacados</h2>
       <div className={`mt-4 grid gap-6 ${gridColsClass(destacados.length)}`}>
         {destacados.map((post) => (
           <TarjetaPost key={post.slug} post={post} />

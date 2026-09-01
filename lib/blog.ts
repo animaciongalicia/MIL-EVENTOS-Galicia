@@ -19,6 +19,46 @@ export const CATEGORIAS_BLOG = [
 
 export type CategoriaBlog = (typeof CATEGORIAS_BLOG)[number];
 
+// Nombre legible de cada categoría, para mostrar en badges, sidebar y <h1>
+// en vez del slug en crudo ("team-building" → "Team building").
+export const CATEGORIA_LABELS: Record<CategoriaBlog, string> = {
+  "team-building": "Team building",
+  incentivos: "Incentivos",
+  "jornadas-outdoor": "Jornadas outdoor",
+  "congresos-y-convenciones": "Congresos y convenciones",
+  "gastronomia-y-vinos": "Gastronomía y vinos",
+  "espacios-y-recursos": "Espacios y recursos",
+};
+
+// Página pilar 1:1 de cada categoría (CLAUDE.md §10) — usada para el enlace
+// interno obligatorio al cierre de cada post (CLAUDE.md §9).
+export const CATEGORIA_PILAR_HREF: Record<CategoriaBlog, string> = {
+  "team-building": "/eventos-empresa/team-building",
+  incentivos: "/eventos-empresa/incentivos",
+  "jornadas-outdoor": "/eventos-empresa/jornadas-outdoor",
+  "congresos-y-convenciones": "/eventos-empresa/congresos-y-convenciones",
+  "gastronomia-y-vinos": "/actividades/gastronomia-y-vinos",
+  "espacios-y-recursos": "/espacios-y-recursos",
+};
+
+export function esCategoriaValida(valor: string): valor is CategoriaBlog {
+  return (CATEGORIAS_BLOG as readonly string[]).includes(valor);
+}
+
+export function formatFecha(fecha: string): string {
+  return new Intl.DateTimeFormat("es-ES", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "UTC",
+  }).format(new Date(fecha));
+}
+
+export function tiempoLectura(content: string): number {
+  const palabras = content.trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(1, Math.round(palabras / 200));
+}
+
 export type PostFrontmatter = {
   title: string;
   description: string;
