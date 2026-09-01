@@ -21,4 +21,8 @@ export const alojamientoEjemplos: Ejemplo[] = [
     nombre: "Seguimiento y check-in coordinado",
     descripcion: "Para que la llegada del grupo no sea un caos en recepción.",
   },
+  {
+    nombre: "Alojamiento para delegados internacionales",
+    descripcion: "Coordinado con llegadas escalonadas y necesidades distintas por país.",
+  },
 ];
