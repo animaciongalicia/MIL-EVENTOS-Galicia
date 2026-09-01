@@ -55,9 +55,9 @@ export default function FooterGlobal() {
             </p>
             <div className="mt-3 flex flex-col gap-2">
               {ecosistemaMarcas.map((marca) => (
-                <a key={marca.nombre} href={marca.url} className="transition hover:text-white">
+                <Link key={marca.nombre} href={marca.href} className="transition hover:text-white">
                   {marca.nombre}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

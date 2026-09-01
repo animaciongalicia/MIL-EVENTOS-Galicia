@@ -53,6 +53,11 @@ Sitemap de referencia: `sitemap-definitivo.md` (debe mantenerse sincronizado con
   /espacios-y-recursos/traslados
   /espacios-y-recursos/alojamiento
 
+/ecosistema                               Sin landing propia, FUERA del menú principal
+  /ecosistema/suunia                      Solo enlazada desde BannerEcosistema y FooterGlobal
+  /ecosistema/sea-galicia                 Solo enlazada desde BannerEcosistema y FooterGlobal
+  /ecosistema/luxe-galicia                Solo enlazada desde BannerEcosistema y FooterGlobal
+
 /blog                                     Índice con sidebar de categorías
   /blog/categoria/[categoria]
   /blog/[slug]
@@ -170,12 +175,14 @@ Si Claude Code necesita generar un texto nuevo (nueva página, nuevo post, nuevo
 
 Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), **Sea Galicia** (actividades náuticas), **Luxe Galicia** (transporte y desplazamientos).
 
-- Aparecen en el `BannerEcosistema` (contextual, dentro de página) y en el `FooterGlobal` — **nunca como sección propia del menú principal**.
+- **Ninguna tiene web propia todavía. Prohibido enlazar a un dominio externo para estas tres marcas.** Cada una tiene su propia página interna en `/ecosistema/[marca]` (`/ecosistema/suunia`, `/ecosistema/sea-galicia`, `/ecosistema/luxe-galicia`), con contenido propio de al menos 1000 palabras que explica qué hace la marca, cuándo entra en juego y cómo se coordina con Mil Eventos Galicia — son la presencia informativa completa de cada marca mientras no tengan sitio propio. `data/ecosistema-marcas.ts` guarda esta ruta interna en el campo `href` de cada `MarcaEcosistema`; `BannerEcosistema` y `FooterGlobal` enlazan siempre con `next/link` a ese `href`, nunca con `<a>` a una URL externa.
+- Aparecen en el `BannerEcosistema` (contextual, dentro de página), en el `FooterGlobal` y en sus propias páginas de `/ecosistema` — **nunca como sección propia del menú principal**.
 - Enlaces cruzados contextuales, no genéricos:
   - Contenido con componente náutico (regatas, kayak, catamarán) → enlazar a Sea Galicia.
   - Contenido con logística, traslados, programas multi-día → enlazar a Luxe Galicia.
   - Contenido con alojamiento, comidas o programas de incentivo de varios días → enlazar a SUUNIA.
 - El banner debe quedar visualmente subordinado al CTA principal de la página (presupuesto/contacto), nunca compitiendo con él.
+- Las páginas de `/ecosistema` usan la paleta `atlantico` (parte del sitio corporativo, no una marca visual propia) y siguen la regla de alternar formato (sección 12): `TarjetasTexto`, `CitaDestacada`, `GridEjemplos` con datos propios (`data/ecosistema-*-ejemplos.ts`) en vez de párrafos largos seguidos. No usan `CifrasDestacadas` ni `PasosTrabajo` — no hay cifras propias verificadas de cada marca hermana, y `PasosTrabajo` sigue reservado a Home y a los 4 pilares de `/eventos-empresa` (prioridad de negocio, sección 11). Cada página cierra remitiendo el contacto a Mil Eventos Galicia (`/contacto` vía `CTAFinal`), nunca con un formulario o contacto propio de la marca.
 
 ---
 
@@ -223,7 +230,7 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 - ~~Redirecciones desde la web anterior~~ — mapeadas en `next.config.js` → `redirects()` a partir del export de Search Console (Coverage + Performance) y GA4 aportado por el cliente. Cubre las URLs con tráfico/impresiones reales, no el sitemap completo (que incluye ~400 páginas de adjuntos de imagen de WordPress sin valor). **Revisar contra el `sitemap.xml` real antes de lanzar**, por si queda alguna URL indexada sin cubrir.
 - **Aviso legal / Política de privacidad:** las páginas existen (`/aviso-legal`, `/politica-de-privacidad`) pero con datos de la empresa (razón social, NIF/CIF, domicilio social, registro) como placeholder — no se han inventado. Pendiente de que el cliente los aporte antes de lanzar.
 - **Quiénes somos:** página mínima con los únicos hechos verificados (CLAUDE.md §1 y §6). Pendiente de que el cliente aporte la historia real de la agencia y el equipo para ampliarla.
-- **SUUNIA / Sea Galicia / Luxe Galicia:** de momento no existen como webs propias — solo se enlazan como marcas hermanas (`data/ecosistema-marcas.ts`, `BannerEcosistema`, footer). Cuando se construyan, deberían heredar el sistema de diseño de la sección 12 (misma tipografía y escala, cada una con su propio color de acento) en vez de partir de cero.
+- **SUUNIA / Sea Galicia / Luxe Galicia:** de momento no existen como webs propias. Mientras tanto tienen página interna completa en `/ecosistema/[marca]` (ver sección 7) en vez de enlace externo — resuelto. Cuando cada una tenga su propio dominio, esas páginas de `/ecosistema` deberían heredar el sistema de diseño de la sección 12 (misma tipografía y escala, cada una con su propio color de acento) en vez de partir de cero, y `data/ecosistema-marcas.ts` pasaría a apuntar de nuevo a la URL externa.
 - **Alquiler de locales en Vigo:** servicio descontinuado (ya no se ofrece y no es escalable), pese a ser uno de los mayores generadores de tráfico de la web anterior. No se menciona "Vigo" en ningún texto del sitio nuevo; la redirección de esa URL antigua apunta a la página genérica de localización de espacios, sin reconstruir esa oferta específica.
 - **Prioridad de negocio confirmada:** el foco comercial es el B2B (`/eventos-empresa`) por ser mucho más rentable que celebraciones/particulares, aunque hoy tenga menos tráfico orgánico real que el clúster de cumpleaños de adultos. El contenido de las 4 páginas pilar de `/eventos-empresa` debe tener prioridad de profundidad y mantenimiento sobre el resto.
 - **Fotografía real pendiente:** el sitio usaba solo texto y bloques de color, sin ninguna imagen — para una agencia de eventos es un déficit serio de prueba visual. Mientras no hay fotos reales de eventos, espacios y equipo, las tarjetas (`GridEjemplos`, `LandingCategoria`, `TarjetaPost`) y algunos `Hero` (`imagenSeed`) usan fotografía de stock de picsum.photos vía `lib/placeholder-image.ts` — genérica, estable por seed, marcada en el código como placeholder. **Sustituir por fotos reales antes de lanzar**, y entonces desmontar `images.remotePatterns` de picsum en `next.config.js`.

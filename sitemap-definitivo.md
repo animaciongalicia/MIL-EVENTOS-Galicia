@@ -22,6 +22,11 @@ Mapa de rutas de referencia. Debe mantenerse sincronizado con la sección 3 de `
   /espacios-y-recursos/traslados
   /espacios-y-recursos/alojamiento
 
+/ecosistema                               Sin landing propia, FUERA del menú principal
+  /ecosistema/suunia                      Solo enlazada desde BannerEcosistema y FooterGlobal
+  /ecosistema/sea-galicia                 Solo enlazada desde BannerEcosistema y FooterGlobal
+  /ecosistema/luxe-galicia                Solo enlazada desde BannerEcosistema y FooterGlobal
+
 /blog                                     Índice con sidebar de categorías
   /blog/categoria/[categoria]
   /blog/[slug]
@@ -42,7 +47,7 @@ Mapa de rutas de referencia. Debe mantenerse sincronizado con la sección 3 de `
 
 Los nombres de menú van acortados; las rutas y los `<title>` mantienen el nombre completo para SEO (ver tabla de equivalencias en la sección 9 de `CLAUDE.md`).
 
-**Celebraciones, Nosotros y las páginas legales nunca aparecen en el menú principal.** Solo se enlazan desde el `FooterGlobal`.
+**Celebraciones, Nosotros, las páginas legales y las de `/ecosistema` nunca aparecen en el menú principal.** Solo se enlazan desde el `FooterGlobal` (y, en el caso de `/ecosistema`, también desde `BannerEcosistema`). Las de `/ecosistema` no tienen web externa propia — no se enlaza a ningún dominio externo para SUUNIA, Sea Galicia o Luxe Galicia (ver CLAUDE.md §7).
 
 ## Reglas de mantenimiento
 
