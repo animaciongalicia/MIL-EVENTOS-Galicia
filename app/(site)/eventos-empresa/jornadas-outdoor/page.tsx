@@ -4,6 +4,7 @@ import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
 import PasosTrabajo from "@/components/shared/PasosTrabajo";
+import CitaDestacada from "@/components/shared/CitaDestacada";
 import { jornadasOutdoorEjemplos } from "@/data/eventos-empresa-jornadas-outdoor";
 import { SEA_GALICIA } from "@/data/ecosistema-marcas";
 
@@ -24,19 +25,15 @@ export default function JornadasOutdoorPage() {
           motivacional.
         </p>
         <p className="mt-4">
-          Una jornada outdoor bien planteada tiene un objetivo claro — desconectar de verdad,
-          integrar a un equipo nuevo, cerrar un proyecto largo, o simplemente dar un respiro antes
-          de una temporada dura — y una estructura pensada para conseguirlo. No es solo
-          &ldquo;vamos a hacer algo fuera&rdquo;: es decidir qué ritmo necesita el grupo, cuánto
-          esfuerzo físico tiene sentido pedir, y cómo se cierra el día para que no se quede en una
-          anécdota.
-        </p>
-        <p className="mt-4">
           Galicia ayuda: playas, ríos, montaña y bosque a menos de una hora de las principales
           ciudades. La diferencia entre &ldquo;salir al campo&rdquo; y una jornada outdoor de
           verdad está en aprovechar ese entorno con intención, no en encontrar un sitio bonito
           para la foto de grupo.
         </p>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-6 pb-12">
+        <CitaDestacada texto="No es solo salir al campo: es decidir qué ritmo necesita el grupo, cuánto esfuerzo físico tiene sentido pedir, y cómo se cierra el día para que no se quede en una anécdota." />
       </section>
 
       <section className="bg-cream-200 py-12">

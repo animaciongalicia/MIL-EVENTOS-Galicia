@@ -4,6 +4,8 @@ import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
 import PasosTrabajo from "@/components/shared/PasosTrabajo";
+import TarjetasTexto from "@/components/shared/TarjetasTexto";
+import CitaDestacada from "@/components/shared/CitaDestacada";
 import { incentivosEjemplos } from "@/data/eventos-empresa-incentivos";
 import { SUUNIA } from "@/data/ecosistema-marcas";
 
@@ -20,18 +22,34 @@ export default function IncentivosPage() {
       <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>Dar las gracias con un email no motiva a nadie. Y un cheque regalo genérico tampoco.</p>
         <p className="mt-4">
-          Lo que funciona es un reconocimiento que se recuerda: un viaje, una experiencia, un
-          momento que la persona no se habría dado a sí misma. Y que se entrega bien — no un vale
-          que llega por correo interno sin más explicación, sino algo con producción, con
-          historia que contar el lunes en la oficina.
-        </p>
-        <p className="mt-4">
           El error más habitual no es el presupuesto, es la genericidad: el mismo premio para
-          todo el equipo comercial, sin distinguir a quien de verdad ha destacado. Un buen
-          programa de incentivos escala — desde un reconocimiento puntual para quien ha cerrado
-          el trimestre, hasta un viaje de varios días para todo el equipo que ha cumplido
-          objetivo anual.
+          todo el equipo comercial, sin distinguir a quien de verdad ha destacado.
         </p>
+      </section>
+
+      <section className="mx-auto max-w-3xl px-6 pb-12">
+        <CitaDestacada texto="Lo que funciona es un reconocimiento que se recuerda: un viaje, una experiencia, un momento que la persona no se habría dado a sí misma." />
+      </section>
+
+      <section className="mx-auto max-w-3xl px-6 pb-12">
+        <p className="text-lg leading-relaxed text-ink-700">
+          Un buen programa de incentivos escala con el logro que premia.
+        </p>
+        <div className="mt-6">
+          <TarjetasTexto
+            icono={false}
+            items={[
+              {
+                titulo: "Reconocimiento puntual",
+                texto: "Para quien ha cerrado el trimestre — un gesto concreto, no un vale genérico.",
+              },
+              {
+                titulo: "Viaje de varios días",
+                texto: "Para todo el equipo que ha cumplido el objetivo anual, con la producción incluida.",
+              },
+            ]}
+          />
+        </div>
       </section>
 
       <section className="bg-cream-200 py-12">

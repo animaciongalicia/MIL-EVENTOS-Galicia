@@ -4,6 +4,8 @@ import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
 import PasosTrabajo from "@/components/shared/PasosTrabajo";
+import TarjetasTexto from "@/components/shared/TarjetasTexto";
+import CitaDestacada from "@/components/shared/CitaDestacada";
 import { teamBuildingEjemplos } from "@/data/eventos-empresa-team-building";
 import { SEA_GALICIA } from "@/data/ecosistema-marcas";
 
@@ -26,12 +28,26 @@ export default function TeamBuildingPage() {
         <p className="mt-4">
           El problema casi nunca es la actividad en sí. Es que la eligió alguien que no conoce a
           tu equipo — un catálogo genérico, pensado para cualquiera, aplicado al tuyo sin
-          preguntar. Y así es imposible que funcione: no es lo mismo un equipo de 12 personas que
-          lleva años trabajando junto que uno de 80 recién fusionado tras una integración, o un
-          departamento comercial que necesita competir entre sí para un equipo técnico que
-          necesita justo lo contrario.
+          preguntar.
         </p>
-        <p className="mt-4">
+      </section>
+
+      <section className="mx-auto max-w-3xl px-6 pb-12">
+        <TarjetasTexto
+          icono={false}
+          items={[
+            {
+              titulo: "Un equipo que lleva años trabajando junto",
+              texto: "No necesita romper el hielo — necesita una excusa distinta para desconectar.",
+            },
+            {
+              titulo: "Un equipo recién fusionado",
+              texto:
+                "El reto es que se conozcan de verdad, no que compitan en una gymkhana genérica.",
+            },
+          ]}
+        />
+        <p className="mt-6 text-lg leading-relaxed text-ink-700">
           Nosotros preguntamos primero: cuántos sois, qué tensiones hay realmente (no las que se
           dicen en la encuesta de clima), qué queréis conseguir y cuánto tiempo tenéis. Después
           diseñamos la actividad — no al revés. Si lo que necesitáis no encaja con nada de lo de
@@ -63,13 +79,9 @@ export default function TeamBuildingPage() {
               },
             ]}
           />
-          <p className="mt-6 leading-relaxed">
-            Y una cosa que preferimos decir antes de que la descubras después: el team building no
-            arregla un equipo roto en una tarde, y cualquiera que te prometa eso te está vendiendo
-            humo. Lo que sí hace, bien planteado, es dar el primer empujón — romper el hielo entre
-            departamentos, integrar a la gente nueva, o simplemente recordarle a todos que trabajan
-            con personas, no con un nombre en un chat de Slack.
-          </p>
+          <div className="mt-8">
+            <CitaDestacada texto="El team building no arregla un equipo roto en una tarde, y cualquiera que te prometa eso te está vendiendo humo. Lo que sí hace, bien planteado, es dar el primer empujón." />
+          </div>
         </div>
       </section>
 
