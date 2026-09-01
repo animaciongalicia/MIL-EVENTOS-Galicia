@@ -83,7 +83,7 @@ export default function LuxeGaliciaPage() {
         subtitulo="Transporte y desplazamientos para eventos de empresa en toda la comunidad."
       />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Luxe Galicia es la marca hermana de Mil Eventos Galicia especializada en transporte y
           desplazamientos — desde el aeropuerto, entre sedes, o de vuelta al hotel — para eventos
@@ -104,7 +104,7 @@ export default function LuxeGaliciaPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12">
+      <section className="mx-auto max-w-5xl px-6 pb-12">
         <CitaDestacada texto="Nada rompe un evento como cincuenta personas esperando un autobús que no llega, o intentando aparcar en un sitio sin plazas." />
       </section>
 
@@ -141,7 +141,7 @@ export default function LuxeGaliciaPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pt-6 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 pt-6 text-lg leading-relaxed text-ink-700">
         <p>
           Algunos ejemplos representativos del tipo de traslado que gestiona Luxe Galicia — no un
           catálogo cerrado, sino una muestra de lo que suele incluir la logística de movimiento de
@@ -165,7 +165,7 @@ export default function LuxeGaliciaPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <h2 className="text-xl font-bold text-atlantico-700">Para qué eventos tiene sentido</h2>
         <p className="mt-3">
           Tiene sentido, sobre todo, para cualquier{" "}

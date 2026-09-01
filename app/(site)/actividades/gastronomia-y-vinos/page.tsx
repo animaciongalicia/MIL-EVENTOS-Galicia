@@ -64,7 +64,7 @@ export default function ActividadesGastronomiaYVinosPage() {
         subtitulo="Galicia se explica mejor con un tenedor en la mano que con una diapositiva más."
       />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           El producto local como excusa para reunir a la gente — y para que el evento se recuerde
           por el sabor, no solo por la agenda del día.
@@ -95,7 +95,7 @@ export default function ActividadesGastronomiaYVinosPage() {
       </section>
 
       <section className="bg-cream-200 py-12">
-        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+        <div className="mx-auto max-w-5xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo lo planteamos siempre</h2>
           <p className="mt-3 leading-relaxed">
             Y si el evento dura más de un día, coordinamos comidas con SUUNIA para que no tengas
@@ -120,7 +120,7 @@ export default function ActividadesGastronomiaYVinosPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 pb-12 text-lg leading-relaxed text-ink-700">
         <p>
           Algunos ejemplos representativos — no un menú cerrado, sino una muestra de lo que
           suele funcionar según el tipo de evento y el grupo que lo protagoniza.
@@ -177,11 +177,11 @@ export default function ActividadesGastronomiaYVinosPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-12">
+      <section className="mx-auto max-w-5xl px-6 py-12">
         <CitaDestacada texto="Trabajamos siempre con productores y bodegas de la zona, no con catering genérico de macroevento que podría servir cualquiera." />
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 pb-12 text-lg leading-relaxed text-ink-700">
         <h2 className="text-xl font-bold text-atlantico-700">Para qué eventos funciona</h2>
         <p className="mt-3">
           Funciona como actividad independiente, como cierre de una convención, o como parte de un

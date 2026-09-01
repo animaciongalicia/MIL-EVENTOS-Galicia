@@ -18,7 +18,7 @@ export default function NosotrosPage() {
         titulo="Quiénes somos"
         subtitulo="Más de 15 años haciendo que las cosas sucedan en Galicia."
       />
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Mil Eventos Galicia lleva más de 15 años organizando eventos de empresa en Galicia:
           team building, incentivos, jornadas outdoor, congresos y convenciones. También

@@ -15,7 +15,7 @@ export default function CelebracionesPage() {
         imagenSeed="celebraciones-galicia"
       />
 
-      <section className="mx-auto max-w-3xl px-6 py-12">
+      <section className="mx-auto max-w-5xl px-6 py-12">
         <h2 className="text-2xl font-bold text-terracota-900">Cumpleaños de adultos</h2>
         <p className="mt-3 text-lg leading-relaxed text-ink-700">
           Cumplir 40, 50 o 60 no es motivo para conformarse con una cena de siempre. Es la excusa
@@ -27,7 +27,7 @@ export default function CelebracionesPage() {
       <GridEjemplos ejemplos={cumpleanosEjemplos} />
 
       <div className="bg-terracota-100">
-        <section className="mx-auto max-w-3xl px-6 py-12">
+        <section className="mx-auto max-w-5xl px-6 py-12">
           <h2 className="text-2xl font-bold text-terracota-900">Fincas y espacios especiales</h2>
           <p className="mt-3 text-lg leading-relaxed text-ink-700">
             Hay sitios que ya ponen el ambiente antes de que llegue el primer invitado. Buscamos
@@ -38,7 +38,7 @@ export default function CelebracionesPage() {
         <GridEjemplos ejemplos={fincasEjemplos} />
       </div>
 
-      <section className="mx-auto max-w-3xl px-6 py-12">
+      <section className="mx-auto max-w-5xl px-6 py-12">
         <h2 className="text-2xl font-bold text-terracota-900">Otros eventos especiales</h2>
         <p className="mt-3 text-lg leading-relaxed text-ink-700">
           Bodas de plata, jubilaciones, despedidas — momentos que no se repiten, y que merecen

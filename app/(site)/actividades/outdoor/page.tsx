@@ -64,7 +64,7 @@ export default function ActividadesOutdoorPage() {
     <>
       <Hero titulo="Outdoor" subtitulo="Naturaleza gallega como escenario, no como decorado." />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Actividades para sacar al equipo del asfalto y ponerlo a decidir, coordinarse y — a
           veces — mojarse, sin que nadie tenga la opción de quedarse mirando desde el margen.
@@ -106,7 +106,7 @@ export default function ActividadesOutdoorPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12">
+      <section className="mx-auto max-w-5xl px-6 pb-12">
         <CitaDestacada texto="No todo el mundo quiere, ni puede, hacer rápel. Ajustamos el reto antes de proponer nada, no después de que alguien se eche atrás." />
         <p className="mt-6 text-lg leading-relaxed text-ink-700">
           Combinar tipos de reto dentro de un mismo día también es habitual: una ruta suave por la
@@ -146,7 +146,7 @@ export default function ActividadesOutdoorPage() {
       </section>
 
       <section className="bg-cream-200 py-12">
-        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+        <div className="mx-auto max-w-5xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo lo planteamos</h2>
           <p className="mt-3 leading-relaxed">
             Tres variables que ajustamos antes de proponerte nada — en este orden, no al azar ni
@@ -183,7 +183,7 @@ export default function ActividadesOutdoorPage() {
       <GridEjemplos ejemplos={actividadesOutdoor} />
       <BannerEcosistema marca={SEA_GALICIA} />
 
-      <section className="mx-auto max-w-3xl px-6 pt-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 pt-12 text-lg leading-relaxed text-ink-700">
         <p>
           Las actividades de agua las coordinamos directamente con Sea Galicia, que aporta el
           material, el patrón y la experiencia náutica que una agencia de eventos generalista no
@@ -192,7 +192,7 @@ export default function ActividadesOutdoorPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <h2 className="text-xl font-bold text-atlantico-700">Para qué eventos funciona</h2>
         <p className="mt-3">
           Funciona como actividad central de una jornada outdoor, como cierre de un team building,

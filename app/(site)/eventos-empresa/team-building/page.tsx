@@ -19,7 +19,7 @@ export default function TeamBuildingPage() {
     <>
       <Hero titulo="Team building" subtitulo="Actividades que unen equipos de verdad." />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           El team building de manual ya no engaña a nadie. Tu equipo ha hecho el escape room, la
           gymkhana de preguntas y el taller de cócteles genérico. Y sigue sin hablarse bien entre
@@ -40,7 +40,7 @@ export default function TeamBuildingPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12">
+      <section className="mx-auto max-w-5xl px-6 pb-12">
         <TarjetasTexto
           icono={false}
           items={[
@@ -135,7 +135,7 @@ export default function TeamBuildingPage() {
       </section>
 
       <section className="bg-cream-200 py-12">
-        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+        <div className="mx-auto max-w-5xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
           <PasosTrabajo
             pasos={[
@@ -169,7 +169,7 @@ export default function TeamBuildingPage() {
 
       <BannerEcosistema marca={SEA_GALICIA} />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <h2 className="text-xl font-bold text-atlantico-700">Para qué tipo de equipo funciona</h2>
         <p className="mt-3">
           Funciona con equipos de cualquier tamaño — de diez personas a varios cientos — y con

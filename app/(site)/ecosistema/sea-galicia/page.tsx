@@ -83,7 +83,7 @@ export default function SeaGaliciaPage() {
         subtitulo="Actividades náuticas para eventos de empresa en toda la costa de Galicia."
       />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Sea Galicia es la marca hermana de Mil Eventos Galicia especializada en actividades
           náuticas — regatas, kayak, vela, surf — para eventos de empresa que quieren aprovechar
@@ -106,7 +106,7 @@ export default function SeaGaliciaPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12">
+      <section className="mx-auto max-w-5xl px-6 pb-12">
         <CitaDestacada texto="Cuando la coordinación física sustituye a la palabra, algo se desbloquea que en una sala de reuniones no pasa nunca." />
       </section>
 
@@ -142,7 +142,7 @@ export default function SeaGaliciaPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pt-6 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 pt-6 text-lg leading-relaxed text-ink-700">
         <p>
           Algunos ejemplos representativos del tipo de actividad que gestiona Sea Galicia — no un
           catálogo cerrado, sino una muestra de lo que suele encajar en un evento de empresa con
@@ -166,7 +166,7 @@ export default function SeaGaliciaPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <h2 className="text-xl font-bold text-atlantico-700">Para qué eventos tiene sentido</h2>
         <p className="mt-3">
           Tiene sentido, sobre todo, en eventos con un perfil activo: para{" "}

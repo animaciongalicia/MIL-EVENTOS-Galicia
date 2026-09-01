@@ -130,7 +130,7 @@ export default function EspaciosYRecursosPage() {
         subtitulo="Todo lo que rodea al evento, resuelto."
       />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           El sitio, cómo llega la gente y dónde duerme si el evento dura más de un día — tres
           decisiones que no tienen nada que ver con la actividad en sí, y que aun así deciden si
@@ -180,7 +180,7 @@ export default function EspaciosYRecursosPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-16">
+      <section className="mx-auto max-w-5xl px-6 py-16">
         <CitaDestacada texto="Tú decides qué pieza necesitas resolver. Nosotros nos ocupamos de que encaje con todo lo demás." />
       </section>
 
@@ -217,7 +217,7 @@ export default function EspaciosYRecursosPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-16 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-16 text-lg leading-relaxed text-ink-700">
         <h2 className="text-2xl font-bold text-atlantico-700">Cuándo entra en juego cada pieza</h2>
         <p className="mt-3">
           No todas las piezas se deciden en el mismo momento del proceso de organización, y eso

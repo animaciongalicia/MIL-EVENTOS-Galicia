@@ -19,7 +19,7 @@ export default function IncentivosPage() {
     <>
       <Hero titulo="Incentivos" subtitulo="Programas que premian y motivan." />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Dar las gracias con un email no motiva a nadie. Y un cheque regalo genérico tampoco,
           por mucho que cueste.
@@ -40,7 +40,7 @@ export default function IncentivosPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12">
+      <section className="mx-auto max-w-5xl px-6 pb-12">
         <CitaDestacada texto="Lo que funciona es un reconocimiento que se recuerda: un viaje, una experiencia, un momento que la persona no se habría dado a sí misma." />
         <p className="mt-6 text-lg leading-relaxed text-ink-700">
           Y que se entrega bien — no un vale que llega por correo interno sin más explicación,
@@ -144,7 +144,7 @@ export default function IncentivosPage() {
       </section>
 
       <section className="bg-cream-200 py-12">
-        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+        <div className="mx-auto max-w-5xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
           <PasosTrabajo
             pasos={[
@@ -183,14 +183,14 @@ export default function IncentivosPage() {
 
       <BannerEcosistema marca={SUUNIA} />
 
-      <section className="mx-auto max-w-3xl px-6 pt-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 pt-12 text-lg leading-relaxed text-ink-700">
         <p>
           Coordinamos alojamiento, comidas y experiencias de varios días con SUUNIA cuando el
           incentivo lo requiere, para que sigas teniendo un único interlocutor de principio a fin.
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <h2 className="text-xl font-bold text-atlantico-700">Para quién diseñamos estos programas</h2>
         <p className="mt-3">
           Trabajamos con equipos comerciales que necesitan reconocer resultados individuales, con

@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 // /politica-de-cookies/ — mapeada en next.config.js.
 export default function PoliticaDeCookiesPage() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-16 text-ink-700">
+    <section className="mx-auto max-w-5xl px-6 py-16 text-ink-700">
       <h1 className="text-2xl font-bold">Política de cookies</h1>
       <div className="mt-8 space-y-4 text-sm leading-relaxed">
         <p>

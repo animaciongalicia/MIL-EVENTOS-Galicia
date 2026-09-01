@@ -62,7 +62,7 @@ export default function ActividadesIndoorPage() {
     <>
       <Hero titulo="Indoor" subtitulo="Cuando el tiempo no acompaña, otro tipo de experiencia bajo techo." />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           O simplemente prefieres tener el evento bajo control — el indoor no es el plan B. Tiene
           su propio ritmo, y no lo elegimos solo cuando llueve.
@@ -87,7 +87,7 @@ export default function ActividadesIndoorPage() {
       </section>
 
       <section className="bg-cream-200 py-12">
-        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+        <div className="mx-auto max-w-5xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo lo planteamos</h2>
           <p className="mt-3 leading-relaxed">
             Vemos el espacio antes (o sus planos, si no puedes enseñárnoslo) para que la actividad
@@ -114,7 +114,7 @@ export default function ActividadesIndoorPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 pb-12 text-lg leading-relaxed text-ink-700">
         <p>
           Algunos ejemplos representativos del catálogo — no un listado cerrado, sino una muestra
           de lo que suele funcionar bien bajo techo, con distintos niveles de energía y de
@@ -191,7 +191,7 @@ export default function ActividadesIndoorPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <h2 className="text-xl font-bold text-atlantico-700">Para qué eventos funciona</h2>
         <p className="mt-3">
           Funciona como cierre de una convención cuando ya no hay tiempo ni ganas de salir del

@@ -143,7 +143,7 @@ export default function EventosEmpresaPage() {
         subtitulo="Más de 15 años haciendo que las cosas sucedan."
       />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Cada evento de empresa tiene un objetivo distinto, aunque a veces se organicen todos
           igual: unir un equipo no es lo mismo que premiar a un comercial, y desconectar un día no
@@ -164,7 +164,7 @@ export default function EventosEmpresaPage() {
         <CifrasDestacadas cifras={cifrasEventosEmpresa} />
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12">
+      <section className="mx-auto max-w-5xl px-6 pb-12">
         <CitaDestacada texto="Tú decides el objetivo y el presupuesto. Nosotros nos ocupamos de que salga bien." />
       </section>
 
@@ -212,7 +212,7 @@ export default function EventosEmpresaPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-16">
+      <section className="mx-auto max-w-5xl px-6 py-16">
         <h2 className="text-2xl font-bold text-atlantico-700">Cómo trabajamos</h2>
         <p className="mt-3 leading-relaxed text-ink-700">
           El proceso es el mismo tengas el evento que tengas — cambia el contenido, no la manera
@@ -236,7 +236,7 @@ export default function EventosEmpresaPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-16 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-16 text-lg leading-relaxed text-ink-700">
         <h2 className="text-2xl font-bold text-atlantico-700">Para quién organizamos eventos de empresa</h2>
         <p className="mt-3">
           Trabajamos con responsables de RRHH, dirección y organización de eventos de empresas de

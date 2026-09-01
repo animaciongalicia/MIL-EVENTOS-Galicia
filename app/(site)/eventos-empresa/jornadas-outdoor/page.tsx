@@ -84,7 +84,7 @@ export default function JornadasOutdoorPage() {
     <>
       <Hero titulo="Jornadas outdoor" subtitulo="Salir de la oficina, con propósito." />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Salir de la oficina un día no arregla nada si el día se parece a estar en la oficina,
           solo que con mosquitos. Una charla motivacional al aire libre sigue siendo una charla
@@ -102,7 +102,7 @@ export default function JornadasOutdoorPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12">
+      <section className="mx-auto max-w-5xl px-6 pb-12">
         <CitaDestacada texto="No es solo salir al campo: es decidir qué ritmo necesita el grupo, cuánto esfuerzo físico tiene sentido pedir, y cómo se cierra el día para que no se quede en una anécdota." />
         <p className="mt-6 text-lg leading-relaxed text-ink-700">
           Esa decisión se toma antes de reservar nada, no sobre la marcha el mismo día de la
@@ -134,7 +134,7 @@ export default function JornadasOutdoorPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
         <p className="mt-3">
           El mismo proceso siempre, cambie el entorno o el objetivo del día — sin pasos de más ni
@@ -179,7 +179,7 @@ export default function JornadasOutdoorPage() {
 
       <BannerEcosistema marca={SEA_GALICIA} />
 
-      <section className="mx-auto max-w-3xl px-6 pt-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 pt-12 text-lg leading-relaxed text-ink-700">
         <p>
           Si la jornada incluye una actividad náutica, coordinamos directamente con Sea Galicia
           para que el material, el guía y el seguro estén resueltos sin que tengas que buscar un
@@ -187,7 +187,7 @@ export default function JornadasOutdoorPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <h2 className="text-xl font-bold text-atlantico-700">Para qué equipos funciona</h2>
         <p className="mt-3">
           Funciona con equipos que necesitan un respiro real, no una obligación más en el

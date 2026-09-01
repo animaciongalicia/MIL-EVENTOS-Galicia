@@ -85,7 +85,7 @@ export default function SuuniaPage() {
         subtitulo="Alojamiento, comidas y experiencias para programas de varios días en toda Galicia."
       />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           SUUNIA es la marca hermana de Mil Eventos Galicia especializada en alojamiento, comidas
           y experiencias — lo que en el sector se conoce como DMC (Destination Management
@@ -106,7 +106,7 @@ export default function SuuniaPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12">
+      <section className="mx-auto max-w-5xl px-6 pb-12">
         <CitaDestacada texto="El alojamiento y la comida no son un trámite del evento — son parte de la experiencia, para bien o para mal." />
       </section>
 
@@ -138,7 +138,7 @@ export default function SuuniaPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pt-6 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 pt-6 text-lg leading-relaxed text-ink-700">
         <p>
           Algunos ejemplos representativos del tipo de programa que gestiona SUUNIA — no un
           catálogo cerrado, sino una muestra de lo que suele incluir un programa de varios días
@@ -161,7 +161,7 @@ export default function SuuniaPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <h2 className="text-xl font-bold text-atlantico-700">Para qué eventos tiene sentido</h2>
         <p className="mt-3">
           Tiene sentido, sobre todo, para cualquier evento de empresa que se extienda más de un

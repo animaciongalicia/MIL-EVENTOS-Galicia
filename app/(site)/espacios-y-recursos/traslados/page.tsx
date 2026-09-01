@@ -17,7 +17,7 @@ export default function TrasladosPage() {
     <>
       <Hero titulo="Traslados" subtitulo="Logística sin fricciones." />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Nada rompe un evento como cincuenta personas esperando un autobús que no llega, o
           intentando aparcar en un sitio sin plazas.
@@ -29,7 +29,7 @@ export default function TrasladosPage() {
       </section>
 
       <section className="bg-cream-200 py-12">
-        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+        <div className="mx-auto max-w-5xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
           <p className="mt-3 leading-relaxed">
             Un único punto de contacto para toda la logística de movimiento, desde el primer vuelo

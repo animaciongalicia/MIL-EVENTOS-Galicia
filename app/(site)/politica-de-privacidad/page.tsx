@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 // esta página en /politica-de-privacidad/ — mapeada en next.config.js.
 export default function PoliticaDePrivacidadPage() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-16 text-ink-700">
+    <section className="mx-auto max-w-5xl px-6 py-16 text-ink-700">
       <h1 className="text-2xl font-bold">Política de privacidad</h1>
       <p className="mt-6 text-sm text-terracota-600">
         Página pendiente de revisión legal antes del lanzamiento.

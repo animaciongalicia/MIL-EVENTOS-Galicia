@@ -11,7 +11,7 @@ export const metadata: Metadata = {
 // /aviso-legal/ — mapeada en next.config.js → redirects().
 export default function AvisoLegalPage() {
   return (
-    <section className="mx-auto max-w-3xl px-6 py-16 text-ink-700">
+    <section className="mx-auto max-w-5xl px-6 py-16 text-ink-700">
       <h1 className="text-2xl font-bold">Aviso legal</h1>
       <p className="mt-6 text-sm text-terracota-600">
         Página pendiente de completar con los datos legales reales de la empresa (razón social,

@@ -102,7 +102,7 @@ export default function HomePage() {
         imagenSeed="mil-eventos-galicia-home"
       />
 
-      <section className="mx-auto max-w-3xl px-6 py-16 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-16 text-lg leading-relaxed text-ink-700">
         <p>
           Organizar un evento de empresa no es solo elegir una actividad y reservar un espacio. Es
           coordinar proveedores que no siempre responden a tiempo, ajustar presupuestos que
@@ -132,7 +132,7 @@ export default function HomePage() {
         />
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-16">
+      <section className="mx-auto max-w-5xl px-6 py-16">
         <CitaDestacada texto="No partimos de un catálogo cerrado de actividades para que elijas una y ya está. Partimos de tu objetivo, y construimos el evento a su alrededor." />
       </section>
 
@@ -151,7 +151,7 @@ export default function HomePage() {
       </section>
 
       <section className="bg-cream-200 py-16">
-        <div className="mx-auto max-w-3xl px-6">
+        <div className="mx-auto max-w-5xl px-6">
           <h2 className="text-2xl font-bold text-atlantico-700">Cómo trabajamos</h2>
           <PasosTrabajo pasos={pasosTrabajo} />
         </div>
@@ -164,7 +164,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-16 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 pb-16 text-lg leading-relaxed text-ink-700">
         <h2 className="text-2xl font-bold text-atlantico-700">Para quién trabajamos</h2>
         <p className="mt-3">
           Desde pequeñas compañías que organizan su primer team building hasta grandes

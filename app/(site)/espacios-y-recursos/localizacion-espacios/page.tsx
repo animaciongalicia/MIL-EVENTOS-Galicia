@@ -15,7 +15,7 @@ export default function LocalizacionEspaciosPage() {
     <>
       <Hero titulo="Localización de espacios" subtitulo="El sitio exacto para tu evento." />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Un espacio equivocado condiciona todo lo demás: el aforo, el ambiente, hasta el humor
           de la gente. Y encontrarlo bien es el trabajo que menos tiempo tienes para hacer.
@@ -28,7 +28,7 @@ export default function LocalizacionEspaciosPage() {
       </section>
 
       <section className="bg-cream-200 py-12">
-        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+        <div className="mx-auto max-w-5xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
           <p className="mt-3 leading-relaxed">
             Te enseñamos dos o tres espacios que ya hemos visitado nosotros — no una lista sacada

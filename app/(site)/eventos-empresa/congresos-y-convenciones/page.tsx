@@ -84,7 +84,7 @@ export default function CongresosYConvencionesPage() {
     <>
       <Hero titulo="Congresos y convenciones" subtitulo="Eventos corporativos a gran escala." />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Un congreso mal producido se nota en los primeros cinco minutos: el micrófono que
           falla, el ponente que no encuentra su sitio, la sala que se queda pequeña porque el
@@ -102,7 +102,7 @@ export default function CongresosYConvencionesPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12">
+      <section className="mx-auto max-w-5xl px-6 pb-12">
         <p className="text-lg leading-relaxed text-ink-700">
           Cuanta más gente convocas, menos margen tienes para improvisar.
         </p>
@@ -151,7 +151,7 @@ export default function CongresosYConvencionesPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 pb-12">
+      <section className="mx-auto max-w-5xl px-6 pb-12">
         <CitaDestacada texto="Tu convención no tiene una segunda oportunidad de salir bien. Por eso no dejamos nada a la improvisación el día del evento." />
         <p className="mt-6 text-lg leading-relaxed text-ink-700">
           Cada pieza se prueba antes del día del evento, no se confía a que salga bien a la
@@ -160,7 +160,7 @@ export default function CongresosYConvencionesPage() {
       </section>
 
       <section className="bg-cream-200 py-12">
-        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+        <div className="mx-auto max-w-5xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo trabajamos</h2>
           <PasosTrabajo
             pasos={[
@@ -199,7 +199,7 @@ export default function CongresosYConvencionesPage() {
 
       <BannerEcosistema marca={LUXE_GALICIA} />
 
-      <section className="mx-auto max-w-3xl px-6 pt-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 pt-12 text-lg leading-relaxed text-ink-700">
         <p>
           Cuando el congreso trae asistentes de fuera de Galicia, coordinamos directamente con
           Luxe Galicia los traslados desde el aeropuerto y entre sedes, sin que tengas que
@@ -207,7 +207,7 @@ export default function CongresosYConvencionesPage() {
         </p>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <h2 className="text-xl font-bold text-atlantico-700">Para quién organizamos estos eventos</h2>
         <p className="mt-3">
           Trabajamos con dirección y comunicación de empresas que necesitan producir su convención

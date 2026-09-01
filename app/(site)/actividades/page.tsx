@@ -117,7 +117,7 @@ export default function ActividadesPage() {
         subtitulo="El catálogo de experiencias que le dan forma a un team building, una jornada outdoor o un incentivo."
       />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
           Ninguna de estas actividades se vende suelta como un producto de catálogo — son las
           piezas con las que construimos tu{" "}
@@ -173,7 +173,7 @@ export default function ActividadesPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-16">
+      <section className="mx-auto max-w-5xl px-6 py-16">
         <h2 className="text-2xl font-bold text-atlantico-700">Se combinan, no se venden sueltas</h2>
         <div className="mt-6">
           <CitaDestacada texto="Una misma jornada puede combinar una actividad náutica por la mañana, una comida con producto gallego al mediodía y un taller en equipo por la tarde." />
@@ -203,7 +203,7 @@ export default function ActividadesPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-6 py-16 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-16 text-lg leading-relaxed text-ink-700">
         <h2 className="text-2xl font-bold text-atlantico-700">Cuando nada de esto encaja</h2>
         <p className="mt-3">
           Si tu evento no encaja con ninguna de las cuatro categorías — porque mezcla varias,

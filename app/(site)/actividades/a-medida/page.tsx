@@ -17,7 +17,7 @@ export default function ActividadesAMedidaPage() {
         subtitulo="Hay eventos que no encajan en ninguna categoría de esta web."
       />
 
-      <section className="mx-auto max-w-3xl px-6 py-12 text-lg leading-relaxed text-ink-700">
+      <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>Para esos, no tenemos catálogo — tenemos una conversación.</p>
         <p className="mt-4">
           Suele pasar con lanzamientos de producto, aniversarios de empresa o cualquier evento
@@ -27,7 +27,7 @@ export default function ActividadesAMedidaPage() {
       </section>
 
       <section className="bg-cream-200 py-12">
-        <div className="mx-auto max-w-3xl px-6 text-ink-700">
+        <div className="mx-auto max-w-5xl px-6 text-ink-700">
           <h2 className="text-xl font-bold text-atlantico-700">Cómo lo planteamos</h2>
           <p className="mt-3 leading-relaxed">
             No cobramos por estudiar la viabilidad. Nos cuentas la idea, te decimos en un par de
