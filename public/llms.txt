@@ -1,0 +1,44 @@
+# Mil Eventos Galicia
+
+> Agencia de eventos de empresa en Galicia con más de 15 años de trayectoria: team building, incentivos, jornadas outdoor, congresos y convenciones. También localiza espacios, gestiona traslados y alojamiento para eventos corporativos en toda Galicia. Línea secundaria: celebraciones sociales (cumpleaños de adultos, fincas).
+
+## Empresas
+
+- [Eventos para empresas](https://mileventosgalicia.com/eventos-empresa): landing con las 4 líneas de servicio para empresas.
+- [Team building](https://mileventosgalicia.com/eventos-empresa/team-building)
+- [Incentivos](https://mileventosgalicia.com/eventos-empresa/incentivos)
+- [Jornadas outdoor](https://mileventosgalicia.com/eventos-empresa/jornadas-outdoor)
+- [Congresos y convenciones](https://mileventosgalicia.com/eventos-empresa/congresos-y-convenciones)
+
+## Actividades
+
+- [Actividades para eventos de empresa](https://mileventosgalicia.com/actividades)
+- [Outdoor](https://mileventosgalicia.com/actividades/outdoor)
+- [Indoor](https://mileventosgalicia.com/actividades/indoor)
+- [Gastronomía y vinos](https://mileventosgalicia.com/actividades/gastronomia-y-vinos)
+- [A medida](https://mileventosgalicia.com/actividades/a-medida)
+
+## Espacios y recursos
+
+- [Espacios y recursos](https://mileventosgalicia.com/espacios-y-recursos)
+- [Localización de espacios](https://mileventosgalicia.com/espacios-y-recursos/localizacion-espacios)
+- [Traslados](https://mileventosgalicia.com/espacios-y-recursos/traslados)
+- [Alojamiento](https://mileventosgalicia.com/espacios-y-recursos/alojamiento)
+
+## Ecosistema de marcas
+
+Tres marcas hermanas sin web propia todavía — su presencia informativa completa vive en estas páginas internas, no en un dominio externo.
+
+- [SUUNIA](https://mileventosgalicia.com/ecosistema/suunia): alojamiento, comidas y experiencias (DMC) para programas de varios días.
+- [Sea Galicia](https://mileventosgalicia.com/ecosistema/sea-galicia): actividades náuticas (regatas, kayak, vela, surf).
+- [Luxe Galicia](https://mileventosgalicia.com/ecosistema/luxe-galicia): transporte y desplazamientos.
+
+## Blog
+
+- [Blog](https://mileventosgalicia.com/blog): ideas, guías y recursos para organizar eventos de empresa en Galicia, organizado en 6 categorías (una por cada página pilar de empresas/actividades/espacios).
+
+## Otros
+
+- [Celebraciones](https://mileventosgalicia.com/celebraciones): línea secundaria para particulares — cumpleaños de adultos, fincas y eventos especiales (no eventos de empresa).
+- [Contacto](https://mileventosgalicia.com/contacto): formulario único de contacto y presupuesto.
+- [Quiénes somos](https://mileventosgalicia.com/nosotros)

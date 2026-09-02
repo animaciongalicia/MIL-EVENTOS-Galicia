@@ -38,9 +38,9 @@ export default function FormularioContacto({
       .filter(Boolean)
       .join("\n");
 
-    const mailtoUrl = `mailto:${EMAIL_CONTACTO}?subject=${encodeURIComponent(
-      asunto
-    )}&body=${encodeURIComponent(cuerpo)}`;
+    const mailtoUrl = `mailto:${EMAIL_CONTACTO}?cc=${encodeURIComponent(
+      email
+    )}&subject=${encodeURIComponent(asunto)}&body=${encodeURIComponent(cuerpo)}`;
 
     window.location.href = mailtoUrl;
     setEnviado(true);
