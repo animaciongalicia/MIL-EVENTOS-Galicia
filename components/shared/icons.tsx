@@ -65,3 +65,19 @@ export function IconChevronDown({ className }: IconProps) {
     </svg>
   );
 }
+
+export function IconMenu({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={`${base} ${className ?? "h-4 w-4"}`} {...strokeProps}>
+      <path d="M4 7h16M4 12h16M4 17h16" />
+    </svg>
+  );
+}
+
+export function IconClose({ className }: IconProps) {
+  return (
+    <svg viewBox="0 0 24 24" className={`${base} ${className ?? "h-4 w-4"}`} {...strokeProps}>
+      <path d="M6 6l12 12M18 6 6 18" />
+    </svg>
+  );
+}

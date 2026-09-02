@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { IconChevronDown } from "@/components/shared/icons";
+import MobileMenu from "@/components/layout/MobileMenu";
 
 type EnlaceMenu = {
   nombre: string;
@@ -49,7 +50,7 @@ export default function Header() {
         <Link href="/" className="font-bold text-atlantico-700">
           Mil Eventos Galicia
         </Link>
-        <ul className="flex gap-6 text-sm">
+        <ul className="hidden gap-6 text-sm md:flex">
           {enlaces.map((enlace) => (
             <li key={enlace.href} className="group relative">
               <Link
@@ -76,6 +77,7 @@ export default function Header() {
             </li>
           ))}
         </ul>
+        <MobileMenu enlaces={enlaces} />
       </nav>
     </header>
   );
