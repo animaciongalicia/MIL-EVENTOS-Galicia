@@ -120,11 +120,16 @@ const nextConfig = {
       { source: "/las-casas-rurales-eventos-de-empresa/:path*", destination: "/espacios-y-recursos/alojamiento", permanent: true },
 
       // --- Institucional ---
-      { source: "/nosotros/:path*", destination: "/nosotros", permanent: true },
+      // OJO: usar :path+ (uno o más), NO :path* (cero o más), en las reglas cuyo
+      // destino es su propia ruta base. Con :path* la ruta base (p.ej. /aviso-legal)
+      // se captura a sí misma y genera un bucle 308 infinito que impide que la
+      // página real cargue. Con :path+ solo se redirigen las subrutas antiguas de
+      // WordPress (/aviso-legal/algo) y la página real sirve en /aviso-legal.
+      { source: "/nosotros/:path+", destination: "/nosotros", permanent: true },
       { source: "/clientes/:path*", destination: "/", permanent: true },
-      { source: "/aviso-legal/:path*", destination: "/aviso-legal", permanent: true },
-      { source: "/politica-de-privacidad/:path*", destination: "/politica-de-privacidad", permanent: true },
-      { source: "/politica-de-cookies/:path*", destination: "/politica-de-cookies", permanent: true },
+      { source: "/aviso-legal/:path+", destination: "/aviso-legal", permanent: true },
+      { source: "/politica-de-privacidad/:path+", destination: "/politica-de-privacidad", permanent: true },
+      { source: "/politica-de-cookies/:path+", destination: "/politica-de-cookies", permanent: true },
 
       // --- Blog e institucional menor (sin equivalente directo → home o blog) ---
       { source: "/blog/page/:path*", destination: "/blog", permanent: true },
