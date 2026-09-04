@@ -33,7 +33,11 @@ Mapa de rutas de referencia. Debe mantenerse sincronizado con la sección 3 de `
 
 /contacto                                 Formulario único (contacto + presupuesto)
 
-/celebraciones                            Página única, FUERA del menú principal
+/celebraciones                            Landing de categoría (página reina), EN el menú principal
+  /celebraciones/cenas-de-empresa
+  /celebraciones/celebraciones-de-empresa
+  /celebraciones/cumpleanos-y-grupos
+  /celebraciones/animacion-y-espectaculo
 
 /nosotros                                 Institucional, solo en footer
 /aviso-legal                              Institucional, solo en footer
@@ -43,11 +47,11 @@ Mapa de rutas de referencia. Debe mantenerse sincronizado con la sección 3 de `
 
 ## Menú principal (top nav)
 
-`Inicio | Empresas ▾ | Actividades ▾ | Espacios ▾ | Blog | Contacto`, con desplegable en Empresas/Actividades/Espacios hacia sus páginas pilar.
+`Inicio | Empresas ▾ | Actividades ▾ | Espacios ▾ | Celebraciones ▾ | Blog | Contacto`, con desplegable en Empresas/Actividades/Espacios/Celebraciones hacia sus páginas pilar.
 
 Los nombres de menú van acortados; las rutas y los `<title>` mantienen el nombre completo para SEO (ver tabla de equivalencias en la sección 9 de `CLAUDE.md`).
 
-**Celebraciones, Nosotros, las páginas legales y las de `/ecosistema` nunca aparecen en el menú principal.** Solo se enlazan desde el `FooterGlobal` (y, en el caso de `/ecosistema`, también desde `BannerEcosistema`). Las de `/ecosistema` no tienen web externa propia — no se enlaza a ningún dominio externo para SUUNIA, Sea Galicia o Luxe Galicia (ver CLAUDE.md §7).
+**Celebraciones SÍ aparece en el menú principal** como página reina con desplegable (ver CLAUDE.md §8). **Nosotros, las páginas legales y las de `/ecosistema` nunca aparecen en el menú principal** — solo se enlazan desde el `FooterGlobal` (y, en el caso de `/ecosistema`, también desde `BannerEcosistema`). Las de `/ecosistema` no tienen web externa propia — no se enlaza a ningún dominio externo para SUUNIA, Sea Galicia o Luxe Galicia (ver CLAUDE.md §7).
 
 ## Reglas de mantenimiento
 

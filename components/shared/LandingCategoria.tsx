@@ -12,9 +12,12 @@ export type SublandingLink = {
 type LandingCategoriaProps = {
   intro: string;
   sublandings: SublandingLink[];
+  acento?: "atlantico" | "terracota";
 };
 
-export default function LandingCategoria({ intro, sublandings }: LandingCategoriaProps) {
+export default function LandingCategoria({ intro, sublandings, acento = "atlantico" }: LandingCategoriaProps) {
+  const bordeHover = acento === "terracota" ? "hover:border-terracota-600" : "hover:border-atlantico-600";
+
   return (
     <section className="mx-auto max-w-5xl px-6 py-12">
       <p className="max-w-2xl text-lg text-ink-700">{intro}</p>
@@ -23,7 +26,7 @@ export default function LandingCategoria({ intro, sublandings }: LandingCategori
           <Link
             key={item.href}
             href={item.href}
-            className="block overflow-hidden rounded-lg border border-sand-200 bg-cream-50 shadow-sm transition hover:-translate-y-0.5 hover:border-atlantico-600 hover:shadow-md"
+            className={`block overflow-hidden rounded-lg border border-sand-200 bg-cream-50 shadow-sm transition hover:-translate-y-0.5 ${bordeHover} hover:shadow-md`}
           >
             <div className="relative aspect-video w-full">
               <Image

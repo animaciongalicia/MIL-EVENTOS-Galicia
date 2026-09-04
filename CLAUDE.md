@@ -6,7 +6,7 @@ Este archivo es el contexto de proyecto para Claude Code. Léelo antes de tocar 
 
 ## 1. Resumen del proyecto
 
-**Mil Eventos Galicia** (mileventosgalicia.com) es una agencia con más de 15 años de trayectoria que organiza eventos para empresas en Galicia: team building, incentivos, jornadas outdoor, congresos y convenciones. También localiza espacios, gestiona traslados y alojamiento, y tiene una línea secundaria de celebraciones sociales (cumpleaños de adultos, fincas, eventos especiales).
+**Mil Eventos Galicia** (mileventosgalicia.com) es una agencia con más de 15 años de trayectoria que organiza eventos para empresas en Galicia: team building, incentivos, jornadas outdoor, congresos y convenciones. También localiza espacios, gestiona traslados y alojamiento. Y tiene una línea de **celebraciones** (página reina propia en el menú — ver sección 8) tanto para empresas (cenas de empresa y de Navidad, inauguraciones, cócteles, aniversarios) como para particulares (cumpleaños de adultos, fincas), con animación propia: DJs, cómicos, monólogos y drag queens.
 
 **Lo que esta web NO debe parecer:**
 - Un catálogo de producto tipo e-commerce ("elige tu actividad y añádela al carrito"). Ninguna actividad individual tiene ficha ni URL propia — se presentan como ejemplos embebidos dentro de páginas pilar más amplias.
@@ -64,7 +64,11 @@ Sitemap de referencia: `sitemap-definitivo.md` (debe mantenerse sincronizado con
 
 /contacto                                 Formulario único (contacto + presupuesto)
 
-/celebraciones                            Página única, FUERA del menú principal
+/celebraciones                            Landing de categoría (página reina), EN el menú principal
+  /celebraciones/cenas-de-empresa
+  /celebraciones/celebraciones-de-empresa
+  /celebraciones/cumpleanos-y-grupos
+  /celebraciones/animacion-y-espectaculo
 
 /nosotros                                 Institucional — solo en footer
 /aviso-legal                              Institucional — solo en footer
@@ -72,12 +76,12 @@ Sitemap de referencia: `sitemap-definitivo.md` (debe mantenerse sincronizado con
 /politica-de-cookies                      Institucional — solo en footer
 ```
 
-**Menú principal (top nav):** `Inicio | Empresas ▾ | Actividades ▾ | Espacios ▾ | Blog | Contacto`, con desplegable en Empresas/Actividades/Espacios enlazando a sus 3-4 páginas pilar (implementado en `components/layout/Header.tsx`).
+**Menú principal (top nav):** `Inicio | Empresas ▾ | Actividades ▾ | Espacios ▾ | Celebraciones ▾ | Blog | Contacto`, con desplegable en Empresas/Actividades/Espacios/Celebraciones enlazando a sus 3-4 páginas pilar (implementado en `components/layout/Header.tsx`).
 (Los nombres de menú van acortados; las rutas y los `<title>` mantienen el nombre completo para SEO. Ver tabla de equivalencias en sección 9.)
 
-**Celebraciones nunca aparece en el menú principal.** Solo se enlaza desde el footer global.
+**Celebraciones SÍ va en el menú principal** como página reina con su propio desplegable (cambio de producto — ver sección 8), sirviendo tanto a empresas como a particulares. Ya no es una página suelta escondida en el footer.
 
-**Nosotros y las 3 páginas legales tampoco van en el menú principal** — solo en `FooterGlobal`, igual que Celebraciones. No estaban en el sitemap original; se añadieron al portar la web anterior (existían en mileventosgalicia.com con tráfico real — ver sección 11).
+**Nosotros y las 3 páginas legales no van en el menú principal** — solo en `FooterGlobal`. No estaban en el sitemap original; se añadieron al portar la web anterior (existían en mileventosgalicia.com con tráfico real — ver sección 11).
 
 Estructura de carpetas sugerida en `/app`:
 ```
@@ -102,7 +106,11 @@ Estructura de carpetas sugerida en `/app`:
   /blog/categoria/[categoria]/page.tsx
   /blog/[slug]/page.tsx
   /contacto/page.tsx
-  /celebraciones/page.tsx                → layout/tema visual propio, no hereda el layout corporativo
+  /celebraciones/page.tsx                → landing pilar dentro de (site); hereda Header/FooterGlobal, acento terracota
+  /celebraciones/cenas-de-empresa/page.tsx
+  /celebraciones/celebraciones-de-empresa/page.tsx
+  /celebraciones/cumpleanos-y-grupos/page.tsx
+  /celebraciones/animacion-y-espectaculo/page.tsx
 ```
 
 ---
@@ -122,7 +130,7 @@ No dupliques markup entre páginas parecidas. Estos son los componentes base que
 | `BloqueDestacados` | Bloque de posts curados a mano (ver sección 10, sustituye a "más leídos" mientras no haya analítica). |
 | `BannerEcosistema` | Banner contextual que enlaza a SUUNIA / Sea Galicia / Luxe Galicia según la página (ver sección 7). |
 | `FooterGlobal` | Footer con ecosistema de marcas, enlace a `/celebraciones`, tira de logos y claim de prueba social. |
-| `FormularioContacto` | Formulario único reutilizado en `/contacto` (y embebido al final de `/celebraciones` con copy propio). |
+| `FormularioContacto` | Formulario único reutilizado en `/contacto`. Sigue teniendo variante `celebraciones` (terracota) por si se reutiliza, aunque el clúster de Celebraciones ahora cierra con `CTAFinal` → `/contacto`. |
 | `CTAFinal` | Bloque de cierre de página con botón de contacto/presupuesto. |
 | `TiraLogos` | Tira de 8-10 logos de clientes, usada en Home y footer. |
 | `CifrasDestacadas` | Fila de 2-3 cifras reales en formato caja (ver regla de prueba social, sección 6) — rompe la prosa con un bloque numérico. |
@@ -136,7 +144,7 @@ No dupliques markup entre páginas parecidas. Estos son los componentes base que
 
 ## 5. Reglas de contenido y tono (obligatorio en todo texto de cara al usuario)
 
-Todo texto generado para el sitio corporativo (no aplica a `/celebraciones`, ver sección 8) sigue el tono **Rentabilista**: fusión entre la persuasión emocional de Raimon Samsó y la disrupción directa de Marina Miller. Dirigido a empresarios y responsables de organización de eventos, no a consumidores finales genéricos.
+Todo texto generado para el sitio corporativo sigue el tono **Rentabilista**: fusión entre la persuasión emocional de Raimon Samsó y la disrupción directa de Marina Miller. Dirigido a empresarios y responsables de organización de eventos, no a consumidores finales genéricos. En `/celebraciones` (ver sección 8) el tono se relaja hacia lo cálido en las páginas de particulares y animación, pero las sub-páginas B2B (cenas y celebraciones de empresa) mantienen el tono Rentabilista.
 
 **Usar siempre:**
 - Segunda persona ("tú", "tu equipo", "vosotros") — casi nunca "nosotros" o "nuestro equipo".
@@ -186,14 +194,20 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 
 ---
 
-## 8. Reglas de `/celebraciones`
+## 8. Reglas de `/celebraciones` (clúster pilar)
 
-- Página única y autocontenida, sin sub-rutas.
-- Layout y paleta visual **distintos** al resto del sitio (más cálidos, menos corporativos) — no reutilizar el `Hero` ni el `FooterGlobal` corporativos tal cual; usar variante propia.
-- Tono más cálido que el resto del sitio, pero igual de directo — no aplican aquí el claim "15 años haciendo que las cosas sucedan" ni la tira de logos de clientes corporativos.
-- Bloques internos: cumpleaños de adultos · fincas y espacios especiales · otros eventos especiales · contacto.
-- Enlace de entrada único desde el `FooterGlobal` del sitio corporativo. Enlace de salida discreto hacia mileventosgalicia.com en su propio footer, para quien haya llegado directo por SEO/campaña y busque en realidad un evento de empresa.
-- Nunca se enlaza desde el contenido de páginas pilar corporativas (Outdoor, Indoor, etc.) ni desde el menú principal.
+**Cambio de producto (decisión del cliente):** Celebraciones dejó de ser una página única escondida en el footer y pasó a ser una **página reina en el menú principal**, con su propio desplegable y 4 sub-páginas. Sirve a **empresas y particulares** por igual — ya no es una línea secundaria solo de particulares.
+
+- **Landing de categoría** (`/celebraciones`) con el patrón `LandingCategoria`, dentro del grupo `(site)`: hereda `Header` y `FooterGlobal` corporativos (ya NO tiene layout raíz propio ni `FooterCelebraciones` — se eliminaron). Sus 4 sub-páginas:
+  1. `/celebraciones/cenas-de-empresa` — B2B (cena de Navidad, cierre de año, con DJ/espectáculo).
+  2. `/celebraciones/celebraciones-de-empresa` — B2B (inauguraciones, cócteles, aniversarios, entregas de premios).
+  3. `/celebraciones/cumpleanos-y-grupos` — particulares (cumpleaños de adultos, fincas, celebraciones privadas; recoge los datos antiguos `celebraciones-cumpleanos/fincas/otros-eventos`).
+  4. `/celebraciones/animacion-y-espectaculo` — transversal (DJs, monólogos, cómicos, drag queens, animación; las otras 3 enlazan a ella).
+- **Paleta:** acento **terracota** conservado como identidad festiva, pero dentro del shell corporativo. Los componentes compartidos (`Hero`, `LandingCategoria`, `CTAFinal`, `CitaDestacada`, `TarjetasTexto`) aceptan `variante="celebraciones"` o `acento="terracota"`; se usa esa variante en todo el clúster. `GridEjemplos` es neutro (no lleva color de marca).
+- **Animación real:** DJs, cómicos, monologuistas y drag queens son servicios que la agencia ofrece/coordina de verdad (confirmado por el cliente) — se escriben sin humo (§6), como recursos propios.
+- **Tono:** las 2 sub-páginas B2B usan el tono Rentabilista directo; cumpleaños/particulares y animación, más cálido pero igual de directo. No aplican aquí el claim "15 años haciendo que las cosas sucedan" ni la tira de logos corporativos.
+- **Cierre:** cada página cierra con `CTAFinal` (acento terracota) hacia `/contacto` — ya no lleva `FormularioContacto` embebido ni enlace de salida a mileventosgalicia.com (era una página aislada; ahora está integrada en el sitio).
+- **Enlazado:** las páginas pilar corporativas (Outdoor, Indoor, etc.) siguen sin enlazar a Celebraciones desde su contenido; el clúster de Celebraciones sí puede enlazar a recursos corporativos cuando encaja (p.ej. localización de espacios).
 
 ---
 
@@ -239,14 +253,14 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 
 ## 12. Sistema visual
 
-- **Paleta** (`tailwind.config.ts`, tokens `cream` / `sand` / `ink` / `atlantico` / `terracota`): fondo crema cálido, texto en tinta cálida (nunca negro puro), acento principal verde-azulado "Atlántico" y acento terracota reservado a `/celebraciones`.
+- **Paleta** (`tailwind.config.ts`, tokens `cream` / `sand` / `ink` / `atlantico` / `terracota`): fondo crema cálido, texto en tinta cálida (nunca negro puro), acento principal verde-azulado "Atlántico" y acento terracota reservado al clúster `/celebraciones` (landing + 4 sub-páginas). Los componentes compartidos con color de marca llevan una prop `acento="atlantico" | "terracota"` (por defecto atlántico) para conmutar sin duplicar componente.
 - **Contraste deliberado, no un único crema plano:** el `Hero` y los bloques largos de texto van en `cream-100/200` (nunca oscuros — esa fue la corrección inicial). Pero el cierre de página (`CTAFinal`) y el `FooterGlobal` sí son bloques sólidos en `atlantico-700`/`atlantico-800` con texto claro — acentos puntuales y acotados, no un wash de toda la sección. Las tarjetas (`GridEjemplos`, `LandingCategoria`, `TarjetaPost`) van en `cream-50` (blanco) con sombra para despegarse del fondo de página; los bloques "Cómo trabajamos" de las páginas pilar van en una banda `cream-200` para romper la monotonía. Si una página nueva queda de un único tono de principio a fin, algo se ha hecho mal.
 - **Nunca usar directamente** los colores por defecto de Tailwind (`slate-*`, `amber-*`, `gray-*`...) en JSX nuevo — usar siempre los tokens de marca (`bg-cream-100`, `text-ink-700`, `border-sand-200`, `bg-atlantico-700`, `text-terracota-900`, etc.), para que un cambio de paleta futuro se haga en un único sitio (`tailwind.config.ts`).
 - **Nunca fijar el número de columnas de un grid a ojo** (`sm:grid-cols-2` porque sí) — usar `gridColsClass(n)` de `components/shared/gridCols.ts`, que elige columnas según la cantidad real de elementos para que nunca quede una tarjeta sola y huérfana en la última fila. Ya se usa en `GridEjemplos`, `LandingCategoria`, `BloqueUltimosPosts`, `BloqueDestacados` y `/blog/categoria/[categoria]`; cualquier grid nuevo de tarjetas con conteo variable debe usarlo también.
 - **Un único ancho de contenedor por página: `max-w-5xl`.** Todas las `<section>` de una misma página —texto corrido incluido— usan `mx-auto max-w-5xl px-6`, el mismo ancho que ya usan `Header`, `FooterGlobal`, `GridEjemplos`, `LandingCategoria`, `BannerEcosistema` y `TiraLogos`. Antes los bloques de texto usaban `max-w-3xl` (768px) y los bloques de tarjetas `max-w-5xl` (1024px) alternando en la misma página — el margen izquierdo saltaba de sección en sección y se veía descuadrado. **Nunca uses `max-w-3xl`, `max-w-md` u otro ancho de sección "para que el texto no quede muy ancho"**: dentro de una `<section className="mx-auto max-w-5xl px-6">` puedes limitar un párrafo o lead concreto con `max-w-2xl` en el propio `<p>` (sin `mx-auto`, para que no se recentre y rompa el margen izquierdo común), pero el contenedor de sección siempre es `max-w-5xl`. Excepción: bloques de formulario/CTA autocontenidos y centrados como `FormularioContacto` o los pills de contacto de `/contacto`, que usan `max-w-xl` porque no conviven con otras secciones de ancho distinto en el flujo de la página.
 - **Tipografía**: `Fraunces` (serif, cargada vía `next/font/google`) para todo `h1`/`h2`/`h3` — aplicado automáticamente en `app/globals.css`, no hace falta añadir `font-serif` a mano. `Inter` para el resto del texto (`font-sans`, por defecto).
-- Ambos layouts raíz (`app/(site)/layout.tsx` y `app/(celebraciones)/celebraciones/layout.tsx`) cargan las mismas dos fuentes de forma independiente, porque son root layouts separados (ver sección 8). Si se añade un tercer root layout, replicar el mismo bloque de `next/font/google`.
-- `/celebraciones` comparte el mismo sistema (misma tipografía, misma escala, mismos componentes base) pero con la paleta `terracota` en vez de `atlantico` — más cálida, nunca literalmente otra marca visual (CLAUDE.md §8).
+- Hoy solo hay un layout raíz corporativo (`app/(site)/layout.tsx`) — el clúster `/celebraciones` vive dentro de `(site)` y lo hereda. (El antiguo layout raíz aislado `app/(celebraciones)/` se eliminó al convertir Celebraciones en pilar del menú, sección 8.) Si en el futuro se añade un segundo root layout, replicar el mismo bloque de `next/font/google`.
+- `/celebraciones` comparte el mismo sistema (misma tipografía, misma escala, mismos componentes base) pero con el acento `terracota` en vez de `atlantico` — más cálido, nunca literalmente otra marca visual (CLAUDE.md §8).
 - **Iconos**: set propio dibujado a mano en `components/shared/icons.tsx` (teléfono, WhatsApp, email, ubicación, flecha, chevron) — sin librería externa. Se usan en contacto (footer, `/contacto`), en el desplegable del menú y en los botones de CTA (`Hero`, `CTAFinal`). Cualquier icono nuevo sigue el mismo estilo: trazo 1.5, sin relleno, `viewBox="0 0 24 24"`.
 - **`PasosTrabajo`** (`components/shared/PasosTrabajo.tsx`): bloque "Cómo trabajamos" con pasos numerados (círculo + título + descripción corta), reservado a Home y a las 4 páginas pilar de `/eventos-empresa` — la prioridad de negocio (CLAUDE.md §11) tiene también prioridad visual sobre el resto del catálogo de páginas pilar, que sigue con el bloque en prosa simple.
-- **Evitar bloques largos de texto corrido.** Cualquier página de más de 2-3 párrafos seguidos debe alternar formato: `CifrasDestacadas`, `CitaDestacada`, `TarjetasTexto`, `GridEjemplos` o `PasosTrabajo` en vez de encadenar más párrafos de prosa. Un párrafo de contexto o cierre está bien; media docena seguidos no. Aplicada ya en `/`, `/eventos-empresa` (landing + 4 pilares), `/actividades` (landing + 4 sub-páginas) y `/espacios-y-recursos` (landing + 3 sub-páginas). No aplica a `/celebraciones` (ya alterna párrafo corto + `GridEjemplos`, y usa paleta `terracota` — estos componentes van en `atlantico`), a las páginas legales (el texto corrido es lo correcto en un aviso legal) ni a los posts de blog (formato artículo).
+- **Evitar bloques largos de texto corrido.** Cualquier página de más de 2-3 párrafos seguidos debe alternar formato: `CifrasDestacadas`, `CitaDestacada`, `TarjetasTexto`, `GridEjemplos` o `PasosTrabajo` en vez de encadenar más párrafos de prosa. Un párrafo de contexto o cierre está bien; media docena seguidos no. Aplicada ya en `/`, `/eventos-empresa` (landing + 4 pilares), `/actividades` (landing + 4 sub-páginas), `/espacios-y-recursos` (landing + 3 sub-páginas) y `/celebraciones` (landing + 4 sub-páginas, con `acento="terracota"` en los componentes). No aplica a las páginas legales (el texto corrido es lo correcto en un aviso legal) ni a los posts de blog (formato artículo).

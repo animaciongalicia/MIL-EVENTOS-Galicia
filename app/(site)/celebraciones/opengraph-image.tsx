@@ -1,11 +1,11 @@
 import { ImageResponse } from "next/og";
 
-export const alt = "Celebraciones especiales en Galicia — Mil Eventos Galicia";
+export const alt = "Celebraciones en Galicia — Mil Eventos Galicia";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-// Variante terracota de la tarjeta OG, propia de /celebraciones — paleta
-// distinta a la corporativa (CLAUDE.md §8).
+// Variante terracota de la tarjeta OG, propia del clúster /celebraciones —
+// paleta más cálida y festiva que la corporativa (CLAUDE.md §8/§12).
 export default function Image() {
   return new ImageResponse(
     (
@@ -42,7 +42,7 @@ export default function Image() {
             maxWidth: 980,
           }}
         >
-          Celebraciones especiales en Galicia
+          Celebraciones en Galicia, para empresas y particulares
         </div>
         <div
           style={{
@@ -51,7 +51,7 @@ export default function Image() {
             color: "#F6E7D6",
           }}
         >
-          Cumpleaños de adultos · Fincas · Eventos especiales
+          Cenas de empresa · Cumpleaños · DJs, cómicos y espectáculo
         </div>
       </div>
     ),

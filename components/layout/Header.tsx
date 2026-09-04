@@ -39,6 +39,16 @@ const enlaces: EnlaceMenu[] = [
       { nombre: "Alojamiento", href: "/espacios-y-recursos/alojamiento" },
     ],
   },
+  {
+    nombre: "Celebraciones",
+    href: "/celebraciones",
+    submenu: [
+      { nombre: "Cenas de empresa", href: "/celebraciones/cenas-de-empresa" },
+      { nombre: "Celebraciones de empresa", href: "/celebraciones/celebraciones-de-empresa" },
+      { nombre: "Cumpleaños y grupos", href: "/celebraciones/cumpleanos-y-grupos" },
+      { nombre: "Animación y espectáculo", href: "/celebraciones/animacion-y-espectaculo" },
+    ],
+  },
   { nombre: "Blog", href: "/blog" },
   { nombre: "Contacto", href: "/contacto" },
 ];
