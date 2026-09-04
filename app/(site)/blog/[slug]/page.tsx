@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import Link from "next/link";
@@ -62,6 +63,21 @@ export default function PostPage({ params }: PostPageProps) {
           </div>
         </div>
       </header>
+
+      {post.imagen && (
+        <div className="mx-auto max-w-5xl px-6 pt-8">
+          <div className="relative aspect-[16/7] w-full overflow-hidden rounded-xl shadow-md">
+            <Image
+              src={post.imagen}
+              alt={post.title}
+              fill
+              priority
+              className="object-cover"
+              sizes="(min-width: 1024px) 1024px, 100vw"
+            />
+          </div>
+        </div>
+      )}
 
       <div className="mx-auto max-w-5xl px-6 py-12">
         <div className="post-content">

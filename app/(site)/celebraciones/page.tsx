@@ -64,7 +64,7 @@ export default function CelebracionesPage() {
         variante="celebraciones"
         titulo="Celebraciones en Galicia"
         subtitulo="Cenas de empresa, cumpleaños y fiestas que se recuerdan — para empresas y para particulares."
-        imagenSeed="celebraciones-galicia-fiesta"
+        imagen="/images/conxuro-queimada.jpg"
       />
 
       <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">

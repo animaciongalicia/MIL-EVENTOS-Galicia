@@ -64,6 +64,8 @@ export type PostFrontmatter = {
   description: string;
   categoria: CategoriaBlog;
   fecha: string;
+  // Portada real en /public; si falta, cae en la de stock por slug.
+  imagen?: string;
 };
 
 export type Post = PostFrontmatter & {

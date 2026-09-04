@@ -23,8 +23,8 @@ export default function TarjetaPost({ post, destacada = false }: TarjetaPostProp
         }`}
       >
         <Image
-          src={placeholderImage(post.slug)}
-          alt=""
+          src={post.imagen ?? placeholderImage(post.slug)}
+          alt={post.imagen ? post.title : ""}
           fill
           className="object-cover transition duration-300 group-hover:scale-105"
           sizes={destacada ? "(min-width: 640px) 50vw, 100vw" : "(min-width: 640px) 33vw, 100vw"}

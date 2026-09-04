@@ -11,6 +11,8 @@ type HeroProps = {
   ctaHref?: string;
   variante?: HeroVariant;
   imagenSeed?: string;
+  // Foto real en /public; tiene prioridad sobre imagenSeed (stock).
+  imagen?: string;
 };
 
 export default function Hero({
@@ -20,6 +22,7 @@ export default function Hero({
   ctaHref,
   variante = "corporativa",
   imagenSeed,
+  imagen,
 }: HeroProps) {
   const esCelebraciones = variante === "celebraciones";
 
@@ -54,10 +57,10 @@ export default function Hero({
           <IconArrowRight className="h-4 w-4" />
         </a>
       )}
-      {imagenSeed && (
+      {(imagen || imagenSeed) && (
         <div className="relative mx-auto mt-12 aspect-[21/9] w-full max-w-4xl overflow-hidden rounded-xl shadow-lg">
           <Image
-            src={placeholderImage(imagenSeed, 1400, 600)}
+            src={imagen ?? placeholderImage(imagenSeed as string, 1400, 600)}
             alt=""
             fill
             priority

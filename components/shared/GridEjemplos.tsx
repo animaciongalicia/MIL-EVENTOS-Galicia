@@ -5,6 +5,9 @@ import { gridColsClass } from "@/components/shared/gridCols";
 export type Ejemplo = {
   nombre: string;
   descripcion: string;
+  // Ruta a foto real en /public (p.ej. "/images/team-building.jpg"). Si no se
+  // indica, cae en la foto de stock por seed (placeholderImage).
+  imagen?: string;
 };
 
 type GridEjemplosProps = {
@@ -23,8 +26,8 @@ export default function GridEjemplos({ ejemplos }: GridEjemplosProps) {
         >
           <div className="relative aspect-video w-full">
             <Image
-              src={placeholderImage(ejemplo.nombre)}
-              alt=""
+              src={ejemplo.imagen ?? placeholderImage(ejemplo.nombre)}
+              alt={ejemplo.imagen ? ejemplo.nombre : ""}
               fill
               className="object-cover"
               sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
