@@ -1,5 +1,4 @@
 import Image from "next/image";
-import { placeholderImage } from "@/lib/placeholder-image";
 import { IconArrowRight } from "@/components/shared/icons";
 
 type HeroVariant = "corporativa" | "celebraciones";
@@ -10,8 +9,7 @@ type HeroProps = {
   ctaTexto?: string;
   ctaHref?: string;
   variante?: HeroVariant;
-  imagenSeed?: string;
-  // Foto real en /public; tiene prioridad sobre imagenSeed (stock).
+  // Foto real en /public. Si no se indica, el Hero no muestra imagen.
   imagen?: string;
 };
 
@@ -21,7 +19,6 @@ export default function Hero({
   ctaTexto,
   ctaHref,
   variante = "corporativa",
-  imagenSeed,
   imagen,
 }: HeroProps) {
   const esCelebraciones = variante === "celebraciones";
@@ -57,10 +54,10 @@ export default function Hero({
           <IconArrowRight className="h-4 w-4" />
         </a>
       )}
-      {(imagen || imagenSeed) && (
+      {imagen && (
         <div className="relative mx-auto mt-12 aspect-[21/9] w-full max-w-4xl overflow-hidden rounded-xl shadow-lg">
           <Image
-            src={imagen ?? placeholderImage(imagenSeed as string, 1400, 600)}
+            src={imagen}
             alt=""
             fill
             priority

@@ -2,7 +2,6 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Post } from "@/lib/blog";
 import { CATEGORIA_LABELS, formatFecha, tiempoLectura } from "@/lib/blog";
-import { placeholderImage } from "@/lib/placeholder-image";
 
 type TarjetaPostProps = {
   post: Post;
@@ -17,19 +16,21 @@ export default function TarjetaPost({ post, destacada = false }: TarjetaPostProp
         destacada ? "sm:flex sm:flex-row" : ""
       }`}
     >
-      <div
-        className={`relative w-full overflow-hidden ${
-          destacada ? "aspect-video sm:aspect-auto sm:w-1/2" : "aspect-video"
-        }`}
-      >
-        <Image
-          src={post.imagen ?? placeholderImage(post.slug)}
-          alt={post.imagen ? post.title : ""}
-          fill
-          className="object-cover transition duration-300 group-hover:scale-105"
-          sizes={destacada ? "(min-width: 640px) 50vw, 100vw" : "(min-width: 640px) 33vw, 100vw"}
-        />
-      </div>
+      {post.imagen && (
+        <div
+          className={`relative w-full overflow-hidden ${
+            destacada ? "aspect-video sm:aspect-auto sm:w-1/2" : "aspect-video"
+          }`}
+        >
+          <Image
+            src={post.imagen}
+            alt={post.title}
+            fill
+            className="object-cover transition duration-300 group-hover:scale-105"
+            sizes={destacada ? "(min-width: 640px) 50vw, 100vw" : "(min-width: 640px) 33vw, 100vw"}
+          />
+        </div>
+      )}
       <div className={destacada ? "flex flex-1 flex-col justify-center p-6 sm:p-8" : "p-6"}>
         <span className="inline-flex w-fit items-center rounded-full bg-atlantico-700/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-atlantico-700">
           {CATEGORIA_LABELS[post.categoria]}

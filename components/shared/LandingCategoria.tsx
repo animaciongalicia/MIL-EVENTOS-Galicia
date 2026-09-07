@@ -1,14 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
-import { placeholderImage } from "@/lib/placeholder-image";
 import { gridColsClass } from "@/components/shared/gridCols";
 
 export type SublandingLink = {
   titulo: string;
   descripcion: string;
   href: string;
-  // Foto real en /public; si falta, cae en la de stock por seed.
-  imagen?: string;
+  // Foto real en /public.
+  imagen: string;
 };
 
 type LandingCategoriaProps = {
@@ -32,8 +31,8 @@ export default function LandingCategoria({ intro, sublandings, acento = "atlanti
           >
             <div className="relative aspect-video w-full">
               <Image
-                src={item.imagen ?? placeholderImage(item.titulo)}
-                alt={item.imagen ? item.titulo : ""}
+                src={item.imagen}
+                alt={item.titulo}
                 fill
                 className="object-cover"
                 sizes="(min-width: 640px) 50vw, 100vw"

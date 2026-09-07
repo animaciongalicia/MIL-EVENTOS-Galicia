@@ -16,21 +16,25 @@ const sublandings = [
     titulo: "Cenas de empresa",
     descripcion: "Cena de Navidad, cierre de año o de proyecto — con DJ, espectáculo o temática.",
     href: "/celebraciones/cenas-de-empresa",
+    imagen: "/images/cena-grupo-empresa-barcelona.jpg",
   },
   {
     titulo: "Celebraciones de empresa",
     descripcion: "Inauguraciones, cócteles, aniversarios y entregas de premios que se recuerdan.",
     href: "/celebraciones/celebraciones-de-empresa",
+    imagen: "/images/celebracion-evento-empresa.jpg",
   },
   {
     titulo: "Cumpleaños y grupos",
     descripcion: "Cumpleaños de adultos, fincas y celebraciones privadas para los tuyos.",
     href: "/celebraciones/cumpleanos-y-grupos",
+    imagen: "/images/carpa-toldo-evento-finca.jpg",
   },
   {
     titulo: "Animación y espectáculo",
     descripcion: "DJs, monólogos, cómicos, drag queens y animación para cualquier celebración.",
     href: "/celebraciones/animacion-y-espectaculo",
+    imagen: "/images/monologo.jpg",
   },
 ];
 
