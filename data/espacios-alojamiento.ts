@@ -3,7 +3,7 @@ import type { Ejemplo } from "@/components/shared/GridEjemplos";
 export const alojamientoEjemplos: Ejemplo[] = [
   {
     nombre: "Hoteles y bloques de habitaciones",
-    imagen: "/images/bandalux-interior-scaled.jpg",
+    imagen: "/images/celebracion-evento-empresa.jpg",
     descripcion: "Reserva y reparto gestionados sin que tengas que llamar a nadie.",
   },
   {

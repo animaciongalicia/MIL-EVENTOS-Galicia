@@ -3,12 +3,12 @@ import type { Ejemplo } from "@/components/shared/GridEjemplos";
 export const localizacionEspaciosEjemplos: Ejemplo[] = [
   {
     nombre: "Pazos y fincas históricas",
-    imagen: "/images/muralla-de-lugo.jpg",
+    imagen: "/images/celebracion-evento-empresa.jpg",
     descripcion: "Para eventos que necesitan carácter, no solo metros cuadrados.",
   },
   {
     nombre: "Naves y espacios industriales",
-    imagen: "/images/bandalux-interior-scaled.jpg",
+    imagen: "/images/locales-recurso-localizaciones.jpg",
     descripcion: "Cuando el proyecto pide un lienzo en blanco.",
   },
   {

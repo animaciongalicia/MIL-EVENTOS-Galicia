@@ -3,7 +3,7 @@ import type { Ejemplo } from "@/components/shared/GridEjemplos";
 export const congresosYConvencionesEjemplos: Ejemplo[] = [
   {
     nombre: "Producción técnica completa",
-    imagen: "/images/bandalux-interior-scaled.jpg",
+    imagen: "/images/taller-musical.jpg",
     descripcion: "Sonido, iluminación, escenario y streaming, coordinados por un único interlocutor.",
   },
   {
@@ -18,7 +18,7 @@ export const congresosYConvencionesEjemplos: Ejemplo[] = [
   },
   {
     nombre: "Congresos multi-día",
-    imagen: "/images/que-ver-en-la-corun-a.jpg",
+    imagen: "/images/organizacion-eventos-corun-a.jpg",
     descripcion: "Con alojamiento y traslados encadenados para los asistentes que vienen de fuera.",
   },
   {
@@ -28,7 +28,7 @@ export const congresosYConvencionesEjemplos: Ejemplo[] = [
   },
   {
     nombre: "Streaming y contenido posterior",
-    imagen: "/images/organizacion-eventos-corun-a.jpg",
+    imagen: "/images/talleres-de-coaching-para-empresas-forest.jpg",
     descripcion: "Para que el evento no termine cuando se apagan las luces.",
   },
 ];

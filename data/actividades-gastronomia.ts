@@ -3,7 +3,7 @@ import type { Ejemplo } from "@/components/shared/GridEjemplos";
 export const actividadesGastronomia: Ejemplo[] = [
   {
     nombre: "Catas de vino gallego",
-    imagen: "/images/teambuilding-bodegas-ribera-sacra.jpg",
+    imagen: "/images/cata-vinos-taller-gastronomia.jpg",
     descripcion: "Rías Baixas, Ribeiro, Ribeira Sacra: cada denominación, su propia historia.",
   },
   {
@@ -13,22 +13,22 @@ export const actividadesGastronomia: Ejemplo[] = [
   },
   {
     nombre: "Ruta de tapas por el casco viejo",
-    imagen: "/images/que-ver-en-la-corun-a.jpg",
+    imagen: "/images/catering-evento.jpg",
     descripcion: "Varios locales, un solo grupo, cero coches que organizar.",
   },
   {
     nombre: "Cena marinera frente al mar",
-    imagen: "/images/mariscadoras-evento-teambuilding.jpg",
+    imagen: "/images/cena-grupo-empresa-barcelona.jpg",
     descripcion: "Producto del día, sin intermediarios.",
   },
   {
     nombre: "Maridajes a medida",
-    imagen: "/images/cata-vinos-taller-gastronomia.jpg",
+    imagen: "/images/celebracion-evento-empresa.jpg",
     descripcion: "Vino y menú pensados juntos, no por separado.",
   },
   {
     nombre: "Taller de coctelería",
-    imagen: "/images/cena-grupo-empresa-barcelona.jpg",
+    imagen: "/images/camareros-evento-empresa.jpg",
     descripcion: "Con o sin alcohol, siempre con espectáculo.",
   },
 ];

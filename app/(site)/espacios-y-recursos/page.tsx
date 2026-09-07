@@ -29,7 +29,7 @@ const sublandings = [
     titulo: "Alojamiento",
     descripcion: "Descanso a la altura del evento.",
     href: "/espacios-y-recursos/alojamiento",
-    imagen: "/images/bandalux-interior-scaled.jpg",
+    imagen: "/images/celebracion-evento-empresa.jpg",
   },
 ];
 

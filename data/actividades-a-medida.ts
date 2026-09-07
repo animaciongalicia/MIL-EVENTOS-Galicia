@@ -13,7 +13,7 @@ export const actividadesAMedida: Ejemplo[] = [
   },
   {
     nombre: "Experiencias con marca propia",
-    imagen: "/images/bandalux-interior-scaled.jpg",
+    imagen: "/images/team-building-masterchef-madrid-scaled.jpg",
     descripcion: "Tu identidad, integrada en cada detalle del evento.",
   },
   {
