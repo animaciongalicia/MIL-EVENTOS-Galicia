@@ -19,21 +19,25 @@ const sublandings = [
     titulo: "Team building",
     descripcion: "Actividades que unen equipos de verdad.",
     href: "/eventos-empresa/team-building",
+    imagen: "/images/team-building-empresas-galicia.jpg",
   },
   {
     titulo: "Incentivos",
     descripcion: "Programas que premian y motivan.",
     href: "/eventos-empresa/incentivos",
+    imagen: "/images/icentivos-empresariales.jpg",
   },
   {
     titulo: "Jornadas outdoor",
     descripcion: "Salir de la oficina, con propósito.",
     href: "/eventos-empresa/jornadas-outdoor",
+    imagen: "/images/naturaleza-cies-rias-baixas.jpg",
   },
   {
     titulo: "Congresos y convenciones",
     descripcion: "Eventos corporativos a gran escala.",
     href: "/eventos-empresa/congresos-y-convenciones",
+    imagen: "/images/reunion-eventos-corporativos.jpg",
   },
 ];
 

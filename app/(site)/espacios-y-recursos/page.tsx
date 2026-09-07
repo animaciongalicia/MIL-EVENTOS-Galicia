@@ -17,16 +17,19 @@ const sublandings = [
     titulo: "Localización de espacios",
     descripcion: "El sitio exacto para tu evento.",
     href: "/espacios-y-recursos/localizacion-espacios",
+    imagen: "/images/locales-recurso-localizaciones.jpg",
   },
   {
     titulo: "Traslados",
     descripcion: "Logística sin fricciones.",
     href: "/espacios-y-recursos/traslados",
+    imagen: "/images/corun-a-paseo.jpg",
   },
   {
     titulo: "Alojamiento",
     descripcion: "Descanso a la altura del evento.",
     href: "/espacios-y-recursos/alojamiento",
+    imagen: "/images/bandalux-interior-scaled.jpg",
   },
 ];
 

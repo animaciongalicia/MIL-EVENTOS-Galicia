@@ -17,21 +17,25 @@ const sublandings = [
     titulo: "Outdoor",
     descripcion: "Naturaleza gallega como escenario, no como decorado.",
     href: "/actividades/outdoor",
+    imagen: "/images/mil-eventos-outdoor-rafting.jpg",
   },
   {
     titulo: "Indoor",
     descripcion: "Cuando el tiempo no acompaña, otro tipo de experiencia.",
     href: "/actividades/indoor",
+    imagen: "/images/taller-cocina.jpg",
   },
   {
     titulo: "Gastronomía y vinos",
     descripcion: "El producto local como excusa para reunir a la gente.",
     href: "/actividades/gastronomia-y-vinos",
+    imagen: "/images/cata-vinos-taller-gastronomia.jpg",
   },
   {
     titulo: "A medida",
     descripcion: "Si no lo has visto en ningún sitio, lo diseñamos desde cero.",
     href: "/actividades/a-medida",
+    imagen: "/images/presentaciones-en-barco.jpg",
   },
 ];
 
