@@ -3,7 +3,7 @@ import type { Ejemplo } from "@/components/shared/GridEjemplos";
 export const actividadesGastronomia: Ejemplo[] = [
   {
     nombre: "Catas de vino gallego",
-    imagen: "/images/cata-vinos-taller-gastronomia.jpg",
+    imagen: "/images/copa-cata-vino-galicia.jpg",
     descripcion: "Rías Baixas, Ribeiro, Ribeira Sacra: cada denominación, su propia historia.",
   },
   {
@@ -13,7 +13,7 @@ export const actividadesGastronomia: Ejemplo[] = [
   },
   {
     nombre: "Ruta de tapas por el casco viejo",
-    imagen: "/images/catering-evento.jpg",
+    imagen: "/images/ruta-tapas-casco-viejo.jpg",
     descripcion: "Varios locales, un solo grupo, cero coches que organizar.",
   },
   {

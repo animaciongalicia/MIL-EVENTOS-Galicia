@@ -3,7 +3,7 @@ import type { Ejemplo } from "@/components/shared/GridEjemplos";
 export const actividadesIndoor: Ejemplo[] = [
   {
     nombre: "Escape room temático",
-    imagen: "/images/teambuilding-4.jpg",
+    imagen: "/images/escape-room-team-building.jpg",
     descripcion: "Diseñado a medida, con referencias que tu equipo reconoce.",
   },
   {
@@ -18,7 +18,7 @@ export const actividadesIndoor: Ejemplo[] = [
   },
   {
     nombre: "Torneos de juegos de mesa",
-    imagen: "/images/team-building2.jpg",
+    imagen: "/images/torneo-juegos-de-mesa.jpg",
     descripcion: "Competición sana, sin pantallas, con la sala que elijas.",
   },
   {

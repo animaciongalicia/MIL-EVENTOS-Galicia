@@ -3,12 +3,12 @@ import type { Ejemplo } from "@/components/shared/GridEjemplos";
 export const localizacionEspaciosEjemplos: Ejemplo[] = [
   {
     nombre: "Pazos y fincas históricas",
-    imagen: "/images/celebracion-evento-empresa.jpg",
+    imagen: "/images/pazo-finca-evento-interior.jpg",
     descripcion: "Para eventos que necesitan carácter, no solo metros cuadrados.",
   },
   {
     nombre: "Naves y espacios industriales",
-    imagen: "/images/locales-recurso-localizaciones.jpg",
+    imagen: "/images/nave-industrial-loft-evento.jpg",
     descripcion: "Cuando el proyecto pide un lienzo en blanco.",
   },
   {
@@ -23,7 +23,7 @@ export const localizacionEspaciosEjemplos: Ejemplo[] = [
   },
   {
     nombre: "Bodegas y espacios con producto propio",
-    imagen: "/images/teambuilding-bodegas-ribera-sacra.jpg",
+    imagen: "/images/bodega-vino-galicia.jpg",
     descripcion: "El sitio y el catering resueltos a la vez.",
   },
   {

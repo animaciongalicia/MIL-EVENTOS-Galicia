@@ -3,7 +3,7 @@ import type { Ejemplo } from "@/components/shared/GridEjemplos";
 export const congresosYConvencionesEjemplos: Ejemplo[] = [
   {
     nombre: "Producción técnica completa",
-    imagen: "/images/taller-musical.jpg",
+    imagen: "/images/escenario-produccion-av-congreso.jpg",
     descripcion: "Sonido, iluminación, escenario y streaming, coordinados por un único interlocutor.",
   },
   {
@@ -28,7 +28,7 @@ export const congresosYConvencionesEjemplos: Ejemplo[] = [
   },
   {
     nombre: "Streaming y contenido posterior",
-    imagen: "/images/talleres-de-coaching-para-empresas-forest.jpg",
+    imagen: "/images/set-streaming-camara-evento.jpg",
     descripcion: "Para que el evento no termine cuando se apagan las luces.",
   },
 ];
