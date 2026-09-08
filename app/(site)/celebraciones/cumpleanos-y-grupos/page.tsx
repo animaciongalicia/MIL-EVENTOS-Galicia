@@ -40,7 +40,7 @@ const queCelebramos = [
 export default function CumpleanosYGruposPage() {
   return (
     <>
-      <Hero
+      <Hero imagen="/images/team-building2.jpg"
         variante="celebraciones"
         titulo="Cumpleaños y grupos"
         subtitulo="Cumpleaños de adultos, fincas y celebraciones privadas — para los tuyos, sin que te toque a ti montarlo todo."

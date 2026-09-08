@@ -59,7 +59,7 @@ const factoresGastronomia = [
 export default function ActividadesGastronomiaYVinosPage() {
   return (
     <>
-      <Hero
+      <Hero imagen="/images/teambuilding-bodegas-ribera-sacra.jpg"
         titulo="Gastronomía y vinos"
         subtitulo="Galicia se explica mejor con un tenedor en la mano que con una diapositiva más."
       />

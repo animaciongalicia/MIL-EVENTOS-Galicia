@@ -79,7 +79,7 @@ const queIncluye = [
 export default function CenasDeEmpresaPage() {
   return (
     <>
-      <Hero
+      <Hero imagen="/images/camareros-evento-empresa.jpg"
         variante="celebraciones"
         titulo="Cenas de empresa"
         subtitulo="La cena de Navidad y el cierre de año, montados para que RRHH no acabe más agotado que el equipo."

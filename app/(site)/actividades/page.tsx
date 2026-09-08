@@ -116,7 +116,7 @@ const factoresOperativos = [
 export default function ActividadesPage() {
   return (
     <>
-      <Hero
+      <Hero imagen="/images/big-paddle-surf-exploramas-team-building-1.jpg"
         titulo="Actividades para tu evento"
         subtitulo="El catálogo de experiencias que le dan forma a un team building, una jornada outdoor o un incentivo."
       />

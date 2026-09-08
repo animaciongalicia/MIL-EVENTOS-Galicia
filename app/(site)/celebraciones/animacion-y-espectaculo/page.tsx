@@ -61,7 +61,7 @@ const comoTrabajamos = [
 export default function AnimacionYEspectaculoPage() {
   return (
     <>
-      <Hero
+      <Hero imagen="/images/camarero-infiltrado.jpg"
         variante="celebraciones"
         titulo="Animación y espectáculo"
         subtitulo="DJs, monólogos, cómicos, drag queens y animación — lo que convierte una reunión en una fiesta."

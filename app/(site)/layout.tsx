@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Fraunces, Inter } from "next/font/google";
 import Header from "@/components/layout/Header";
 import FooterGlobal from "@/components/layout/FooterGlobal";
+import Analytics from "@/components/analytics/Analytics";
 import "../globals.css";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
@@ -30,6 +31,11 @@ export const metadata: Metadata = {
     title: "Mil Eventos Galicia",
     description: DESCRIPCION_SITIO,
   },
+  // Verificación de Google Search Console. Se rellena con el token del método
+  // "etiqueta HTML" (content="...") vía la variable de entorno en Vercel.
+  ...(process.env.NEXT_PUBLIC_GSC_VERIFICATION
+    ? { verification: { google: process.env.NEXT_PUBLIC_GSC_VERIFICATION } }
+    : {}),
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -39,6 +45,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Header />
         {children}
         <FooterGlobal />
+        <Analytics />
       </body>
     </html>
   );

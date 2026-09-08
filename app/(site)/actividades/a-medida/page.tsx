@@ -60,7 +60,7 @@ const queNecesitamos = [
 export default function ActividadesAMedidaPage() {
   return (
     <>
-      <Hero
+      <Hero imagen="/images/conxuro-queimada-2.jpg"
         titulo="A medida"
         subtitulo="Hay eventos que no encajan en ninguna categoría de esta web."
       />

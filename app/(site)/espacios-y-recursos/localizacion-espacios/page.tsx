@@ -80,7 +80,7 @@ const queRevisamos = [
 export default function LocalizacionEspaciosPage() {
   return (
     <>
-      <Hero
+      <Hero imagen="/images/sotavento-noche.jpg"
         titulo="Localización de espacios"
         subtitulo="El sitio exacto para tu evento, en cualquier punto de Galicia."
       />

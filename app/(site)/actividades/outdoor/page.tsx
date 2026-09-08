@@ -62,7 +62,7 @@ const factoresOutdoor = [
 export default function ActividadesOutdoorPage() {
   return (
     <>
-      <Hero titulo="Outdoor" subtitulo="Naturaleza gallega como escenario, no como decorado." />
+      <Hero imagen="/images/puenting-teambuilding.jpg" titulo="Outdoor" subtitulo="Naturaleza gallega como escenario, no como decorado." />
 
       <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>

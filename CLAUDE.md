@@ -24,7 +24,7 @@ Este archivo es el contexto de proyecto para Claude Code. Léelo antes de tocar 
 - **Repositorio:** GitHub.
 - **Contenido:** archivos (Markdown/MDX o JSON), sin CMS ni base de datos en la primera fase. Los posts de blog viven como archivos `.mdx` en el repo.
 - **Formularios:** el formulario de `/contacto` no usa backend ni proveedor externo. Construye un `mailto:` con los datos ya redactados (`data/contacto.ts` centraliza el email, teléfono y enlace de WhatsApp) y lo abre en el cliente de correo del usuario — lo envía él mismo desde su cuenta a `info@mileventosgalicia.com`, con copia automática para él. Teléfono/WhatsApp de contacto: +34 678 288 284.
-- **Analítica:** no instalada por defecto. Si en el futuro se activa (Vercel Analytics o Google Analytics), se usará para alimentar el bloque "Más leídos" del blog (ver sección 4 y sección 10, pendiente abierto).
+- **Analítica:** GA4 y verificación de Search Console están cableados por variables de entorno (`components/analytics/Analytics.tsx` + `verification` en `app/(site)/layout.tsx`), pero **inactivos hasta que se definan las variables en Vercel** (`NEXT_PUBLIC_GA_ID`, `NEXT_PUBLIC_GSC_VERIFICATION` — ver `.env.example`). Sin variables no se inyecta ningún script. Cuando haya datos reales de GA4 podrán alimentar el bloque "Más leídos" del blog (sección 10). Pendiente RGPD: condicionar GA4 a un banner de consentimiento de cookies. Guía de migración/SEO en `MIGRACION-SEO.md`.
 - **Sin backend propio, sin login, sin panel de administración** en esta fase. Los contenidos se editan directamente en el repo.
 
 ---

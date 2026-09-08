@@ -60,7 +60,7 @@ const factoresIndoor = [
 export default function ActividadesIndoorPage() {
   return (
     <>
-      <Hero titulo="Indoor" subtitulo="Cuando el tiempo no acompaña, otro tipo de experiencia bajo techo." />
+      <Hero imagen="/images/team-building-masterchef-madrid-scaled.jpg" titulo="Indoor" subtitulo="Cuando el tiempo no acompaña, otro tipo de experiencia bajo techo." />
 
       <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>

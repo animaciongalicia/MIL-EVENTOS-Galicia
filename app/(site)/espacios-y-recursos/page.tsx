@@ -128,7 +128,7 @@ const razonesEspacios = [
 export default function EspaciosYRecursosPage() {
   return (
     <>
-      <Hero
+      <Hero imagen="/images/sotavento-palexco.jpg"
         titulo="Espacios y recursos para tu evento"
         subtitulo="Todo lo que rodea al evento, resuelto."
       />

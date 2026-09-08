@@ -84,7 +84,7 @@ const queResolvemos = [
 export default function CelebracionesDeEmpresaPage() {
   return (
     <>
-      <Hero
+      <Hero imagen="/images/cena-grupo-empresa-barcelona.jpg"
         variante="celebraciones"
         titulo="Celebraciones de empresa"
         subtitulo="Inauguraciones, cócteles, aniversarios y entregas de premios que se recuerdan y se comparten."
