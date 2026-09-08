@@ -4,15 +4,22 @@ import Link from "next/link";
 import {
   CATEGORIAS_BLOG,
   CATEGORIA_LABELS,
-  CATEGORIA_PILAR_HREF,
+  type CategoriaBlog,
   esCategoriaValida,
   getPostsByCategoria,
 } from "@/lib/blog";
 import TarjetaPost from "@/components/blog/TarjetaPost";
 import BlogCategoriasNav from "@/components/blog/BlogCategoriasNav";
 import CTAFinal from "@/components/shared/CTAFinal";
-import { IconArrowRight } from "@/components/shared/icons";
 import { gridColsClass } from "@/components/shared/gridCols";
+
+// Descripción propia por categoría editorial (no habla de un servicio concreto,
+// así no canibaliza ninguna pilar).
+const CATEGORIA_DESC: Record<CategoriaBlog, string> = {
+  guias: "Guías prácticas para organizar tu evento paso a paso, sin sustos de última hora.",
+  ideas: "Ideas y ejemplos para que tu próximo evento no sea uno más de la lista.",
+  errores: "Los fallos que más se repiten al organizar un evento — y cómo evitarlos a tiempo.",
+};
 
 type CategoriaPageProps = {
   params: { categoria: string };
@@ -27,12 +34,7 @@ export function generateMetadata({ params }: CategoriaPageProps): Metadata {
   const label = CATEGORIA_LABELS[params.categoria];
   return {
     title: `${label} | Blog | Mil Eventos Galicia`,
-    description: `Artículos sobre ${label.toLowerCase()} para eventos de empresa en Galicia.`,
-    // noindex: la página de categoría es un filtro de navegación del blog, no
-    // una landing SEO. Se marca noindex para NO competir con su página pilar
-    // por la misma keyword (evita canibalización — CLAUDE.md §9/§10). El blog
-    // sigue enlazando "hacia arriba" a la pilar (funnel en la propia página).
-    robots: { index: false, follow: true },
+    description: CATEGORIA_DESC[params.categoria],
   };
 }
 
@@ -58,15 +60,8 @@ export default function CategoriaPage({ params }: CategoriaPageProps) {
             {label}
           </h1>
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-600">
-            Artículos sobre {label.toLowerCase()} para eventos de empresa en Galicia.
+            {CATEGORIA_DESC[categoria]}
           </p>
-          <Link
-            href={CATEGORIA_PILAR_HREF[categoria]}
-            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-atlantico-700 hover:underline"
-          >
-            ¿Buscas {label.toLowerCase()} para tu evento? Ver la página de {label.toLowerCase()}
-            <IconArrowRight className="h-4 w-4" />
-          </Link>
         </div>
       </section>
 

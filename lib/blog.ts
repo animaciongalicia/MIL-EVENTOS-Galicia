@@ -4,11 +4,11 @@ import matter from "gray-matter";
 
 const BLOG_DIR = path.join(process.cwd(), "content/blog");
 
-// Categorías confirmadas — mapeadas 1:1 con páginas pilar para evitar
-// ambigüedad en el enlazado interno obligatorio (CLAUDE.md §9) y canibalización
-// de keyword entre categoría y pilar (p.ej. "outdoor" competía entre
-// /eventos-empresa/jornadas-outdoor y /actividades/outdoor).
-export const CATEGORIAS_BLOG = [
+// --- PILAR (SEO, no visible como taxonomía) ---------------------------------
+// Cada post apoya a UNA página pilar. Sirve solo para el enlace interno
+// obligatorio al cierre del post (CLAUDE.md §9), NO como categoría navegable —
+// así el blog nunca compite por keyword con la pilar (anti-canibalización).
+export const PILARES = [
   "team-building",
   "incentivos",
   "jornadas-outdoor",
@@ -17,28 +17,37 @@ export const CATEGORIAS_BLOG = [
   "espacios-y-recursos",
 ] as const;
 
-export type CategoriaBlog = (typeof CATEGORIAS_BLOG)[number];
+export type Pilar = (typeof PILARES)[number];
 
-// Nombre legible de cada categoría, para mostrar en badges, sidebar y <h1>
-// en vez del slug en crudo ("team-building" → "Team building").
-export const CATEGORIA_LABELS: Record<CategoriaBlog, string> = {
-  "team-building": "Team building",
-  incentivos: "Incentivos",
-  "jornadas-outdoor": "Jornadas outdoor",
-  "congresos-y-convenciones": "Congresos y convenciones",
-  "gastronomia-y-vinos": "Gastronomía y vinos",
-  "espacios-y-recursos": "Espacios y recursos",
+export const PILAR_LABELS: Record<Pilar, string> = {
+  "team-building": "team building",
+  incentivos: "incentivos",
+  "jornadas-outdoor": "jornadas outdoor",
+  "congresos-y-convenciones": "congresos y convenciones",
+  "gastronomia-y-vinos": "gastronomía y vinos",
+  "espacios-y-recursos": "espacios y recursos",
 };
 
-// Página pilar 1:1 de cada categoría (CLAUDE.md §10) — usada para el enlace
-// interno obligatorio al cierre de cada post (CLAUDE.md §9).
-export const CATEGORIA_PILAR_HREF: Record<CategoriaBlog, string> = {
+export const PILAR_HREF: Record<Pilar, string> = {
   "team-building": "/eventos-empresa/team-building",
   incentivos: "/eventos-empresa/incentivos",
   "jornadas-outdoor": "/eventos-empresa/jornadas-outdoor",
   "congresos-y-convenciones": "/eventos-empresa/congresos-y-convenciones",
   "gastronomia-y-vinos": "/actividades/gastronomia-y-vinos",
   "espacios-y-recursos": "/espacios-y-recursos",
+};
+
+// --- CATEGORÍA (editorial, la taxonomía navegable del blog) -----------------
+// Agrupa por TIPO de contenido, no por servicio — así no duplica la intención
+// de búsqueda de ninguna pilar y las páginas de categoría sí pueden indexarse.
+export const CATEGORIAS_BLOG = ["guias", "ideas", "errores"] as const;
+
+export type CategoriaBlog = (typeof CATEGORIAS_BLOG)[number];
+
+export const CATEGORIA_LABELS: Record<CategoriaBlog, string> = {
+  guias: "Guías",
+  ideas: "Ideas",
+  errores: "Errores a evitar",
 };
 
 export function esCategoriaValida(valor: string): valor is CategoriaBlog {
@@ -63,8 +72,9 @@ export type PostFrontmatter = {
   title: string;
   description: string;
   categoria: CategoriaBlog;
+  pilar: Pilar;
   fecha: string;
-  // Portada real en /public; si falta, cae en la de stock por slug.
+  // Portada real en /public; si falta, la tarjeta y el post no muestran imagen.
   imagen?: string;
 };
 
@@ -97,11 +107,16 @@ export function getPostsByCategoria(categoria: string): Post[] {
   return getAllPosts().filter((post) => post.categoria === categoria);
 }
 
+// Relacionados: primero de la misma categoría editorial; si no llegan a
+// `limite`, se rellena con los más recientes del resto — para que TODO post
+// ofrezca siempre por dónde seguir navegando el blog.
 export function getPostsRelacionados(slug: string, limite = 3): Post[] {
   const post = getPostBySlug(slug);
   if (!post) return [];
 
-  return getAllPosts()
-    .filter((p) => p.slug !== slug && p.categoria === post.categoria)
-    .slice(0, limite);
+  const resto = getAllPosts().filter((p) => p.slug !== slug);
+  const mismaCategoria = resto.filter((p) => p.categoria === post.categoria);
+  const otros = resto.filter((p) => p.categoria !== post.categoria);
+
+  return [...mismaCategoria, ...otros].slice(0, limite);
 }

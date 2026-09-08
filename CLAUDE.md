@@ -128,7 +128,7 @@ No dupliques markup entre páginas parecidas. Estos son los componentes base que
 | `TarjetaPost` | Tarjeta de post para listados de blog (imagen, categoría, título, extracto, fecha). Variante `destacada` (horizontal, imagen a la mitad) para el último artículo del índice. |
 | `BloqueDestacados` | Bloque de posts curados a mano (ver sección 10, sustituye a "más leídos" mientras no haya analítica). Debe ir dentro de un contenedor `mx-auto max-w-5xl px-6` (no trae ancho propio). |
 | `BannerEcosistema` | Banner contextual que enlaza a SUUNIA / Sea Galicia / Luxe Galicia según la página (ver sección 7). |
-| `FooterGlobal` | Footer-mapa del sitio (`bg-atlantico-800`): bloque de marca+contacto+dirección (doble ancho) y columnas de enlaces a fondo — Empresas (4 pilares), Actividades (4), Espacios (3) + Celebraciones (4) apiladas, y Ecosistema + institucional (Nosotros/Blog/Contacto). Los títulos de columna enlazan a su landing. Cierra con © + enlaces legales. Rejilla `lg:grid-cols-6` con la marca en `col-span-2`. |
+| `FooterGlobal` | Footer de 3 bloques (`bg-atlantico-800`, `lg:grid-cols-4` con la marca en `col-span-2`): marca + contacto + dirección · **Explora** (las 4 landings: Empresas, Actividades, Espacios, Celebraciones) · **Mil Eventos** (Blog, Quiénes somos, Contacto) + **Ecosistema** (SUUNIA/Sea/Luxe). Cierra con © + enlaces legales. Sin listar todas las sub-páginas (se probó un footer-mapa completo y quedaba apelotonado). |
 | `FormularioContacto` | Formulario único reutilizado en `/contacto`. Sigue teniendo variante `celebraciones` (terracota) por si se reutiliza, aunque el clúster de Celebraciones ahora cierra con `CTAFinal` → `/contacto`. |
 | `CTAFinal` | Bloque de cierre de página con botón de contacto/presupuesto. |
 | `TiraLogos` | Tira de 8-10 logos de clientes, usada en Home y footer. |
@@ -222,7 +222,7 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 
 - Los posts de blog deben incluir metadatos (`title`, `description`, categoría, fecha) en el frontmatter del `.mdx`.
 - Enlazado interno obligatorio: cada post de blog cierra con un enlace a la página pilar relacionada; cada página pilar puede enlazar a posts relacionados si existen.
-- **Anti-canibalización blog ↔ pilares:** las 6 categorías del blog mapean 1:1 con páginas pilar (`CATEGORIA_PILAR_HREF`), así que las páginas `/blog/categoria/[categoria]` van con **`robots: { index: false, follow: true }`** (noindex) para no competir por la misma keyword que su pilar. Sirven como filtro de navegación del blog y **enlazan hacia arriba** a su pilar (funnel en la cabecera). El índice `/blog`, los posts `/blog/[slug]` y las pilares SÍ se indexan. No exponer una página de categoría indexable que duplique la intención de búsqueda de una pilar.
+- **Anti-canibalización blog ↔ pilares (pilar y categoría DESACOPLADOS):** cada post lleva dos campos en el frontmatter — `pilar` (una de las 6 pilares, `PILARES` en `lib/blog.ts`) y `categoria` (editorial). El **`pilar` no es taxonomía navegable**: solo alimenta el enlace interno obligatorio del cierre del post (§9) vía `PILAR_HREF`/`PILAR_LABELS`, así el blog nunca compite por keyword con la pilar. La **`categoria` es la taxonomía navegable** y agrupa por TIPO de contenido, no por servicio: `guias`, `ideas`, `errores` (`CATEGORIA_LABELS`). Como no duplican la intención de búsqueda de ninguna pilar, las páginas `/blog/categoria/[categoria]` **sí se indexan** (ya no llevan noindex). Los relacionados (`getPostsRelacionados`) muestran primero la misma categoría editorial y rellenan con los más recientes, para que todo post ofrezca por dónde seguir. Al añadir un post, define SIEMPRE `pilar` + `categoria`.
 
 ---
 
@@ -231,7 +231,7 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 - Naming de carpetas y rutas en minúsculas, con guiones (`kebab-case`), igual que las URLs del sitemap.
 - Componentes en `PascalCase`, un componente por archivo.
 - Datos de "ejemplos" dentro de páginas pilar (los 4-6 bloques de `GridEjemplos`) deben vivir en un archivo de datos separado (`data/actividades-outdoor.ts`, etc.), no hardcodeados en el JSX de la página — así se pueden editar sin tocar el componente.
-- Posts de blog: un archivo `.mdx` por post en `/content/blog/`, con frontmatter que incluya `categoria` (una de las 6 definidas en `lib/blog.ts`: `team-building`, `incentivos`, `jornadas-outdoor`, `congresos-y-convenciones`, `gastronomia-y-vinos`, `espacios-y-recursos`). Cada categoría mapea 1:1 con una página pilar para que el enlazado interno del post nunca sea ambiguo.
+- Posts de blog: un archivo `.mdx` por post en `/content/blog/`, con frontmatter que incluya `pilar` (una de las 6 pilares de `PILARES`: `team-building`, `incentivos`, `jornadas-outdoor`, `congresos-y-convenciones`, `gastronomia-y-vinos`, `espacios-y-recursos` — decide el enlace interno del cierre) y `categoria` (editorial: `guias`, `ideas`, `errores` — la taxonomía navegable). Ver §9 para por qué van desacoplados.
 - Antes de añadir una página pilar nueva o una categoría nueva de blog, actualizar tanto este `CLAUDE.md` como `sitemap-definitivo.md`.
 
 ---

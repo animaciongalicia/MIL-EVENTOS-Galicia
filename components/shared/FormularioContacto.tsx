@@ -6,6 +6,9 @@ import { EMAIL_CONTACTO } from "@/data/contacto";
 type FormularioContactoProps = {
   copyEnvio?: string;
   variante?: "corporativa" | "celebraciones";
+  // Clases del <form>. Por defecto se autocentra (max-w-xl); pásalo vacío para
+  // encajarlo dentro de una columna (p.ej. el layout a 2 columnas de /contacto).
+  claseWrapper?: string;
 };
 
 // Sin backend: construye un mailto: con los datos ya redactados y lo abre en
@@ -14,6 +17,7 @@ type FormularioContactoProps = {
 export default function FormularioContacto({
   copyEnvio = "Enviar",
   variante = "corporativa",
+  claseWrapper = "mx-auto max-w-xl px-6 py-12",
 }: FormularioContactoProps) {
   const esCelebraciones = variante === "celebraciones";
   const [enviado, setEnviado] = useState(false);
@@ -47,7 +51,7 @@ export default function FormularioContacto({
   }
 
   return (
-    <form onSubmit={handleSubmit} className="mx-auto max-w-xl space-y-4 px-6 py-12">
+    <form onSubmit={handleSubmit} className={`space-y-4 ${claseWrapper}`}>
       <div>
         <label htmlFor="nombre" className="block text-sm font-medium">
           Nombre

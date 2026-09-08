@@ -5,7 +5,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import {
   CATEGORIA_LABELS,
-  CATEGORIA_PILAR_HREF,
+  PILAR_HREF,
+  PILAR_LABELS,
   formatFecha,
   getAllPosts,
   getPostBySlug,
@@ -35,7 +36,7 @@ export default function PostPage({ params }: PostPageProps) {
   if (!post) notFound();
 
   const relacionados = getPostsRelacionados(post.slug);
-  const pilarHref = CATEGORIA_PILAR_HREF[post.categoria];
+  const pilarHref = PILAR_HREF[post.pilar];
 
   return (
     <article>
@@ -95,7 +96,7 @@ export default function PostPage({ params }: PostPageProps) {
             href={pilarHref}
             className="mt-4 inline-flex items-center gap-2 rounded-full bg-atlantico-700 px-6 py-3 font-semibold text-white transition hover:bg-atlantico-800"
           >
-            Ver {CATEGORIA_LABELS[post.categoria].toLowerCase()}
+            Ver {PILAR_LABELS[post.pilar]}
             <IconArrowRight className="h-4 w-4" />
           </Link>
         </div>
