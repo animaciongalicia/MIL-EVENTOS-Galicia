@@ -82,7 +82,11 @@ const factoresJornada = [
 export default function JornadasOutdoorPage() {
   return (
     <>
-      <Hero titulo="Jornadas outdoor" subtitulo="Salir de la oficina, con propósito." />
+      <Hero
+        titulo="Jornadas outdoor"
+        subtitulo="Salir de la oficina, con propósito."
+        imagen="/images/barranquismo-en-galicia-para-empresas.jpg"
+      />
 
       <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>

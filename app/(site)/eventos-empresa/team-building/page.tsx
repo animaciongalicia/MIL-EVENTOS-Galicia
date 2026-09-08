@@ -17,7 +17,11 @@ export const metadata: Metadata = {
 export default function TeamBuildingPage() {
   return (
     <>
-      <Hero titulo="Team building" subtitulo="Actividades que unen equipos de verdad." />
+      <Hero
+        titulo="Team building"
+        subtitulo="Actividades que unen equipos de verdad."
+        imagen="/images/team-building-empresas.jpg"
+      />
 
       <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>

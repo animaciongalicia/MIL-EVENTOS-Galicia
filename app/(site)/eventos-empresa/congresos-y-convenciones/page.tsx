@@ -82,7 +82,11 @@ const factoresCongreso = [
 export default function CongresosYConvencionesPage() {
   return (
     <>
-      <Hero titulo="Congresos y convenciones" subtitulo="Eventos corporativos a gran escala." />
+      <Hero
+        titulo="Congresos y convenciones"
+        subtitulo="Eventos corporativos a gran escala."
+        imagen="/images/locales-palexco-terraza.jpg"
+      />
 
       <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
         <p>
