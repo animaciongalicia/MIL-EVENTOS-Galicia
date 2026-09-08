@@ -4,12 +4,14 @@ import Link from "next/link";
 import {
   CATEGORIAS_BLOG,
   CATEGORIA_LABELS,
+  CATEGORIA_PILAR_HREF,
   esCategoriaValida,
   getPostsByCategoria,
 } from "@/lib/blog";
 import TarjetaPost from "@/components/blog/TarjetaPost";
 import BlogCategoriasNav from "@/components/blog/BlogCategoriasNav";
 import CTAFinal from "@/components/shared/CTAFinal";
+import { IconArrowRight } from "@/components/shared/icons";
 import { gridColsClass } from "@/components/shared/gridCols";
 
 type CategoriaPageProps = {
@@ -26,6 +28,11 @@ export function generateMetadata({ params }: CategoriaPageProps): Metadata {
   return {
     title: `${label} | Blog | Mil Eventos Galicia`,
     description: `Artículos sobre ${label.toLowerCase()} para eventos de empresa en Galicia.`,
+    // noindex: la página de categoría es un filtro de navegación del blog, no
+    // una landing SEO. Se marca noindex para NO competir con su página pilar
+    // por la misma keyword (evita canibalización — CLAUDE.md §9/§10). El blog
+    // sigue enlazando "hacia arriba" a la pilar (funnel en la propia página).
+    robots: { index: false, follow: true },
   };
 }
 
@@ -53,6 +60,13 @@ export default function CategoriaPage({ params }: CategoriaPageProps) {
           <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-600">
             Artículos sobre {label.toLowerCase()} para eventos de empresa en Galicia.
           </p>
+          <Link
+            href={CATEGORIA_PILAR_HREF[categoria]}
+            className="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-atlantico-700 hover:underline"
+          >
+            ¿Buscas {label.toLowerCase()} para tu evento? Ver la página de {label.toLowerCase()}
+            <IconArrowRight className="h-4 w-4" />
+          </Link>
         </div>
       </section>
 

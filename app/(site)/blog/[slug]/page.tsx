@@ -80,7 +80,7 @@ export default function PostPage({ params }: PostPageProps) {
       )}
 
       <div className="mx-auto max-w-5xl px-6 py-12">
-        <div className="post-content">
+        <div className="post-content max-w-2xl">
           <MDXRemote source={post.content} />
         </div>
 

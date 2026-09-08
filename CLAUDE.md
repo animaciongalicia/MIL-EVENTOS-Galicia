@@ -128,7 +128,7 @@ No dupliques markup entre páginas parecidas. Estos son los componentes base que
 | `TarjetaPost` | Tarjeta de post para listados de blog (imagen, categoría, título, extracto, fecha). Variante `destacada` (horizontal, imagen a la mitad) para el último artículo del índice. |
 | `BloqueDestacados` | Bloque de posts curados a mano (ver sección 10, sustituye a "más leídos" mientras no haya analítica). Debe ir dentro de un contenedor `mx-auto max-w-5xl px-6` (no trae ancho propio). |
 | `BannerEcosistema` | Banner contextual que enlaza a SUUNIA / Sea Galicia / Luxe Galicia según la página (ver sección 7). |
-| `FooterGlobal` | Footer con ecosistema de marcas, enlace a `/celebraciones`, tira de logos y claim de prueba social. |
+| `FooterGlobal` | Footer-mapa del sitio (`bg-atlantico-800`): bloque de marca+contacto+dirección (doble ancho) y columnas de enlaces a fondo — Empresas (4 pilares), Actividades (4), Espacios (3) + Celebraciones (4) apiladas, y Ecosistema + institucional (Nosotros/Blog/Contacto). Los títulos de columna enlazan a su landing. Cierra con © + enlaces legales. Rejilla `lg:grid-cols-6` con la marca en `col-span-2`. |
 | `FormularioContacto` | Formulario único reutilizado en `/contacto`. Sigue teniendo variante `celebraciones` (terracota) por si se reutiliza, aunque el clúster de Celebraciones ahora cierra con `CTAFinal` → `/contacto`. |
 | `CTAFinal` | Bloque de cierre de página con botón de contacto/presupuesto. |
 | `TiraLogos` | Tira de 8-10 logos de clientes, usada en Home y footer. |
@@ -222,6 +222,7 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 
 - Los posts de blog deben incluir metadatos (`title`, `description`, categoría, fecha) en el frontmatter del `.mdx`.
 - Enlazado interno obligatorio: cada post de blog cierra con un enlace a la página pilar relacionada; cada página pilar puede enlazar a posts relacionados si existen.
+- **Anti-canibalización blog ↔ pilares:** las 6 categorías del blog mapean 1:1 con páginas pilar (`CATEGORIA_PILAR_HREF`), así que las páginas `/blog/categoria/[categoria]` van con **`robots: { index: false, follow: true }`** (noindex) para no competir por la misma keyword que su pilar. Sirven como filtro de navegación del blog y **enlazan hacia arriba** a su pilar (funnel en la cabecera). El índice `/blog`, los posts `/blog/[slug]` y las pilares SÍ se indexan. No exponer una página de categoría indexable que duplique la intención de búsqueda de una pilar.
 
 ---
 
@@ -264,3 +265,4 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 - **Iconos**: set propio dibujado a mano en `components/shared/icons.tsx` (teléfono, WhatsApp, email, ubicación, flecha, chevron) — sin librería externa. Se usan en contacto (footer, `/contacto`), en el desplegable del menú y en los botones de CTA (`Hero`, `CTAFinal`). Cualquier icono nuevo sigue el mismo estilo: trazo 1.5, sin relleno, `viewBox="0 0 24 24"`.
 - **`PasosTrabajo`** (`components/shared/PasosTrabajo.tsx`): bloque "Cómo trabajamos" con pasos numerados (círculo + título + descripción corta), reservado a Home y a las 4 páginas pilar de `/eventos-empresa` — la prioridad de negocio (CLAUDE.md §11) tiene también prioridad visual sobre el resto del catálogo de páginas pilar, que sigue con el bloque en prosa simple.
 - **Evitar bloques largos de texto corrido.** Cualquier página de más de 2-3 párrafos seguidos debe alternar formato: `CifrasDestacadas`, `CitaDestacada`, `TarjetasTexto`, `GridEjemplos` o `PasosTrabajo` en vez de encadenar más párrafos de prosa. Un párrafo de contexto o cierre está bien; media docena seguidos no. Aplicada ya en `/`, `/eventos-empresa` (landing + 4 pilares), `/actividades` (landing + 4 sub-páginas), `/espacios-y-recursos` (landing + 3 sub-páginas) y `/celebraciones` (landing + 4 sub-páginas, con `acento="terracota"` en los componentes). No aplica a las páginas legales (el texto corrido es lo correcto en un aviso legal) ni a los posts de blog (formato artículo).
+- **Ancho de lectura del post de blog:** en `/blog/[slug]`, la cabecera y la foto de portada van a `max-w-5xl`, pero el cuerpo del artículo (`.post-content`) va en `max-w-2xl` (≈65-75 caracteres por línea) para que sea legible — es la única excepción al "todo a `max-w-5xl`" (§12), justificada por ser texto largo de lectura corrida.
