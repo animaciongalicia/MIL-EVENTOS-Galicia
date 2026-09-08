@@ -58,7 +58,7 @@ Sitemap de referencia: `sitemap-definitivo.md` (debe mantenerse sincronizado con
   /ecosistema/sea-galicia                 Solo enlazada desde BannerEcosistema y FooterGlobal
   /ecosistema/luxe-galicia                Solo enlazada desde BannerEcosistema y FooterGlobal
 
-/blog                                     Índice con sidebar de categorías
+/blog                                     Índice a ancho completo con chips de categoría
   /blog/categoria/[categoria]
   /blog/[slug]
 
@@ -101,7 +101,7 @@ Estructura de carpetas sugerida en `/app`:
   /espacios-y-recursos/localizacion-espacios/page.tsx
   /espacios-y-recursos/traslados/page.tsx
   /espacios-y-recursos/alojamiento/page.tsx
-  /blog/layout.tsx                       → layout con sidebar de categorías
+  /blog/layout.tsx                       → passthrough (el blog va a ancho completo, sin sidebar)
   /blog/page.tsx
   /blog/categoria/[categoria]/page.tsx
   /blog/[slug]/page.tsx
@@ -123,11 +123,10 @@ No dupliques markup entre páginas parecidas. Estos son los componentes base que
 |---|---|
 | `Hero` | Cabecera de cada página (título + subtítulo + CTA). Variantes: corporativa, celebraciones. |
 | `LandingCategoria` | Patrón compartido por `/eventos-empresa`, `/actividades` y `/espacios-y-recursos`: intro + tarjetas de acceso a sublandings. |
-| `SidebarBlog` | Sidebar persistente de `/blog`, con las 6 categorías. |
+| `BlogCategoriasNav` | Barra horizontal de chips de categoría (con conteo), a ancho completo. Se usa en `/blog` y en `/blog/categoria/[categoria]`; sustituyó al antiguo `SidebarBlog`, que estrujaba la rejilla de posts. |
 | `GridEjemplos` | Grid de 4-6 tarjetas de ejemplo dentro de una página pilar (nombre + 2 líneas, sin link a página propia). |
-| `TarjetaPost` | Tarjeta de post para listados de blog (imagen, categoría, título, extracto, fecha). |
-| `BloqueUltimosPosts` | Bloque de los 5 posts más recientes en `/blog`. |
-| `BloqueDestacados` | Bloque de posts curados a mano (ver sección 10, sustituye a "más leídos" mientras no haya analítica). |
+| `TarjetaPost` | Tarjeta de post para listados de blog (imagen, categoría, título, extracto, fecha). Variante `destacada` (horizontal, imagen a la mitad) para el último artículo del índice. |
+| `BloqueDestacados` | Bloque de posts curados a mano (ver sección 10, sustituye a "más leídos" mientras no haya analítica). Debe ir dentro de un contenedor `mx-auto max-w-5xl px-6` (no trae ancho propio). |
 | `BannerEcosistema` | Banner contextual que enlaza a SUUNIA / Sea Galicia / Luxe Galicia según la página (ver sección 7). |
 | `FooterGlobal` | Footer con ecosistema de marcas, enlace a `/celebraciones`, tira de logos y claim de prueba social. |
 | `FormularioContacto` | Formulario único reutilizado en `/contacto`. Sigue teniendo variante `celebraciones` (terracota) por si se reutiliza, aunque el clúster de Celebraciones ahora cierra con `CTAFinal` → `/contacto`. |
@@ -257,7 +256,7 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 - **Contraste deliberado, no un único crema plano:** el `Hero` compartido (páginas interiores) y los bloques largos de texto van en `cream-100/200` (nunca oscuros — esa fue la corrección inicial). Pero el cierre de página (`CTAFinal`) y el `FooterGlobal` sí son bloques sólidos en `atlantico-700`/`atlantico-800` con texto claro — acentos puntuales y acotados, no un wash de toda la sección.
 - **Home (`app/(site)/page.tsx`) — diseño propio, no plantilla:** la home NO usa el componente `Hero` ni `LandingCategoria`; monta su propio **hero cinematográfico a pantalla completa** (`min-h-[88vh]`, foto de evento full-bleed con degradado `atlantico-800` de abajo arriba, eyebrow + titular serif grande + subtítulo + 2 CTAs invertidos, y las 3 cifras reales integradas en una barra `border-cream-50/20` dentro del propio hero). Debajo, un bloque de **servicios con jerarquía**: un banner destacado ancho para Eventos de empresa (prioridad B2B, §11) y una fila de 3 mosaicos con el texto SOBRE la imagen (degradado + título + flecha), en vez de repetir cuatro tarjetas foto+caja iguales. El resto de secciones alternan fondos `cream-50` / `cream-100` / `cream-200` para dar ritmo, con el hero y el `CTAFinal` como los dos anclas oscuras. Regla de "menos fotos sueltas, más jerarquía y aire": la home concentra la fotografía en el hero, el mosaico de servicios y el blog — no encadena bloques de foto+texto planos. Cada epígrafe de sección va como eyebrow en `uppercase tracking-[0.2em] text-atlantico-600`. Las tarjetas (`GridEjemplos`, `LandingCategoria`, `TarjetaPost`) van en `cream-50` (blanco) con sombra para despegarse del fondo de página; los bloques "Cómo trabajamos" de las páginas pilar van en una banda `cream-200` para romper la monotonía. Si una página nueva queda de un único tono de principio a fin, algo se ha hecho mal.
 - **Nunca usar directamente** los colores por defecto de Tailwind (`slate-*`, `amber-*`, `gray-*`...) en JSX nuevo — usar siempre los tokens de marca (`bg-cream-100`, `text-ink-700`, `border-sand-200`, `bg-atlantico-700`, `text-terracota-900`, etc.), para que un cambio de paleta futuro se haga en un único sitio (`tailwind.config.ts`).
-- **Nunca fijar el número de columnas de un grid a ojo** (`sm:grid-cols-2` porque sí) — usar `gridColsClass(n)` de `components/shared/gridCols.ts`, que elige columnas según la cantidad real de elementos para que nunca quede una tarjeta sola y huérfana en la última fila. Ya se usa en `GridEjemplos`, `LandingCategoria`, `BloqueUltimosPosts`, `BloqueDestacados` y `/blog/categoria/[categoria]`; cualquier grid nuevo de tarjetas con conteo variable debe usarlo también.
+- **Nunca fijar el número de columnas de un grid a ojo** (`sm:grid-cols-2` porque sí) — usar `gridColsClass(n)` de `components/shared/gridCols.ts`, que elige columnas según la cantidad real de elementos para que nunca quede una tarjeta sola y huérfana en la última fila. Ya se usa en `GridEjemplos`, `LandingCategoria`, `BloqueDestacados`, `/blog` (rejilla "Más artículos") y `/blog/categoria/[categoria]`; cualquier grid nuevo de tarjetas con conteo variable debe usarlo también.
 - **Un único ancho de contenedor por página: `max-w-5xl`.** Todas las `<section>` de una misma página —texto corrido incluido— usan `mx-auto max-w-5xl px-6`, el mismo ancho que ya usan `Header`, `FooterGlobal`, `GridEjemplos`, `LandingCategoria`, `BannerEcosistema` y `TiraLogos`. Antes los bloques de texto usaban `max-w-3xl` (768px) y los bloques de tarjetas `max-w-5xl` (1024px) alternando en la misma página — el margen izquierdo saltaba de sección en sección y se veía descuadrado. **Nunca uses `max-w-3xl`, `max-w-md` u otro ancho de sección "para que el texto no quede muy ancho"**: dentro de una `<section className="mx-auto max-w-5xl px-6">` puedes limitar un párrafo o lead concreto con `max-w-2xl` en el propio `<p>` (sin `mx-auto`, para que no se recentre y rompa el margen izquierdo común), pero el contenedor de sección siempre es `max-w-5xl`. Excepción: bloques de formulario/CTA autocontenidos y centrados como `FormularioContacto` o los pills de contacto de `/contacto`, que usan `max-w-xl` porque no conviven con otras secciones de ancho distinto en el flujo de la página.
 - **Tipografía**: `Fraunces` (serif, cargada vía `next/font/google`) para todo `h1`/`h2`/`h3` — aplicado automáticamente en `app/globals.css`, no hace falta añadir `font-serif` a mano. `Inter` para el resto del texto (`font-sans`, por defecto).
 - Hoy solo hay un layout raíz corporativo (`app/(site)/layout.tsx`) — el clúster `/celebraciones` vive dentro de `(site)` y lo hereda. (El antiguo layout raíz aislado `app/(celebraciones)/` se eliminó al convertir Celebraciones en pilar del menú, sección 8.) Si en el futuro se añade un segundo root layout, replicar el mismo bloque de `next/font/google`.

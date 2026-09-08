@@ -104,7 +104,7 @@ export default function HomePage() {
           object-cover recorta sin deformar. (Ver CLAUDE.md §12: la home usa un
           hero full-bleed propio, distinto del componente Hero de páginas
           interiores, que sigue siendo claro.) */}
-      <section className="relative isolate flex min-h-[88vh] flex-col justify-end overflow-hidden">
+      <section className="relative isolate flex min-h-[62vh] flex-col justify-end overflow-hidden">
         <Image
           src="/images/celebracion-evento-empresa.jpg"
           alt="Evento de empresa montado por Mil Eventos Galicia en Galicia"
@@ -115,7 +115,7 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-atlantico-800 via-atlantico-800/75 to-atlantico-800/35" />
 
-        <div className="mx-auto w-full max-w-5xl px-6 pb-12 pt-28 sm:pt-40">
+        <div className="mx-auto w-full max-w-5xl px-6 pb-12 pt-24 sm:pt-28">
           <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cream-100/80">
             Agencia de eventos en Galicia · Más de 15 años
           </p>
@@ -142,7 +142,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          <dl className="mt-14 grid max-w-3xl grid-cols-1 gap-x-8 gap-y-6 border-t border-cream-50/20 pt-8 sm:grid-cols-3">
+          <dl className="mt-10 grid max-w-3xl grid-cols-1 gap-x-8 gap-y-6 border-t border-cream-50/20 pt-6 sm:grid-cols-3">
             {cifrasHero.map((c) => (
               <div key={c.etiqueta}>
                 <dt className="font-serif text-4xl font-bold text-cream-50">{c.valor}</dt>
