@@ -1,14 +1,14 @@
 # Mil Eventos Galicia
 
-> Agencia de eventos de empresa en Galicia con más de 15 años de trayectoria: team building, incentivos, jornadas outdoor, congresos y convenciones. También localiza espacios, gestiona traslados y alojamiento para eventos corporativos en toda Galicia. Línea secundaria: celebraciones sociales (cumpleaños de adultos, fincas).
+> Agencia con más de 15 años organizando eventos para empresas en Galicia: team building, incentivos, jornadas outdoor, congresos y convenciones. También localiza espacios, gestiona traslados y alojamiento. Tiene una línea de celebraciones (empresas y particulares) con animación propia: DJs, cómicos, monólogos y drag queens. Titular: Inversiones SHISO, S.L. (CIF B70319923), Ronda de Montealto 4, 5ºA, 15002 A Coruña. Contacto: info@mileventosgalicia.com · +34 678 288 284.
 
-## Empresas
+## Empresas (foco principal del negocio)
 
 - [Eventos para empresas](https://mileventosgalicia.com/eventos-empresa): landing con las 4 líneas de servicio para empresas.
-- [Team building](https://mileventosgalicia.com/eventos-empresa/team-building)
-- [Incentivos](https://mileventosgalicia.com/eventos-empresa/incentivos)
-- [Jornadas outdoor](https://mileventosgalicia.com/eventos-empresa/jornadas-outdoor)
-- [Congresos y convenciones](https://mileventosgalicia.com/eventos-empresa/congresos-y-convenciones)
+- [Team building](https://mileventosgalicia.com/eventos-empresa/team-building): actividades para unir equipos.
+- [Incentivos](https://mileventosgalicia.com/eventos-empresa/incentivos): programas que premian y motivan.
+- [Jornadas outdoor](https://mileventosgalicia.com/eventos-empresa/jornadas-outdoor): desconexión al aire libre con propósito.
+- [Congresos y convenciones](https://mileventosgalicia.com/eventos-empresa/congresos-y-convenciones): eventos corporativos a gran escala con producción técnica.
 
 ## Actividades
 
@@ -25,6 +25,14 @@
 - [Traslados](https://mileventosgalicia.com/espacios-y-recursos/traslados)
 - [Alojamiento](https://mileventosgalicia.com/espacios-y-recursos/alojamiento)
 
+## Celebraciones (empresas y particulares)
+
+- [Celebraciones](https://mileventosgalicia.com/celebraciones): landing del clúster festivo, para empresas y particulares.
+- [Cenas de empresa](https://mileventosgalicia.com/celebraciones/cenas-de-empresa): cena de Navidad, cierre de año, con DJ o espectáculo.
+- [Celebraciones de empresa](https://mileventosgalicia.com/celebraciones/celebraciones-de-empresa): inauguraciones, cócteles, aniversarios, entregas de premios.
+- [Cumpleaños y grupos](https://mileventosgalicia.com/celebraciones/cumpleanos-y-grupos): cumpleaños de adultos, fincas y celebraciones privadas.
+- [Animación y espectáculo](https://mileventosgalicia.com/celebraciones/animacion-y-espectaculo): DJs, monólogos, cómicos, drag queens y animación.
+
 ## Ecosistema de marcas
 
 Tres marcas hermanas sin web propia todavía — su presencia informativa completa vive en estas páginas internas, no en un dominio externo.
@@ -35,10 +43,9 @@ Tres marcas hermanas sin web propia todavía — su presencia informativa comple
 
 ## Blog
 
-- [Blog](https://mileventosgalicia.com/blog): ideas, guías y recursos para organizar eventos de empresa en Galicia, organizado en 6 categorías (una por cada página pilar de empresas/actividades/espacios).
+- [Blog](https://mileventosgalicia.com/blog): ideas, guías y errores a evitar al organizar eventos de empresa en Galicia. Cada artículo enlaza a su página de servicio (pilar).
 
-## Otros
+## Institucional
 
-- [Celebraciones](https://mileventosgalicia.com/celebraciones): línea secundaria para particulares — cumpleaños de adultos, fincas y eventos especiales (no eventos de empresa).
-- [Contacto](https://mileventosgalicia.com/contacto): formulario único de contacto y presupuesto.
 - [Quiénes somos](https://mileventosgalicia.com/nosotros)
+- [Contacto](https://mileventosgalicia.com/contacto): formulario único de contacto y presupuesto (por correo).

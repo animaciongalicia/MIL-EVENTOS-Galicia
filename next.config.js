@@ -20,9 +20,9 @@ const nextConfig = {
       // (cumpleaños de adultos) ---
       { source: "/celebraciones-privadas/:path*", destination: "/celebraciones", permanent: true },
       { source: "/celebraciones-familiares/:path*", destination: "/celebraciones", permanent: true },
-      { source: "/cumpleanos-de-adultos-en-coruna/:path*", destination: "/celebraciones", permanent: true },
+      { source: "/cumpleanos-de-adultos-en-coruna/:path*", destination: "/celebraciones/cumpleanos-y-grupos", permanent: true },
       { source: "/cumpleanos-en-casa/:path*", destination: "/celebraciones", permanent: true },
-      { source: "/las-8-mejores-ideas-para-celebrar-un-cumpleanos-de-adulto/:path*", destination: "/celebraciones", permanent: true },
+      { source: "/las-8-mejores-ideas-para-celebrar-un-cumpleanos-de-adulto/:path*", destination: "/celebraciones/cumpleanos-y-grupos", permanent: true },
       { source: "/organizacion-de-cumpleanos/:path*", destination: "/celebraciones", permanent: true },
       { source: "/organiza-un-cumpleanos-especial/:path*", destination: "/celebraciones", permanent: true },
       { source: "/como-organizar-una-boda-pequena/:path*", destination: "/celebraciones", permanent: true },
@@ -39,7 +39,7 @@ const nextConfig = {
       { source: "/eventos-empresariales/jornadas-outdoor/:path*", destination: "/eventos-empresa/jornadas-outdoor", permanent: true },
       { source: "/servicios", destination: "/eventos-empresa", permanent: true },
       { source: "/servicios/eventos-marca/:path*", destination: "/eventos-empresa/congresos-y-convenciones", permanent: true },
-      { source: "/servicios/inauguraciones/:path*", destination: "/eventos-empresa/congresos-y-convenciones", permanent: true },
+      { source: "/servicios/inauguraciones/:path*", destination: "/celebraciones/celebraciones-de-empresa", permanent: true },
       { source: "/servicios/diseno-grafico-marketing-eventos-galicia-2/:path*", destination: "/eventos-empresa/congresos-y-convenciones", permanent: true },
       { source: "/servicios/gestion-redes-sociales/:path*", destination: "/eventos-empresa", permanent: true },
       { source: "/personal-de-produccion/:path*", destination: "/eventos-empresa/congresos-y-convenciones", permanent: true },
@@ -64,6 +64,7 @@ const nextConfig = {
       { source: "/gymkanas-tematicas-como-actividad-de-teambuilding/:path*", destination: "/eventos-empresa/team-building", permanent: true },
       { source: "/gymkana-juegos-empleados/:path*", destination: "/eventos-empresa/team-building", permanent: true },
       { source: "/gymkana-turistica-para-empresas-en-coruna/:path*", destination: "/eventos-empresa/team-building", permanent: true },
+      { source: "/juegos-de-escapismo-team-building/:path*", destination: "/eventos-empresa/team-building", permanent: true },
 
       // --- Actividades ---
       { source: "/actividades-para-eventos/:path*", destination: "/actividades", permanent: true },
@@ -85,12 +86,12 @@ const nextConfig = {
       { source: "/catering-y-eventos-de-empresa/:path*", destination: "/actividades/gastronomia-y-vinos", permanent: true },
       { source: "/servicios-de-catering/:path*", destination: "/actividades/gastronomia-y-vinos", permanent: true },
       { source: "/servicios/catering/:path*", destination: "/actividades/gastronomia-y-vinos", permanent: true },
-      { source: "/servicios/cenas-de-empresa/:path*", destination: "/actividades/gastronomia-y-vinos", permanent: true },
-      { source: "/cenas-de-empresa-en-coruna/:path*", destination: "/actividades/gastronomia-y-vinos", permanent: true },
+      { source: "/servicios/cenas-de-empresa/:path*", destination: "/celebraciones/cenas-de-empresa", permanent: true },
+      { source: "/cenas-de-empresa-en-coruna/:path*", destination: "/celebraciones/cenas-de-empresa", permanent: true },
       { source: "/cenas-de-empresa-restaurantes/:path*", destination: "/actividades/gastronomia-y-vinos", permanent: true },
       { source: "/vuelo-en-globo-empresas/:path*", destination: "/actividades/a-medida", permanent: true },
       { source: "/animaciones-para-eventos/:path*", destination: "/actividades/a-medida", permanent: true },
-      { source: "/monologos-y-comicos-en-galicia/:path*", destination: "/actividades/a-medida", permanent: true },
+      { source: "/monologos-y-comicos-en-galicia/:path*", destination: "/celebraciones/animacion-y-espectaculo", permanent: true },
       { source: "/como-hacer-eventos-tematicos-consejos-y-trucos/:path*", destination: "/actividades/a-medida", permanent: true },
 
       // --- Espacios y recursos ---

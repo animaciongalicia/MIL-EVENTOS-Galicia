@@ -1,13 +1,34 @@
-import Script from "next/script";
+"use client";
 
-// Google Analytics 4 (GA4). Solo se carga si NEXT_PUBLIC_GA_ID está definido en
-// las variables de entorno de Vercel (formato "G-XXXXXXXXXX"). Mientras no lo
-// esté, no se inyecta ningún script — la web funciona igual sin analítica.
-// Nota RGPD: para producción conviene condicionar esto a un banner de
-// consentimiento de cookies (ver /politica-de-cookies). Pendiente §2 CLAUDE.md.
+import Script from "next/script";
+import { useEffect, useState } from "react";
+
+// Clave de consentimiento en localStorage. La comparte el banner de cookies.
+export const CONSENT_KEY = "cookie-consent";
+export const CONSENT_EVENT = "cookie-consent-changed";
+
+// Google Analytics 4. Solo se carga si:
+//  1) NEXT_PUBLIC_GA_ID está definido (formato "G-XXXXXXXXXX"), y
+//  2) el usuario ha ACEPTADO cookies analíticas (RGPD — consentimiento previo).
+// Sin ambas cosas no se inyecta ningún script ni se instala ninguna cookie.
 export default function Analytics() {
   const gaId = process.env.NEXT_PUBLIC_GA_ID;
-  if (!gaId) return null;
+  const [consentido, setConsentido] = useState(false);
+
+  useEffect(() => {
+    const leer = () => {
+      try {
+        setConsentido(localStorage.getItem(CONSENT_KEY) === "accepted");
+      } catch {
+        setConsentido(false);
+      }
+    };
+    leer();
+    window.addEventListener(CONSENT_EVENT, leer);
+    return () => window.removeEventListener(CONSENT_EVENT, leer);
+  }, []);
+
+  if (!gaId || !consentido) return null;
 
   return (
     <>
@@ -19,7 +40,7 @@ export default function Analytics() {
         {`window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
-gtag('config', '${gaId}');`}
+gtag('config', '${gaId}', { anonymize_ip: true });`}
       </Script>
     </>
   );
