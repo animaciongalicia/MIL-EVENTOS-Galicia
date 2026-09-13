@@ -3,6 +3,30 @@ import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
+import FAQ, { type PreguntaFrecuente } from "@/components/shared/FAQ";
+
+const faq: PreguntaFrecuente[] = [
+  {
+    pregunta: "¿Qué diferencia una jornada outdoor de un team building?",
+    respuesta:
+      "La jornada outdoor busca desconectar del día a día, no resolver una tensión concreta del equipo ni premiar a nadie en particular. Es un respiro con estructura, no una excursión sin más.",
+  },
+  {
+    pregunta: "¿Dónde se hacen las jornadas outdoor en Galicia?",
+    respuesta:
+      "En playas, ríos, montaña y bosque, casi siempre a menos de una hora de las principales ciudades gallegas — sin que el desplazamiento se coma media jornada.",
+  },
+  {
+    pregunta: "¿Qué pasa si el tiempo no acompaña?",
+    respuesta:
+      "Toda actividad lleva una alternativa cerrada de antemano. En Galicia llueve, así que planificamos el plan B desde el principio, no el mismo día.",
+  },
+  {
+    pregunta: "¿Hace falta estar en forma?",
+    respuesta:
+      "No. Ajustamos el nivel de esfuerzo a la edad y la condición física del grupo antes de proponer nada, con distintos niveles de exigencia.",
+  },
+];
 import PasosTrabajo from "@/components/shared/PasosTrabajo";
 import CitaDestacada from "@/components/shared/CitaDestacada";
 import TarjetasTexto from "@/components/shared/TarjetasTexto";
@@ -217,6 +241,8 @@ export default function JornadasOutdoorPage() {
           nosotros, con el clima gallego ya tenido en cuenta.
         </p>
       </section>
+
+      <FAQ preguntas={faq} />
 
       <CTAFinal
         titulo="El día que salgáis de la oficina, que sea uno que merezca la pena contar el lunes."

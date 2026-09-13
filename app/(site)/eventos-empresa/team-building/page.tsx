@@ -3,6 +3,30 @@ import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
+import FAQ, { type PreguntaFrecuente } from "@/components/shared/FAQ";
+
+const faq: PreguntaFrecuente[] = [
+  {
+    pregunta: "¿Cuántas personas hacen falta para un team building?",
+    respuesta:
+      "Desde grupos de diez personas hasta varios cientos. El formato cambia con el tamaño del grupo — lo ajustamos a lo que sois, no al revés.",
+  },
+  {
+    pregunta: "¿Cuánto dura una actividad de team building?",
+    respuesta:
+      "Desde una hora, como cierre de una jornada, hasta un día completo. Lo ajustamos al tiempo real que tengas, sin forzar una actividad que no cabe en la agenda.",
+  },
+  {
+    pregunta: "¿Y si el equipo tiene edades o condiciones físicas muy distintas?",
+    respuesta:
+      "Ajustamos el nivel de esfuerzo antes de proponer nada. No todo el mundo quiere ni puede hacer rápel, así que nadie se queda fuera de la actividad.",
+  },
+  {
+    pregunta: "¿Se puede hacer en interior si llueve?",
+    respuesta:
+      "Sí. Toda propuesta outdoor lleva un plan B en interior cerrado de antemano, no una promesa vaga de improvisar el día del evento.",
+  },
+];
 import PasosTrabajo from "@/components/shared/PasosTrabajo";
 import TarjetasTexto from "@/components/shared/TarjetasTexto";
 import CitaDestacada from "@/components/shared/CitaDestacada";
@@ -202,6 +226,8 @@ export default function TeamBuildingPage() {
           Cuéntanos cómo es tu equipo y qué queréis conseguir. El formato lo resolvemos nosotros.
         </p>
       </section>
+
+      <FAQ preguntas={faq} />
 
       <CTAFinal
         titulo="Un equipo que confía entre sí no se construye en una tarde. Pero es un buen sitio para empezar."

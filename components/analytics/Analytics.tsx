@@ -11,8 +11,12 @@ export const CONSENT_EVENT = "cookie-consent-changed";
 //  1) NEXT_PUBLIC_GA_ID está definido (formato "G-XXXXXXXXXX"), y
 //  2) el usuario ha ACEPTADO cookies analíticas (RGPD — consentimiento previo).
 // Sin ambas cosas no se inyecta ningún script ni se instala ninguna cookie.
+// ID de medición GA4 (público — aparece en el JS del cliente). Hardcodeado como
+// valor por defecto; una variable de entorno en Vercel puede sobreescribirlo.
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "G-SKC7CDC118";
+
 export default function Analytics() {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  const gaId = GA_ID;
   const [consentido, setConsentido] = useState(false);
 
   useEffect(() => {

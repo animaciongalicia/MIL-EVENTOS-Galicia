@@ -3,6 +3,30 @@ import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
+import FAQ, { type PreguntaFrecuente } from "@/components/shared/FAQ";
+
+const faq: PreguntaFrecuente[] = [
+  {
+    pregunta: "¿Os encargáis también de la producción técnica?",
+    respuesta:
+      "Sí: sonido, iluminación, escenario, señalética y streaming, coordinado por un único interlocutor en vez de que contrates cada pieza por separado.",
+  },
+  {
+    pregunta: "¿Gestionáis los ponentes y las acreditaciones?",
+    respuesta:
+      "Sí, desde la invitación y la ficha técnica de cada ponente hasta el control de acceso y las acreditaciones de cientos de personas.",
+  },
+  {
+    pregunta: "¿Y el alojamiento y los traslados de quien viene de fuera?",
+    respuesta:
+      "Los coordinamos con SUUNIA y Luxe Galicia, encajados con el resto del evento, sin que tengas que gestionar un proveedor de transporte o de hotel aparte.",
+  },
+  {
+    pregunta: "¿Para cuántas personas podéis organizar una convención?",
+    respuesta:
+      "Desde una reunión de departamento hasta convenciones de varios cientos de asistentes, con el aforo y la producción dimensionados al número real.",
+  },
+];
 import PasosTrabajo from "@/components/shared/PasosTrabajo";
 import TarjetasTexto from "@/components/shared/TarjetasTexto";
 import CitaDestacada from "@/components/shared/CitaDestacada";
@@ -239,6 +263,8 @@ export default function CongresosYConvencionesPage() {
           Cuéntanos el aforo y el formato que necesitas. La producción la coordinamos nosotros.
         </p>
       </section>
+
+      <FAQ preguntas={faq} />
 
       <CTAFinal
         titulo="Tu convención no tiene una segunda oportunidad de salir bien. Nos aseguramos de que no la necesite."

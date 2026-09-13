@@ -3,6 +3,30 @@ import Hero from "@/components/shared/Hero";
 import GridEjemplos from "@/components/shared/GridEjemplos";
 import BannerEcosistema from "@/components/shared/BannerEcosistema";
 import CTAFinal from "@/components/shared/CTAFinal";
+import FAQ, { type PreguntaFrecuente } from "@/components/shared/FAQ";
+
+const faq: PreguntaFrecuente[] = [
+  {
+    pregunta: "¿En qué se diferencia un incentivo de un team building?",
+    respuesta:
+      "El incentivo premia un resultado concreto — un comercial, un equipo que ha cumplido objetivo. El team building integra al grupo. No es lo mismo, y por eso no se organizan igual.",
+  },
+  {
+    pregunta: "¿Podéis organizar escapadas de varios días?",
+    respuesta:
+      "Sí. Alojamiento, comidas y actividades encadenadas, coordinado por un único interlocutor — con SUUNIA y las marcas hermanas cuando el programa lo pide.",
+  },
+  {
+    pregunta: "¿Sirve para grupos pequeños o solo para grandes?",
+    respuesta:
+      "Para ambos. Ajustamos la experiencia al número de personas y al presupuesto por persona desde el principio, no al revés.",
+  },
+  {
+    pregunta: "¿Los incentivos son solo para equipos comerciales?",
+    respuesta:
+      "No. Funcionan para cualquier equipo cuyo resultado quieras reconocer — el reconocimiento en directo motiva igual en ventas que en operaciones o producción.",
+  },
+];
 import PasosTrabajo from "@/components/shared/PasosTrabajo";
 import TarjetasTexto from "@/components/shared/TarjetasTexto";
 import CitaDestacada from "@/components/shared/CitaDestacada";
@@ -219,6 +243,8 @@ export default function IncentivosPage() {
           Cuéntanos a quién quieres premiar y por qué. El formato lo diseñamos nosotros.
         </p>
       </section>
+
+      <FAQ preguntas={faq} />
 
       <CTAFinal titulo="El mejor incentivo es el que se recuerda meses después de gastárselo." ctaTexto="Diseñamos tu programa" />
     </>

@@ -130,6 +130,20 @@ const nextConfig = {
       { source: "/forum-gastronomico-coruna-en-marzo-2017/:path*", destination: "/", permanent: true },
       { source: "/asesorar-pubs-y-locales-en-tiempos-de/:path*", destination: "/", permanent: true },
       { source: "/checkout/:path*", destination: "/", permanent: true },
+
+      // --- URLs antiguas detectadas en el export de indexación de GSC (sept.
+      // 2026) que no estaban cubiertas. Las de /feed/, wp-login.php y
+      // wp-content/* se dejan sin redirección a propósito (404 correcto, sin
+      // valor SEO; Google las retira). ---
+      { source: "/servicios-para-empresas/:path*", destination: "/eventos-empresa", permanent: true },
+      { source: "/incentivos-y-outdoor-training/:path*", destination: "/eventos-empresa/incentivos", permanent: true },
+      { source: "/trabajo-en-equipo-rafting-paintball/:path*", destination: "/eventos-empresa/team-building", permanent: true },
+      { source: "/monologuista-cena-empresa/:path*", destination: "/celebraciones/animacion-y-espectaculo", permanent: true },
+      // Entradas legacy de Blogger (rutas con fecha y .html) todavía rastreadas:
+      { source: "/2012/05/regalos-personalizados-exito-asegurado.html", destination: "/eventos-empresa/incentivos", permanent: true },
+      { source: "/2014/04/incentivo-ruta-y-paseo-entre-bateas.html", destination: "/eventos-empresa/incentivos", permanent: true },
+      { source: "/2014/11/cenas-de-empresa-en-coruna.html", destination: "/celebraciones/cenas-de-empresa", permanent: true },
+      { source: "/2009/06/cenas-de-empresa.html", destination: "/celebraciones/cenas-de-empresa", permanent: true },
     ];
   },
 };

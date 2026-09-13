@@ -37,18 +37,19 @@ Aplicado:
 - ✅ **Contenido sin humo, escaneable y con enlazado interno** (pilares + blog editorial) — formato
   que los LLMs resumen y citan mejor que la prosa corporativa vacía.
 
+- ✅ **FAQ con JSON-LD `FAQPage`** en las 4 pilares de Empresas (`components/shared/FAQ.tsx`):
+  acordeón visible + schema desde los mismos datos (cumple las directrices de Google, que exigen
+  que las Q&A sean visibles). Ayuda a que Google y los LLMs citen preguntas-respuestas.
+
 Recomendado a futuro (cuando haya datos/fotos reales):
-- **FAQ JSON-LD** en las pilares (Google/LLMs citan preguntas-respuestas). Se puede generar desde
-  los bloques FAQ que ya existen en los posts.
+- Extender el FAQ a Actividades, Espacios y Celebraciones.
 - **Reseñas/valoraciones reales** con `AggregateRating` (solo si son verificables — §6, nada de humo).
 - **`sameAs`** en el JSON-LD con los perfiles sociales reales (Instagram, LinkedIn…) cuando los tengas.
 
 ## 3. Analítica y cookies (RGPD)
-- ✅ GA4 + verificación GSC cableados; GA4 carga **solo tras aceptar** el banner de cookies.
+- ✅ GA4 activo con el ID de medición real `G-SKC7CDC118`; carga **solo tras aceptar** el banner de
+  cookies (RGPD). Verificación de Search Console con el token real.
 - ✅ Política de cookies nueva y legal.
-- ⚠️ **Falta el ID de medición de GA4** (`G-XXXXXXXXXX`). El `398076866` aportado es el ID de
-  propiedad, no el de medición — no funciona en el código. Cuando lo tengas, se pone en Vercel
-  (`NEXT_PUBLIC_GA_ID`).
 
 ## 4. Pendiente de tu lado
 - El **ID de medición GA4** (`G-…`).
