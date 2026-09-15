@@ -7,6 +7,7 @@ import CTAFinal from "@/components/shared/CTAFinal";
 import TarjetaPost from "@/components/blog/TarjetaPost";
 import { IconArrowRight } from "@/components/shared/icons";
 import { getAllPosts } from "@/lib/blog";
+import { provincias } from "@/data/provincias";
 
 // Cifras integradas en el hero (barra inferior). Reales y verificables (§6).
 const cifrasHero = [
@@ -239,6 +240,60 @@ export default function HomePage() {
                   <h3 className="text-xl font-bold text-cream-50">{area.titulo}</h3>
                   <p className="mt-1.5 text-sm leading-snug text-cream-100/80">{area.descripcion}</p>
                   <span className="mt-3 inline-flex items-center gap-1.5 text-sm font-semibold text-cream-50">
+                    Ver más
+                    <IconArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-1" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* TODA GALICIA — enlaza las 4 páginas de provincia (SEO local) desde la home */}
+      <section className="bg-cream-50">
+        <div className="mx-auto max-w-5xl px-6 py-20">
+          <div className="flex items-end justify-between gap-4">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-atlantico-600">
+                Dónde
+              </p>
+              <h2 className="mt-3 text-2xl font-bold text-ink-900 sm:text-3xl">
+                Montamos eventos en toda Galicia
+              </h2>
+            </div>
+            <Link
+              href="/eventos-en-galicia"
+              className="shrink-0 text-sm font-semibold text-atlantico-700 hover:underline"
+            >
+              Ver todas las zonas →
+            </Link>
+          </div>
+          <p className="mt-4 max-w-2xl text-lg leading-relaxed text-ink-600">
+            Cuatro provincias, un mismo equipo que conoce el terreno: la costa atlántica, las Rías
+            Baixas, la Ribeira Sacra y el interior termal. Elige la tuya o deja que te propongamos la
+            que mejor le va a tu evento.
+          </p>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {provincias.map((provincia) => (
+              <Link
+                key={provincia.slug}
+                href={`/eventos-en-galicia/${provincia.slug}`}
+                className="group relative block overflow-hidden rounded-2xl shadow-md ring-1 ring-sand-200 transition hover:shadow-xl"
+              >
+                <div className="relative aspect-[3/4] w-full">
+                  <Image
+                    src={provincia.heroImagen}
+                    alt={`Eventos de empresa en ${provincia.nombre}`}
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                    sizes="(min-width: 1024px) 25vw, (min-width: 640px) 50vw, 100vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-atlantico-800/95 via-atlantico-800/30 to-transparent" />
+                </div>
+                <div className="absolute inset-x-0 bottom-0 p-5">
+                  <h3 className="text-lg font-bold text-cream-50">{provincia.nombre}</h3>
+                  <span className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-cream-50">
                     Ver más
                     <IconArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-1" />
                   </span>
