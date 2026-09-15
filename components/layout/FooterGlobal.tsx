@@ -28,6 +28,10 @@ const institucional = [
   { nombre: "Quiénes somos", href: "/nosotros" },
   { nombre: "Contacto", href: "/contacto" },
 ];
+const zonas = provincias.map((provincia) => ({
+  nombre: provincia.nombre,
+  href: `/eventos-en-galicia/${provincia.slug}`,
+}));
 
 const tituloClase = "text-xs font-semibold uppercase tracking-[0.15em] text-cream-300/80";
 const enlaceClase = "block text-cream-200 transition hover:text-white";
@@ -66,11 +70,11 @@ export default function FooterGlobal() {
         </div>
       )}
       <div className="bg-atlantico-800 px-6 py-16 text-sm text-cream-200">
-        {/* 4 columnas: marca+contacto · Empresas · Servicios · Mil Eventos */}
-        <div className="mx-auto grid max-w-5xl grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-4">
-          <div className="col-span-2 lg:col-span-1">
+        {/* 5 columnas: marca+contacto (doble) · Empresas · Servicios · Mil Eventos (+Ecosistema) · Zonas */}
+        <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-6">
+          <div className="col-span-2">
             <p className="font-serif text-lg font-bold text-white">Mil Eventos Galicia</p>
-            <p className="mt-3 leading-relaxed text-cream-200">
+            <p className="mt-3 max-w-xs leading-relaxed text-cream-200">
               Más de 15 años haciendo que las cosas sucedan en Galicia.
             </p>
             <div className="mt-5 flex flex-col gap-2.5">
@@ -95,40 +99,26 @@ export default function FooterGlobal() {
 
           <Columna titulo="Empresas" tituloHref="/eventos-empresa" enlaces={empresas} />
           <Columna titulo="Servicios" tituloHref="/actividades" enlaces={servicios} />
-          <Columna titulo="Mil Eventos" tituloHref="/nosotros" enlaces={institucional} />
-        </div>
 
-        {/* Zonas de Galicia — enlaza las páginas de provincia desde todo el sitio (SEO local) */}
-        <div className="mx-auto mt-12 flex max-w-5xl flex-col gap-2 border-t border-atlantico-600 pt-6 sm:flex-row sm:items-center sm:gap-4">
-          <Link href="/eventos-en-galicia" className={`${tituloClase} transition hover:text-white`}>
-            Zonas de Galicia
-          </Link>
-          <div className="flex flex-wrap gap-x-5 gap-y-1">
-            {provincias.map((provincia) => (
-              <Link
-                key={provincia.slug}
-                href={`/eventos-en-galicia/${provincia.slug}`}
-                className={enlaceClase}
-              >
-                {provincia.nombre}
-              </Link>
-            ))}
+          {/* Mil Eventos con Ecosistema apilado debajo */}
+          <div>
+            <Columna titulo="Mil Eventos" tituloHref="/nosotros" enlaces={institucional} />
+            <div className="mt-8">
+              <span className={tituloClase}>Ecosistema</span>
+              <div className="mt-4 flex flex-col gap-2.5">
+                {ecosistemaMarcas.map((marca) => (
+                  <Link key={marca.nombre} href={marca.href} className={enlaceClase}>
+                    {marca.nombre}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
+
+          <Columna titulo="Zonas de Galicia" tituloHref="/eventos-en-galicia" enlaces={zonas} />
         </div>
 
-        {/* Ecosistema en una tira propia, para no apilar dos grupos en una columna */}
-        <div className="mx-auto mt-6 flex max-w-5xl flex-col gap-2 border-t border-atlantico-600 pt-6 sm:flex-row sm:items-center sm:gap-4">
-          <span className={tituloClase}>Ecosistema</span>
-          <div className="flex flex-wrap gap-x-5 gap-y-1">
-            {ecosistemaMarcas.map((marca) => (
-              <Link key={marca.nombre} href={marca.href} className={enlaceClase}>
-                {marca.nombre}
-              </Link>
-            ))}
-          </div>
-        </div>
-
-        <div className="mx-auto mt-8 flex max-w-5xl flex-col items-center justify-between gap-4 border-t border-atlantico-600 pt-6 text-xs text-cream-300/80 sm:flex-row">
+        <div className="mx-auto mt-12 flex max-w-6xl flex-col items-center justify-between gap-4 border-t border-atlantico-600 pt-6 text-xs text-cream-300/80 sm:flex-row">
           <p>© {new Date().getFullYear()} Mil Eventos Galicia · Inversiones SHISO, S.L.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/aviso-legal" className="transition hover:text-white">
