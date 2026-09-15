@@ -4,6 +4,7 @@ import Link from "next/link";
 import Hero from "@/components/shared/Hero";
 import CitaDestacada from "@/components/shared/CitaDestacada";
 import TarjetasTexto from "@/components/shared/TarjetasTexto";
+import FAQ from "@/components/shared/FAQ";
 import CTAFinal from "@/components/shared/CTAFinal";
 import { getProvincia, provincias } from "@/data/provincias";
 
@@ -77,14 +78,33 @@ export default function ProvinciaPage({ params }: ProvinciaPageProps) {
 
       <section className="mx-auto max-w-5xl px-6 py-16">
         <h2 className="text-2xl font-bold text-atlantico-700">
-          Por qué {provincia.nombre} para tu evento
+          Qué montamos en {provincia.nombre}
         </h2>
         <p className="mt-3 max-w-2xl text-lg leading-relaxed text-ink-700">
-          Cuatro razones concretas, no tópicos de guía turística.
+          Los formatos que más pide la provincia — una muestra de por dónde se suele empezar, no un
+          catálogo cerrado.
         </p>
         <div className="mt-8">
-          <TarjetasTexto items={provincia.porQue} />
+          <TarjetasTexto icono={false} items={provincia.tiposEvento} />
         </div>
+      </section>
+
+      <section className="bg-cream-200 py-16">
+        <div className="mx-auto max-w-5xl px-6">
+          <h2 className="text-2xl font-bold text-atlantico-700">
+            Por qué {provincia.nombre} para tu evento
+          </h2>
+          <p className="mt-3 max-w-2xl text-lg leading-relaxed text-ink-700">
+            Cuatro razones concretas, no tópicos de guía turística.
+          </p>
+          <div className="mt-8">
+            <TarjetasTexto items={provincia.porQue} />
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 py-16">
+        <CitaDestacada texto={provincia.refuerzo} />
       </section>
 
       <section className="mx-auto max-w-5xl px-6 pb-16 text-lg leading-relaxed text-ink-700">
@@ -107,6 +127,8 @@ export default function ProvinciaPage({ params }: ProvinciaPageProps) {
         </div>
         <p className="mt-8 max-w-2xl font-semibold text-ink-900">{provincia.cierre}</p>
       </section>
+
+      <FAQ preguntas={provincia.faq} titulo={`Preguntas frecuentes sobre eventos en ${provincia.nombre}`} />
 
       <CTAFinal titulo={provincia.ctaTitulo} />
     </>

@@ -26,8 +26,14 @@ export type Provincia = {
   cita: string;
   // Ciudades y zonas donde se montan eventos en la provincia.
   ciudades: CiudadProvincia[];
+  // Tipos de evento que se montan en la provincia, con gancho local (TarjetasTexto).
+  tiposEvento: { titulo: string; texto: string }[];
   // Razones concretas para elegir la provincia (TarjetasTexto).
   porQue: { titulo: string; texto: string }[];
+  // Segundo párrafo/cita de refuerzo a media página.
+  refuerzo: string;
+  // Preguntas frecuentes (acordeón visible + JSON-LD FAQPage). SEO/LLM local.
+  faq: { pregunta: string; respuesta: string }[];
   // Párrafo de cierre antes del CTA.
   cierre: string;
   ctaTitulo: string;
@@ -75,6 +81,28 @@ export const provincias: Provincia[] = [
           "Cascos históricos y fincas para celebraciones y jornadas a menos de media hora de la ciudad, sin sacrificar comodidad de acceso.",
       },
     ],
+    tiposEvento: [
+      {
+        titulo: "Team building en la costa",
+        texto:
+          "Del rafting en el Ulla a una jornada por la Costa da Morte: naturaleza atlántica a menos de una hora de la ciudad, con plan B cerrado por si el tiempo aprieta.",
+      },
+      {
+        titulo: "Convenciones y congresos",
+        texto:
+          "Palacios de congresos con aforo real y hoteles para grupos grandes en la ciudad — con Santiago a cuarenta minutos como sede alternativa que se vende sola.",
+      },
+      {
+        titulo: "Incentivos con Santiago de gancho",
+        texto:
+          "Un programa de varios días que combina trabajo, gastronomía y la ciudad del Camino — el destino que hace que el equipo de otra sede no falte.",
+      },
+      {
+        titulo: "Cenas y celebraciones de empresa",
+        texto:
+          "Cierres de año, entregas de premios o una cena de gala frente al puerto, con producción, catering y espectáculo resueltos de principio a fin.",
+      },
+    ],
     porQue: [
       {
         titulo: "Conectividad de sobra",
@@ -95,6 +123,30 @@ export const provincias: Provincia[] = [
         titulo: "Estamos aquí",
         texto:
           "Es nuestra provincia. Proveedores, espacios y contactos que hemos probado en persona, no una lista sacada de un portal de reservas.",
+      },
+    ],
+    refuerzo:
+      "En A Coruña no subcontratamos el conocimiento del terreno: el pazo, la terraza sobre la bahía o la nave para un lanzamiento los hemos pisado nosotros antes de proponértelos.",
+    faq: [
+      {
+        pregunta: "¿Organizáis eventos solo en la ciudad de A Coruña?",
+        respuesta:
+          "No. Trabajamos toda la provincia: A Coruña ciudad, Santiago de Compostela, Ferrol, la Costa da Morte y el interior. Elegimos la zona según el tipo de evento y de dónde viene tu equipo, no al revés.",
+      },
+      {
+        pregunta: "¿Podéis encargaros también del alojamiento y el transporte?",
+        respuesta:
+          "Sí. Coordinamos espacio, traslados y alojamiento con un único interlocutor. Para programas de varios días entran en juego nuestras marcas hermanas SUUNIA (estancia y experiencias) y Luxe Galicia (transporte).",
+      },
+      {
+        pregunta: "¿Con cuánta antelación conviene contactar?",
+        respuesta:
+          "Cuanto antes, más margen. Los espacios con carácter y las fechas señaladas —cierres de año, convenciones de primavera— se reservan con meses. Si ya tienes fecha, ese es el momento de empezar.",
+      },
+      {
+        pregunta: "¿Solo hacéis eventos de empresa o también celebraciones?",
+        respuesta:
+          "El foco es el evento de empresa, pero también montamos celebraciones —cenas, cócteles, cumpleaños de adultos, aniversarios— con la misma logística seria detrás.",
       },
     ],
     cierre:
@@ -147,6 +199,28 @@ export const provincias: Provincia[] = [
           "Parque Nacional y una de las mejores playas del mundo como escenario de una jornada irrepetible — con la logística de acceso resuelta por nosotros.",
       },
     ],
+    tiposEvento: [
+      {
+        titulo: "Team building náutico",
+        texto:
+          "Vela, catamarán, paddle surf o una regata por equipos en la ría — con Sea Galicia, nuestra marca hermana, poniendo la parte náutica cuando el programa la pide.",
+      },
+      {
+        titulo: "Incentivos en las Rías Baixas",
+        texto:
+          "Playa, balneario en A Toxa y hoteles con aforo para premiar resultados: el destino que un equipo asocia a vacaciones sin dejar de ser un incentivo.",
+      },
+      {
+        titulo: "Catas y enogastronomía",
+        texto:
+          "El Albariño de Cambados, marisco sobre la ría y bodegas que reciben grupos de verdad — la experiencia que hace que el equipo confirme sin que insistas.",
+      },
+      {
+        titulo: "Cenas y convenciones en Vigo",
+        texto:
+          "Salas con vistas a la ría, cenas de empresa y cócteles en la mayor ciudad de Galicia, con los espacios localizados y la producción resuelta por nosotros.",
+      },
+    ],
     porQue: [
       {
         titulo: "El mar como actividad",
@@ -167,6 +241,30 @@ export const provincias: Provincia[] = [
         titulo: "Programa multi-día resuelto",
         texto:
           "Alojamiento, traslados y comidas coordinados por un único interlocutor — con SUUNIA reforzando la parte de estancia y experiencias.",
+      },
+    ],
+    refuerzo:
+      "El paisaje de las Rías Baixas vende solo. Lo difícil —la lancha reservada, el aforo real del catamarán, el traslado que no deja a nadie en tierra— es justo lo que resolvemos nosotros.",
+    faq: [
+      {
+        pregunta: "¿Trabajáis en Vigo?",
+        respuesta:
+          "Sí. Vigo es la mayor ciudad de la provincia y una zona donde organizamos eventos de empresa, cenas y celebraciones con normalidad, y localizamos los espacios que necesites. Lo único que no hacemos es alquilar un local propio para fiestas de cumpleaños.",
+      },
+      {
+        pregunta: "¿Qué actividades náuticas podéis montar?",
+        respuesta:
+          "Vela, catamarán, paddle surf, kayak o una regata por equipos, según el nivel y el tamaño del grupo. La parte náutica la coordina Sea Galicia, nuestra marca hermana especializada en el mar.",
+      },
+      {
+        pregunta: "¿Es buena zona para un incentivo de varios días?",
+        respuesta:
+          "De las mejores de Galicia. Playa, náutica, balneario en A Toxa y bodegas de Albariño dan de sobra para un programa de dos o tres días, con alojamiento y traslados coordinados por un único interlocutor.",
+      },
+      {
+        pregunta: "¿Podéis organizar una cata de Albariño para la empresa?",
+        respuesta:
+          "Sí. En Cambados y O Salnés trabajamos con bodegas que reciben grupos con criterio — cata guiada y comida sobre la ría, como actividad de equipo o cierre de un evento más grande.",
       },
     ],
     cierre:
@@ -214,6 +312,28 @@ export const provincias: Provincia[] = [
           "El punto de arranque del último tramo a Santiago. Un reto de equipo con significado, para quien quiere que el team building deje poso.",
       },
     ],
+    tiposEvento: [
+      {
+        titulo: "Jornadas de desconexión",
+        texto:
+          "Sacar al equipo del ruido de la ciudad y del móvil que no para: la Ribeira Sacra y la costa de A Mariña son el marco para que un equipo se reencuentre de verdad.",
+      },
+      {
+        titulo: "Incentivos en la Ribeira Sacra",
+        texto:
+          "Catamarán entre viñedos verticales, bodegas heroicas y monasterios sobre el Sil — un incentivo con un paisaje que se cuenta durante meses.",
+      },
+      {
+        titulo: "Team building con significado",
+        texto:
+          "El último tramo del Camino desde Sarria como reto de equipo: esfuerzo compartido y una meta con sentido, no una gymkana más.",
+      },
+      {
+        titulo: "Reuniones con carácter",
+        texto:
+          "Una jornada de trabajo dentro de la única muralla romana entera del mundo, con la ciudad histórica para pasear entre sesión y cena.",
+      },
+    ],
     porQue: [
       {
         titulo: "Desconexión real",
@@ -234,6 +354,30 @@ export const provincias: Provincia[] = [
         titulo: "Logística de sitio remoto",
         texto:
           "Un destino apartado exige traslados y alojamiento bien atados. Es exactamente lo que resolvemos para que la distancia no sea un problema.",
+      },
+    ],
+    refuerzo:
+      "Un destino apartado exige una logística impecable: traslados y alojamiento bien atados para que la distancia sea parte del encanto, no del problema. Esa es la parte que ponemos nosotros.",
+    faq: [
+      {
+        pregunta: "¿Merece la pena llevar a un equipo a Lugo estando más lejos?",
+        respuesta:
+          "Precisamente por eso. La distancia es lo que garantiza la desconexión: sin la oficina cerca, el equipo se implica de verdad. Y la logística de llegar hasta el rincón bueno la resolvemos nosotros.",
+      },
+      {
+        pregunta: "¿Qué se puede hacer en la Ribeira Sacra con la empresa?",
+        respuesta:
+          "Catamarán por los cañones del Sil, visitas a bodegas heroicas, catas y comidas entre viñedos. Es uno de los escenarios más espectaculares de Galicia para una jornada de equipo o un incentivo.",
+      },
+      {
+        pregunta: "¿Organizáis el Camino de Santiago para empresas?",
+        respuesta:
+          "Sí. Desde Sarria, el último tramo hasta Santiago funciona como reto de equipo: lo montamos con el alojamiento, el transporte de maletas y el apoyo logístico resueltos para que el grupo solo tenga que caminar.",
+      },
+      {
+        pregunta: "¿Hay espacios para reuniones y congresos en la provincia?",
+        respuesta:
+          "Sí, en Lugo ciudad y su entorno. Localizamos salas y espacios con aforo real, y combinamos la parte de trabajo con la experiencia —muralla, gastronomía, Ribeira Sacra— que hace que el viaje valga la pena.",
       },
     ],
     cierre:
@@ -281,6 +425,28 @@ export const provincias: Provincia[] = [
           "Uno de los pueblos más bonitos de Galicia, con fincas y espacios con encanto para celebraciones y jornadas lejos del bullicio.",
       },
     ],
+    tiposEvento: [
+      {
+        titulo: "Enoturismo para empresas",
+        texto:
+          "Ribeiro, Valdeorras y Ribeira Sacra a un paso: catas y comidas en bodega que convierten un cierre de trimestre o un incentivo en una experiencia, no en otra diapositiva.",
+      },
+      {
+        titulo: "Incentivos termales",
+        texto:
+          "Las termas de Ourense al aire libre a pie de ciudad — la desconexión que ningún otro destino gallego pone tan fácil después de una jornada de trabajo.",
+      },
+      {
+        titulo: "Jornadas sobre el Sil",
+        texto:
+          "Catamarán por los cañones y viñedos verticales de la Ribeira Sacra: un escenario que un equipo que ya lo ha visto todo no espera, y por eso recuerda.",
+      },
+      {
+        titulo: "Celebraciones en el interior",
+        texto:
+          "Fincas y espacios con encanto en Allariz y el rural ourensano para una cena de empresa o una celebración lejos del bullicio de la costa.",
+      },
+    ],
     porQue: [
       {
         titulo: "Enoturismo de verdad",
@@ -301,6 +467,30 @@ export const provincias: Provincia[] = [
         titulo: "La Ribeira Sacra",
         texto:
           "Paisaje declarado y vino heroico compartido con Lugo — uno de los escenarios más espectaculares para una jornada de equipo en toda Galicia.",
+      },
+    ],
+    refuerzo:
+      "El interior es la carta que sorprende. Y un equipo se acuerda mucho más de lo que no esperaba: por eso Ourense funciona tan bien cuando la playa y la ciudad ya están vistas.",
+    faq: [
+      {
+        pregunta: "¿Por qué elegir el interior en vez de la costa?",
+        respuesta:
+          "Por el factor sorpresa. El equipo que ya ha ido a la playa y a la ciudad no espera el interior —vino, termas y la Ribeira Sacra— y precisamente por eso se acuerda del evento que lo llevó allí.",
+      },
+      {
+        pregunta: "¿Qué denominaciones de vino se pueden visitar?",
+        respuesta:
+          "Ribeiro, Valdeorras y la Ribeira Sacra, las tres a un paso. Trabajamos con bodegas que reciben grupos con criterio, para una cata guiada o una comida entre viñedos como actividad de equipo.",
+      },
+      {
+        pregunta: "¿Se puede combinar termalismo con un evento de trabajo?",
+        respuesta:
+          "Sí, y es una de las bazas de Ourense: las termas al aire libre a pie de ciudad permiten cerrar una jornada de trabajo con una desconexión real, sin salir del destino.",
+      },
+      {
+        pregunta: "¿La Ribeira Sacra es de Lugo o de Ourense?",
+        respuesta:
+          "De las dos: es un territorio compartido a ambos lados del Sil. Desde Ourense se accede a los cañones, las bodegas y el catamarán con la misma facilidad — montamos el programa donde mejor encaje con tu evento.",
       },
     ],
     cierre:
