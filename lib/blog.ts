@@ -15,6 +15,10 @@ export const PILARES = [
   "congresos-y-convenciones",
   "gastronomia-y-vinos",
   "espacios-y-recursos",
+  // Celebraciones es el único pilar NO corporativo: enlaza al clúster festivo
+  // (particulares + empresa). Añadido para poder capturar el tráfico de
+  // "cumpleaños de adultos" sin hacer de esa línea la reina del sitio (§8/§11).
+  "celebraciones",
 ] as const;
 
 export type Pilar = (typeof PILARES)[number];
@@ -26,6 +30,7 @@ export const PILAR_LABELS: Record<Pilar, string> = {
   "congresos-y-convenciones": "congresos y convenciones",
   "gastronomia-y-vinos": "gastronomía y vinos",
   "espacios-y-recursos": "espacios y recursos",
+  celebraciones: "celebraciones",
 };
 
 export const PILAR_HREF: Record<Pilar, string> = {
@@ -35,6 +40,7 @@ export const PILAR_HREF: Record<Pilar, string> = {
   "congresos-y-convenciones": "/eventos-empresa/congresos-y-convenciones",
   "gastronomia-y-vinos": "/actividades/gastronomia-y-vinos",
   "espacios-y-recursos": "/espacios-y-recursos",
+  celebraciones: "/celebraciones",
 };
 
 // --- CATEGORÍA (editorial, la taxonomía navegable del blog) -----------------

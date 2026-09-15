@@ -22,7 +22,7 @@ const nextConfig = {
       { source: "/celebraciones-familiares/:path*", destination: "/celebraciones", permanent: true },
       { source: "/cumpleanos-de-adultos-en-coruna/:path*", destination: "/celebraciones/cumpleanos-y-grupos", permanent: true },
       { source: "/cumpleanos-en-casa/:path*", destination: "/celebraciones", permanent: true },
-      { source: "/las-8-mejores-ideas-para-celebrar-un-cumpleanos-de-adulto/:path*", destination: "/celebraciones/cumpleanos-y-grupos", permanent: true },
+      { source: "/las-8-mejores-ideas-para-celebrar-un-cumpleanos-de-adulto/:path*", destination: "/blog/celebrar-cumpleanos-adulto-diferente-galicia", permanent: true },
       { source: "/organizacion-de-cumpleanos/:path*", destination: "/celebraciones", permanent: true },
       { source: "/organiza-un-cumpleanos-especial/:path*", destination: "/celebraciones", permanent: true },
       { source: "/como-organizar-una-boda-pequena/:path*", destination: "/celebraciones", permanent: true },
