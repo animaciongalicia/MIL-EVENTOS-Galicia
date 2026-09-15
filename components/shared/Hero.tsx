@@ -55,7 +55,7 @@ export default function Hero({
         </a>
       )}
       {imagen && (
-        <div className="relative mx-auto mt-12 aspect-[21/9] w-full max-w-4xl overflow-hidden rounded-xl shadow-lg">
+        <div className="relative mx-auto mt-12 aspect-[16/9] w-full max-w-4xl overflow-hidden rounded-xl shadow-lg sm:aspect-[2/1]">
           <Image
             src={imagen}
             alt=""

@@ -144,6 +144,37 @@ const nextConfig = {
       { source: "/2014/04/incentivo-ruta-y-paseo-entre-bateas.html", destination: "/eventos-empresa/incentivos", permanent: true },
       { source: "/2014/11/cenas-de-empresa-en-coruna.html", destination: "/celebraciones/cenas-de-empresa", permanent: true },
       { source: "/2009/06/cenas-de-empresa.html", destination: "/celebraciones/cenas-de-empresa", permanent: true },
+
+      // --- Cierre de cobertura tras cruzar TODAS las URLs con tráfico/impresiones
+      // de los exports de GSC/GA (sept. 2026): páginas cuyos "padres" no tenían
+      // regla y caían en 404 (muchas son páginas-adjunto de imagen de WP, 1 vista;
+      // la regla de padre :path* cubre la página y todos sus adjuntos de golpe).
+      { source: "/conciertos/:path*", destination: "/eventos-empresa/congresos-y-convenciones", permanent: true },
+      { source: "/espacios-para-eventos/:path*", destination: "/espacios-y-recursos/localizacion-espacios", permanent: true },
+      { source: "/alquiler-de-locales-fin-de-ano-coruna/:path*", destination: "/espacios-y-recursos/localizacion-espacios", permanent: true },
+      { source: "/aumenta-las-ventas-galicia/:path*", destination: "/eventos-empresa/incentivos", permanent: true },
+      { source: "/incentivo-paquete-especial-rias-baixas/:path*", destination: "/eventos-empresa/incentivos", permanent: true },
+      { source: "/como-organizar-eventos-outdoor/:path*", destination: "/eventos-empresa/jornadas-outdoor", permanent: true },
+      { source: "/eventos-en-coruna-y-galicia/:path*", destination: "/eventos-empresa", permanent: true },
+      { source: "/comunicar-eventos-empresa/:path*", destination: "/eventos-empresa/congresos-y-convenciones", permanent: true },
+      { source: "/audiovisuales/:path*", destination: "/eventos-empresa/congresos-y-convenciones", permanent: true },
+      { source: "/detalles-para-eventos/:path*", destination: "/actividades/a-medida", permanent: true },
+      { source: "/animacion-de-eventos/:path*", destination: "/celebraciones/animacion-y-espectaculo", permanent: true },
+      { source: "/gran-fiesta-cenas-de-empresa/:path*", destination: "/celebraciones/cenas-de-empresa", permanent: true },
+      { source: "/llegan-las-navidades-y-sus-cenas_13/:path*", destination: "/celebraciones/cenas-de-empresa", permanent: true },
+      { source: "/fiestas-en-discotecas/:path*", destination: "/celebraciones", permanent: true },
+      { source: "/bodas-especiales-originales/:path*", destination: "/celebraciones", permanent: true },
+      { source: "/cumpleanos-infantiles-regalos/:path*", destination: "/celebraciones", permanent: true },
+      { source: "/mas-informacion-sobre-las-cookies/:path*", destination: "/politica-de-cookies", permanent: true },
+      // Servicios de marketing/publicidad descontinuados → hub de empresa.
+      { source: "/difusion-comunicacion/:path*", destination: "/eventos-empresa", permanent: true },
+      { source: "/publicidad-marketing/:path*", destination: "/eventos-empresa", permanent: true },
+      { source: "/publicidad-parabriseado/:path*", destination: "/eventos-empresa", permanent: true },
+      // Subrutas de /servicios sin regla específica arriba (congresos-y-ferias,
+      // incentivo-viajes-suunia-copia, etc.) — catch-all al final para que las
+      // reglas /servicios/... más específicas de arriba ganen por orden.
+      { source: "/servicios/congresos-y-ferias/:path*", destination: "/eventos-empresa/congresos-y-convenciones", permanent: true },
+      { source: "/servicios/:path+", destination: "/eventos-empresa", permanent: true },
     ];
   },
 };
