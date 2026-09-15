@@ -55,6 +55,8 @@ const structuredData = {
   areaServed: { "@type": "AdministrativeArea", name: "Galicia" },
   knowsLanguage: ["es", "gl"],
   slogan: "Más de 15 años haciendo que las cosas sucedan.",
+  logo: `${SITE_URL}/images/logo-mileventos-tagline.png`,
+  image: `${SITE_URL}/images/logo-mileventos-tagline.png`,
 };
 
 // Sin title.template: cada página ya añade "| Mil Eventos Galicia" a mano en

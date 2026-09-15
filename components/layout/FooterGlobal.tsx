@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import TiraLogos from "@/components/shared/TiraLogos";
 import { logosClientes } from "@/data/logos-clientes";
 import { ecosistemaMarcas } from "@/data/ecosistema-marcas";
@@ -73,8 +74,14 @@ export default function FooterGlobal() {
         {/* 5 columnas: marca+contacto (doble) · Empresas · Servicios · Mil Eventos (+Ecosistema) · Zonas */}
         <div className="mx-auto grid max-w-6xl grid-cols-2 gap-x-8 gap-y-10 lg:grid-cols-6">
           <div className="col-span-2">
-            <p className="font-serif text-lg font-bold text-white">Mil Eventos Galicia</p>
-            <p className="mt-3 max-w-xs leading-relaxed text-cream-200">
+            <Image
+              src="/images/logo-mileventos-blanco.png"
+              alt="Mil Eventos Galicia"
+              width={250}
+              height={30}
+              className="h-7 w-auto"
+            />
+            <p className="mt-4 max-w-xs leading-relaxed text-cream-200">
               Más de 15 años haciendo que las cosas sucedan en Galicia.
             </p>
             <div className="mt-5 flex flex-col gap-2.5">

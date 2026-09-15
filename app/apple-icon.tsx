@@ -3,8 +3,8 @@ import { ImageResponse } from "next/og";
 export const size = { width: 180, height: 180 };
 export const contentType = "image/png";
 
-// Icono para pantalla de inicio de iOS — mismo criterio provisional que
-// app/icon.tsx (ver CLAUDE.md §11).
+// Icono para pantalla de inicio de iOS — colores de marca: "M" naranja
+// (#F4A037) sobre negro, como el lockup oscuro del logo.
 export default function AppleIcon() {
   return new ImageResponse(
     (
@@ -15,10 +15,10 @@ export default function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#1E4A47",
-          color: "#F8F5EF",
-          fontSize: 96,
-          fontWeight: 700,
+          background: "#141414",
+          color: "#F4A037",
+          fontSize: 110,
+          fontWeight: 800,
         }}
       >
         M

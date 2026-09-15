@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { IconChevronDown } from "@/components/shared/icons";
 import MobileMenu from "@/components/layout/MobileMenu";
 
@@ -57,8 +58,15 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-20 border-b border-sand-300 bg-cream-50/95 backdrop-blur">
       <nav className="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
-        <Link href="/" className="font-bold text-atlantico-700">
-          Mil Eventos Galicia
+        <Link href="/" aria-label="Mil Eventos Galicia — inicio" className="shrink-0">
+          <Image
+            src="/images/logo-mileventos.png"
+            alt="Mil Eventos Galicia"
+            width={234}
+            height={28}
+            priority
+            className="h-6 w-auto sm:h-7"
+          />
         </Link>
         <ul className="hidden gap-6 text-sm md:flex">
           {enlaces.map((enlace) => (

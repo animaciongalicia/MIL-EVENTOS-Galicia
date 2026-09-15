@@ -3,9 +3,8 @@ import { ImageResponse } from "next/og";
 export const size = { width: 32, height: 32 };
 export const contentType = "image/png";
 
-// Favicon provisional generado por código (monograma "M" sobre atlantico-700)
-// mientras no hay logo real del cliente en el repo — sustituir por el logo
-// real en cuanto esté disponible como archivo (ver CLAUDE.md §11).
+// Favicon con los colores de la marca real: "M" naranja (#F4A037) sobre negro,
+// haciendo eco del lockup oscuro del logo (ver data/logos / public/images).
 export default function Icon() {
   return new ImageResponse(
     (
@@ -16,10 +15,10 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          background: "#1E4A47",
-          color: "#F8F5EF",
-          fontSize: 20,
-          fontWeight: 700,
+          background: "#141414",
+          color: "#F4A037",
+          fontSize: 24,
+          fontWeight: 800,
         }}
       >
         M
