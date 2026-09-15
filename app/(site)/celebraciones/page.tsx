@@ -22,7 +22,7 @@ const sublandings = [
     titulo: "Celebraciones de empresa",
     descripcion: "Inauguraciones, cócteles, aniversarios y entregas de premios que se recuerdan.",
     href: "/celebraciones/celebraciones-de-empresa",
-    imagen: "/images/celebracion-evento-empresa.jpg",
+    imagen: "/images/catering-evento-empresa.jpg",
   },
   {
     titulo: "Cumpleaños y grupos",
@@ -68,7 +68,7 @@ export default function CelebracionesPage() {
         variante="celebraciones"
         titulo="Celebraciones en Galicia"
         subtitulo="Cenas de empresa, cumpleaños y fiestas que se recuerdan — para empresas y para particulares."
-        imagen="/images/conxuro-queimada.jpg"
+        imagen="/images/celebracion-evento-empresa.jpg"
       />
 
       <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">

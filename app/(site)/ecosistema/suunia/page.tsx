@@ -81,6 +81,7 @@ export default function SuuniaPage() {
   return (
     <>
       <Hero
+        imagen="/images/pazo-casa-rural-galicia.jpg"
         titulo="SUUNIA"
         subtitulo="Alojamiento, comidas y experiencias para programas de varios días en toda Galicia."
       />

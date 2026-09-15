@@ -79,6 +79,7 @@ export default function LuxeGaliciaPage() {
   return (
     <>
       <Hero
+        imagen="/images/coche-vip-chofer.jpg"
         titulo="Luxe Galicia"
         subtitulo="Transporte y desplazamientos para eventos de empresa en toda la comunidad."
       />

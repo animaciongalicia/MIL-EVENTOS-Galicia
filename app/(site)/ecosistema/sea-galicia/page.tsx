@@ -79,6 +79,7 @@ export default function SeaGaliciaPage() {
   return (
     <>
       <Hero
+        imagen="/images/regata-cies-galicia-sailing-teambuilding.jpg"
         titulo="Sea Galicia"
         subtitulo="Actividades náuticas para eventos de empresa en toda la costa de Galicia."
       />

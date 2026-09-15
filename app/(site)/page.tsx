@@ -103,7 +103,7 @@ export default function HomePage() {
           object-cover recorta sin deformar. (Ver CLAUDE.md §12: la home usa un
           hero full-bleed propio, distinto del componente Hero de páginas
           interiores, que sigue siendo claro.) */}
-      <section className="relative isolate flex min-h-[62vh] flex-col justify-end overflow-hidden">
+      <section className="relative isolate flex min-h-[54vh] flex-col justify-end overflow-hidden">
         <Image
           src="/images/celebracion-evento-empresa.jpg"
           alt="Evento de empresa montado por Mil Eventos Galicia en Galicia"
@@ -114,14 +114,14 @@ export default function HomePage() {
         />
         <div className="absolute inset-0 -z-10 bg-gradient-to-t from-atlantico-800 via-atlantico-800/75 to-atlantico-800/35" />
 
-        <div className="mx-auto w-full max-w-5xl px-6 pb-12 pt-24 sm:pt-28">
-          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cream-100/80">
+        <div className="mx-auto w-full max-w-5xl px-6 pb-12 pt-20 sm:pt-24">
+          <p className="text-xs font-semibold uppercase tracking-[0.25em] text-cream-100/75">
             Agencia de eventos en Galicia · Más de 15 años
           </p>
-          <h1 className="mt-5 max-w-3xl text-4xl font-bold leading-[1.08] text-cream-50 sm:text-5xl lg:text-6xl">
+          <h1 className="mt-5 max-w-2xl text-3xl font-bold leading-[1.1] text-cream-50 sm:text-[2.75rem]">
             Organizar el evento no es tu trabajo. Es el nuestro.
           </h1>
-          <p className="mt-6 max-w-xl text-lg leading-relaxed text-cream-100/90">
+          <p className="mt-5 max-w-xl text-base leading-relaxed text-cream-100/90 sm:text-lg">
             Team building, incentivos, congresos y celebraciones para empresas. Un único
             interlocutor que se ocupa de cada pieza — para que tú te ocupes de lo tuyo.
           </p>

@@ -82,7 +82,7 @@ const queRevisamos = [
 export default function AlojamientoPage() {
   return (
     <>
-      <Hero imagen="/images/ribeira-sacra-mundiplus.jpg"
+      <Hero imagen="/images/hotel-con-encanto-galicia.jpg"
         titulo="Alojamiento"
         subtitulo="Descanso a la altura del evento, en cualquier punto de Galicia."
       />
