@@ -13,7 +13,7 @@ import {
   getPostsRelacionados,
   tiempoLectura,
 } from "@/lib/blog";
-import TarjetaPost from "@/components/blog/TarjetaPost";
+import FilaPost from "@/components/blog/FilaPost";
 import { IconArrowRight } from "@/components/shared/icons";
 
 type PostPageProps = {
@@ -80,41 +80,65 @@ export default function PostPage({ params }: PostPageProps) {
         </div>
       )}
 
-      <div className="mx-auto max-w-5xl px-6 py-12">
-        <div className="post-content max-w-2xl">
-          <MDXRemote source={post.content} />
-        </div>
+      <div className="mx-auto grid max-w-5xl gap-12 px-6 py-12 lg:grid-cols-[minmax(0,1fr)_16rem]">
+        {/* Columna principal: cuerpo del artículo + cierre hacia la pilar */}
+        <div className="min-w-0">
+          <div className="post-content max-w-2xl">
+            <MDXRemote source={post.content} />
+          </div>
 
-        <div className="mt-12 rounded-lg border border-atlantico-600/30 bg-cream-50 p-6 shadow-sm sm:p-8">
-          <p className="text-sm font-semibold uppercase tracking-wide text-atlantico-700">
-            Sigue leyendo
-          </p>
-          <p className="mt-2 max-w-2xl font-serif text-xl font-bold text-ink-900">
-            ¿Quieres ver cómo lo planteamos de principio a fin?
-          </p>
-          <Link
-            href={pilarHref}
-            className="mt-4 inline-flex items-center gap-2 rounded-full bg-atlantico-700 px-6 py-3 font-semibold text-white transition hover:bg-atlantico-800"
-          >
-            Ver {PILAR_LABELS[post.pilar]}
-            <IconArrowRight className="h-4 w-4" />
+          <div className="mt-12 max-w-2xl rounded-lg border border-atlantico-600/30 bg-cream-50 p-6 shadow-sm sm:p-8">
+            <p className="text-sm font-semibold uppercase tracking-wide text-atlantico-700">
+              Sigue leyendo
+            </p>
+            <p className="mt-2 font-serif text-xl font-bold text-ink-900">
+              ¿Quieres ver cómo lo planteamos de principio a fin?
+            </p>
+            <Link
+              href={pilarHref}
+              className="mt-4 inline-flex items-center gap-2 rounded-full bg-atlantico-700 px-6 py-3 font-semibold text-white transition hover:bg-atlantico-800"
+            >
+              Ver {PILAR_LABELS[post.pilar]}
+              <IconArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <Link href="/blog" className="mt-12 inline-block text-sm text-atlantico-700 underline">
+            ← Volver al blog
           </Link>
         </div>
 
-        {relacionados.length > 0 && (
-          <section className="mt-12">
-            <h2 className="text-xl font-bold text-atlantico-700">Más sobre esto</h2>
-            <div className="mt-4 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-              {relacionados.map((relacionado) => (
-                <TarjetaPost key={relacionado.slug} post={relacionado} />
-              ))}
-            </div>
-          </section>
-        )}
+        {/* Barra lateral: aprovecha el hueco del cuerpo estrecho — CTA + relacionados */}
+        <aside className="lg:sticky lg:top-24 lg:self-start">
+          <div className="rounded-xl border border-sand-200 bg-atlantico-800 p-6 text-cream-100">
+            <p className="font-serif text-lg font-bold text-white">
+              ¿Le das vueltas a un evento?
+            </p>
+            <p className="mt-2 text-sm leading-relaxed text-cream-200">
+              Cuéntanoslo y te respondemos con opciones reales, no con un folleto.
+            </p>
+            <Link
+              href="/contacto"
+              className="mt-4 inline-flex items-center gap-2 rounded-full bg-terracota-600 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-terracota-900"
+            >
+              Pedir propuesta
+              <IconArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
 
-        <Link href="/blog" className="mt-12 inline-block text-sm text-atlantico-700 underline">
-          ← Volver al blog
-        </Link>
+          {relacionados.length > 0 && (
+            <div className="mt-8">
+              <h2 className="text-xs font-semibold uppercase tracking-[0.15em] text-ink-500">
+                Sigue leyendo
+              </h2>
+              <div className="mt-2 divide-y divide-sand-200 border-t border-sand-200">
+                {relacionados.map((relacionado) => (
+                  <FilaPost key={relacionado.slug} post={relacionado} compacto />
+                ))}
+              </div>
+            </div>
+          )}
+        </aside>
       </div>
     </article>
   );

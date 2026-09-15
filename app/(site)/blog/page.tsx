@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { getAllPosts } from "@/lib/blog";
 import TarjetaPost from "@/components/blog/TarjetaPost";
+import FilaPost from "@/components/blog/FilaPost";
 import BlogCategoriasNav from "@/components/blog/BlogCategoriasNav";
 import CTAFinal from "@/components/shared/CTAFinal";
-import { gridColsClass } from "@/components/shared/gridCols";
 
 export const metadata: Metadata = {
   title: "Blog | Mil Eventos Galicia",
@@ -52,13 +52,13 @@ export default function BlogIndexPage() {
             </section>
           )}
 
-          {/* Resto de artículos — rejilla a ancho completo, ya sin sidebar */}
+          {/* Resto de artículos — lista editorial vertical (se lee mejor que la rejilla) */}
           {resto.length > 0 && (
             <section className="mx-auto max-w-5xl px-6 py-16">
               <h2 className="text-2xl font-bold text-ink-900">Más artículos</h2>
-              <div className={`mt-8 grid gap-6 ${gridColsClass(resto.length)}`}>
+              <div className="mt-6 divide-y divide-sand-200 border-t border-sand-200">
                 {resto.map((post) => (
-                  <TarjetaPost key={post.slug} post={post} />
+                  <FilaPost key={post.slug} post={post} />
                 ))}
               </div>
             </section>

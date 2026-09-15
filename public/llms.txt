@@ -33,6 +33,13 @@
 - [Cumpleaños y grupos](https://mileventosgalicia.com/celebraciones/cumpleanos-y-grupos): cumpleaños de adultos, fincas y celebraciones privadas.
 - [Animación y espectáculo](https://mileventosgalicia.com/celebraciones/animacion-y-espectaculo): DJs, monólogos, cómicos, drag queens y animación.
 
+## Zonas de Galicia (SEO local por provincia)
+- [Eventos en Galicia](https://mileventosgalicia.com/eventos-en-galicia): hub de las cuatro provincias gallegas.
+- [Eventos de empresa en A Coruña](https://mileventosgalicia.com/eventos-en-galicia/a-coruna): A Coruña ciudad, Santiago de Compostela, Ferrol, Costa da Morte.
+- [Eventos de empresa en Pontevedra y las Rías Baixas](https://mileventosgalicia.com/eventos-en-galicia/pontevedra): Pontevedra, Sanxenxo, O Grove, Cambados, Illas Cíes; team building náutico.
+- [Eventos de empresa en Lugo](https://mileventosgalicia.com/eventos-en-galicia/lugo): Lugo ciudad, Ribeira Sacra, Ribadeo y As Catedrais, A Mariña.
+- [Eventos de empresa en Ourense](https://mileventosgalicia.com/eventos-en-galicia/ourense): Ourense, Ribeira Sacra, O Ribeiro, Valdeorras; enoturismo y termalismo.
+
 ## Ecosistema de marcas
 
 Tres marcas hermanas sin web propia todavía — su presencia informativa completa vive en estas páginas internas, no en un dominio externo.

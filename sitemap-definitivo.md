@@ -39,6 +39,12 @@ Mapa de rutas de referencia. Debe mantenerse sincronizado con la sección 3 de `
   /celebraciones/cumpleanos-y-grupos
   /celebraciones/animacion-y-espectaculo
 
+/eventos-en-galicia                       Hub SEO local, FUERA del menú (solo footer "Zonas de Galicia")
+  /eventos-en-galicia/a-coruna            Enlazada desde el hub y el FooterGlobal
+  /eventos-en-galicia/pontevedra          Rías Baixas — sin mencionar Vigo (§11)
+  /eventos-en-galicia/lugo                Enlazada desde el hub y el FooterGlobal
+  /eventos-en-galicia/ourense             Enlazada desde el hub y el FooterGlobal
+
 /nosotros                                 Institucional, solo en footer
 /aviso-legal                              Institucional, solo en footer
 /politica-de-privacidad                   Institucional, solo en footer

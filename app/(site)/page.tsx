@@ -3,12 +3,10 @@ import Link from "next/link";
 import CitaDestacada from "@/components/shared/CitaDestacada";
 import TarjetasTexto from "@/components/shared/TarjetasTexto";
 import PasosTrabajo from "@/components/shared/PasosTrabajo";
-import TiraLogos from "@/components/shared/TiraLogos";
 import CTAFinal from "@/components/shared/CTAFinal";
 import TarjetaPost from "@/components/blog/TarjetaPost";
 import { IconArrowRight } from "@/components/shared/icons";
 import { getAllPosts } from "@/lib/blog";
-import { logosClientes } from "@/data/logos-clientes";
 
 // Cifras integradas en el hero (barra inferior). Reales y verificables (§6).
 const cifrasHero = [
@@ -309,7 +307,19 @@ export default function HomePage() {
         </section>
       )}
 
-      <TiraLogos logos={logosClientes} />
+      {/* Prueba social comedida: sectores reales, sin exhibir logos (§6). */}
+      <section className="border-y border-sand-200 bg-cream-100">
+        <div className="mx-auto max-w-5xl px-6 py-12 text-center">
+          <p className="text-xs font-semibold uppercase tracking-[0.2em] text-atlantico-600">
+            Han confiado en nosotros
+          </p>
+          <p className="mx-auto mt-4 max-w-3xl text-lg leading-relaxed text-ink-700">
+            Hemos organizado eventos para empresas de gran consumo y bebidas, automoción,
+            distribución, tecnología y medios de comunicación — y celebraciones para particulares
+            por toda Galicia.
+          </p>
+        </div>
+      </section>
 
       <CTAFinal titulo="¿Va a ser un evento más, o el que todos recuerden? Empecemos por hablar." />
     </>

@@ -71,6 +71,12 @@ Sitemap de referencia: `sitemap-definitivo.md` (debe mantenerse sincronizado con
   /celebraciones/cumpleanos-y-grupos
   /celebraciones/animacion-y-espectaculo
 
+/eventos-en-galicia                       Hub SEO local por provincia, FUERA del menú principal
+  /eventos-en-galicia/a-coruna            Solo enlazada desde el hub y la tira "Zonas de Galicia" del FooterGlobal
+  /eventos-en-galicia/pontevedra          Rías Baixas — SIN mencionar "Vigo" (§11)
+  /eventos-en-galicia/lugo
+  /eventos-en-galicia/ourense
+
 /nosotros                                 Institucional — solo en footer
 /aviso-legal                              Institucional — solo en footer
 /politica-de-privacidad                   Institucional — solo en footer
@@ -129,10 +135,10 @@ No dupliques markup entre páginas parecidas. Estos son los componentes base que
 | `TarjetaPost` | Tarjeta de post para listados de blog (imagen, categoría, título, extracto, fecha). Variante `destacada` (horizontal, imagen a la mitad) para el último artículo del índice. |
 | `BloqueDestacados` | Bloque de posts curados a mano (ver sección 10, sustituye a "más leídos" mientras no haya analítica). Debe ir dentro de un contenedor `mx-auto max-w-5xl px-6` (no trae ancho propio). |
 | `BannerEcosistema` | Banner contextual que enlaza a SUUNIA / Sea Galicia / Luxe Galicia según la página (ver sección 7). |
-| `FooterGlobal` | Footer de 3 bloques (`bg-atlantico-800`, `lg:grid-cols-4` con la marca en `col-span-2`): marca + contacto + dirección · **Explora** (las 4 landings: Empresas, Actividades, Espacios, Celebraciones) · **Mil Eventos** (Blog, Quiénes somos, Contacto) + **Ecosistema** (SUUNIA/Sea/Luxe). Cierra con © + enlaces legales. Sin listar todas las sub-páginas (se probó un footer-mapa completo y quedaba apelotonado). |
+| `FooterGlobal` | Footer de 4 columnas limpias (`bg-atlantico-800`, `grid-cols-2 lg:grid-cols-4`, marca en `col-span-2 lg:col-span-1`): **marca + contacto + dirección** · **Empresas** (las 4 pilares B2B) · **Servicios** (Actividades, Espacios, Celebraciones) · **Mil Eventos** (Blog, Quiénes somos, Contacto). Debajo, dos tiras horizontales propias: **Zonas de Galicia** (hub + 4 provincias, para el SEO local) y **Ecosistema** (SUUNIA/Sea/Luxe). Cierra con © + enlaces legales. Los títulos de columna son enlaces a su landing. Sin listar todas las sub-páginas ni apilar dos grupos en una columna (se probó un footer-mapa completo y quedaba apelotonado). |
 | `FormularioContacto` | Formulario único reutilizado en `/contacto`. Sigue teniendo variante `celebraciones` (terracota) por si se reutiliza, aunque el clúster de Celebraciones ahora cierra con `CTAFinal` → `/contacto`. |
 | `CTAFinal` | Bloque de cierre de página con botón de contacto/presupuesto. |
-| `TiraLogos` | Tira de 8-10 logos de clientes, usada en Home y footer. |
+| `TiraLogos` | Tira de logos de clientes. **Decisión del cliente: no mostrar logos** (`data/logos-clientes.ts` está vacío, así que `TiraLogos` devuelve `null` y el `FooterGlobal` no lo pinta). La Home los sustituyó por una **frase de sectores honesta** ("Han confiado en nosotros…"). El componente se mantiene por si se decide reactivarlos. |
 | `CifrasDestacadas` | Fila de 2-3 cifras reales en formato caja (ver regla de prueba social, sección 6) — rompe la prosa con un bloque numérico. |
 | `CitaDestacada` | Caja de cita/afirmación aislada (borde lateral + texto en serif itálica) para destacar una frase dentro de un tramo largo de contenido. |
 | `TarjetasTexto` | Tarjetas de título + texto corto sin imagen (icono opcional), para razones, comparativas o listados que no encajan en `GridEjemplos` ni en `PasosTrabajo`. |
@@ -172,7 +178,7 @@ Si Claude Code necesita generar un texto nuevo (nueva página, nuevo post, nuevo
 ## 6. Reglas de prueba social
 
 - Claim ancla, presente en Home y en `/eventos-empresa`: **"Más de 15 años haciendo que las cosas sucedan."**
-- Tira de 8-10 logos de clientes reales (hay margen para rotar entre ~20-30 disponibles), sin acompañarlos de cifras infladas.
+- **Sin tira de logos de clientes** (decisión del cliente: no le gusta exponer ese dato). En su lugar, una **frase de sectores honesta** en Home ("Han confiado en nosotros… empresas de gran consumo y bebidas, automoción, distribución, tecnología y medios…") — describe a quién se ha servido sin nombrar marcas ni inflar. Si en el futuro se reactivan logos, van sin cifras infladas.
 - Como mucho 2-3 cifras, y solo si son reales y verificables (años de trayectoria, nº de eventos, nº de empresas que repiten). Mejor 2 cifras ciertas que 5 cifras de humo.
 - **Prohibido:** contadores falsos, testimonios inventados, cifras redondas sin justificación ("+500 eventos" solo si es cierto y demostrable).
 - La prueba social apoya el mensaje, no lo sustituye — nunca debe ocupar más espacio visual que el contenido de la propia página.
@@ -248,6 +254,7 @@ Tres marcas hermanas: **SUUNIA** (alojamientos, comidas y experiencias / DMC), *
 - **SUUNIA / Sea Galicia / Luxe Galicia:** de momento no existen como webs propias. Mientras tanto tienen página interna completa en `/ecosistema/[marca]` (ver sección 7) en vez de enlace externo — resuelto. Cuando cada una tenga su propio dominio, esas páginas de `/ecosistema` deberían heredar el sistema de diseño de la sección 12 (misma tipografía y escala, cada una con su propio color de acento) en vez de partir de cero, y `data/ecosistema-marcas.ts` pasaría a apuntar de nuevo a la URL externa.
 - **Alquiler de locales en Vigo:** servicio descontinuado (ya no se ofrece y no es escalable), pese a ser uno de los mayores generadores de tráfico de la web anterior. No se menciona "Vigo" en ningún texto del sitio nuevo; la redirección de esa URL antigua apunta a la página genérica de localización de espacios, sin reconstruir esa oferta específica.
 - **Prioridad de negocio confirmada:** el foco comercial es el B2B (`/eventos-empresa`) por ser mucho más rentable que celebraciones/particulares, aunque hoy tenga menos tráfico orgánico real que el clúster de cumpleaños de adultos. El contenido de las 4 páginas pilar de `/eventos-empresa` debe tener prioridad de profundidad y mantenimiento sobre el resto.
+- **Páginas de provincia (SEO local):** clúster `/eventos-en-galicia` (hub + `/a-coruna`, `/pontevedra`, `/lugo`, `/ourense`) para recuperar el long-tail geográfico de la web anterior (`…-en-coruna`, etc.) sin canibalizar las pilares (§9): las pilares compiten por "en Galicia" y estas por "en \[provincia\]". Contenido en `data/provincias.ts` (§10, datos fuera del JSX), tono Rentabilista B2B (§5), sin cifras por provincia inventadas (§6). Enlazan a las pilares (enlace interno §9) y algunas a las marcas hermanas cuando encaja (Sea Galicia en Pontevedra, SUUNIA en incentivos multi-día). **FUERA del menú principal** — solo desde el hub y la tira "Zonas de Galicia" del `FooterGlobal`. Regla §11 respetada: la página de Pontevedra trabaja las Rías Baixas **sin nombrar "Vigo"** ni usar imágenes cuyo nombre lo incluya.
 - ~~**Fotografía real pendiente**~~ — resuelto: todas las tarjetas (`GridEjemplos`, `LandingCategoria`, `TarjetaPost`) y los `Hero` con imagen usan ya fotografía real servida desde `/public/images`. Se retiró el placeholder de picsum.photos: `lib/placeholder-image.ts` eliminado, el campo `imagen` pasa a ser obligatorio en `Ejemplo` y `SublandingLink` (opcional en `Hero` y en el frontmatter de blog, donde se renderiza solo si existe), `imagenSeed` eliminado de `Hero`, y desmontado `images.remotePatterns` de picsum en `next.config.js`. Sigue pendiente sustituir por fotos propias definitivas las que hoy son de stock, pero ya no hay dependencia de ningún host remoto.
 
 ---
