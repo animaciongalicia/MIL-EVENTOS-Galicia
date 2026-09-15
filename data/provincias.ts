@@ -104,18 +104,23 @@ export const provincias: Provincia[] = [
   {
     slug: "pontevedra",
     nombre: "Pontevedra",
-    titulo: "Eventos de Empresa en Pontevedra y las Rías Baixas | Mil Eventos Galicia",
+    titulo: "Eventos de Empresa en Vigo, Pontevedra y las Rías Baixas | Mil Eventos Galicia",
     descripcion:
-      "Team building náutico, incentivos y eventos de empresa en Pontevedra y las Rías Baixas: Sanxenxo, O Grove, Cambados, las Cíes. Más de 15 años organizándolos.",
+      "Team building náutico, incentivos y eventos de empresa en Vigo, Pontevedra y las Rías Baixas: Sanxenxo, O Grove, Cambados, las Cíes. Más de 15 años organizándolos.",
     heroImagen: "/images/naturaleza-cies-rias-baixas.jpg",
     heroTitulo: "Eventos de empresa en las Rías Baixas",
-    heroSubtitulo: "Mar, Albariño y un equipo que vuelve con ganas de más.",
+    heroSubtitulo: "De Vigo a la ría de Arousa: mar, Albariño y un equipo que vuelve con ganas de más.",
     intro: [
       "Las Rías Baixas son el argumento fácil: mar templado, marisco recién sacado y bodegas de Albariño donde una cata deja de ser un cliché para convertirse en el mejor rato del programa. Pero un buen destino mal organizado sigue siendo un evento mediocre.",
-      "Por eso trabajamos la provincia entera desde Pontevedra hasta la ría de Arousa con la misma exigencia que en casa: la lancha reservada, el catamarán con aforo real, la bodega que sí recibe grupos y el traslado coordinado para que nadie se quede en tierra mirando el reloj.",
+      "Por eso trabajamos la provincia entera —de Vigo, el motor económico de la ría, a Pontevedra y la ría de Arousa— con la misma exigencia que en casa: la lancha reservada, el catamarán con aforo real, la bodega que sí recibe grupos y el traslado coordinado para que nadie se quede en tierra mirando el reloj.",
     ],
     cita: "Aquí el escenario juega a favor. Nuestro trabajo es que la organización esté a la altura del paisaje.",
     ciudades: [
+      {
+        nombre: "Vigo y su ría",
+        texto:
+          "La mayor ciudad de Galicia y motor de las Rías Baixas: cenas de empresa, team building y celebraciones, con los espacios localizados por nosotros — de una sala con vistas a la ría a un pazo a las afueras.",
+      },
       {
         nombre: "Pontevedra ciudad",
         texto:

@@ -9,7 +9,7 @@ import { localizacionEspaciosEjemplos } from "@/data/espacios-localizacion-espac
 export const metadata: Metadata = {
   title: "Localización de Espacios para Eventos en Galicia | Mil Eventos Galicia",
   description:
-    "Localización de espacios para eventos de empresa en Galicia: pazos, naves, salas de congresos y espacios singulares, filtrados y visitados antes de proponértelos.",
+    "Localización de espacios para eventos en A Coruña, Vigo, Santiago y toda Galicia: pazos, naves, salas de congresos y espacios singulares, filtrados y visitados antes de proponértelos.",
 };
 
 const comoTrabajamos = [
@@ -93,10 +93,10 @@ export default function LocalizacionEspaciosPage() {
           enteras de tu agenda.
         </p>
         <p className="mt-4">
-          Conocemos el territorio — pazos, naves, espacios singulares, salas con capacidad real —
-          y filtramos antes de enseñarte nada. Tú decides entre dos o tres opciones que ya encajan
-          con tu evento, no entre una lista interminable de posibilidades sacada de una web de
-          reservas genérica.
+          Conocemos el territorio — pazos, naves, espacios singulares, salas con capacidad real, en
+          A Coruña, Vigo, Santiago, Pontevedra y el resto de Galicia — y filtramos antes de
+          enseñarte nada. Tú decides entre dos o tres opciones que ya encajan con tu evento, no
+          entre una lista interminable de posibilidades sacada de una web de reservas genérica.
         </p>
         <p className="mt-4">
           No cobramos por buscar. La localización de espacio va dentro del servicio de

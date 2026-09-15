@@ -9,7 +9,7 @@ import { celebracionesEmpresaEjemplos } from "@/data/celebraciones-empresa";
 export const metadata: Metadata = {
   title: "Celebraciones de Empresa en Galicia: Inauguraciones y Cócteles | Mil Eventos Galicia",
   description:
-    "Inauguraciones, cócteles corporativos, aniversarios de empresa y entregas de premios en Galicia — con la producción, la animación y el catering resueltos de principio a fin.",
+    "Inauguraciones, cócteles corporativos, aniversarios de empresa y entregas de premios en A Coruña, Vigo, Santiago y toda Galicia — con la producción, la animación y el catering resueltos de principio a fin.",
 };
 
 const cuandoTiene = [
@@ -130,8 +130,9 @@ export default function CelebracionesDeEmpresaPage() {
 
       <section className="mx-auto max-w-5xl px-6 pb-6 pt-12 text-lg leading-relaxed text-ink-700">
         <p>
-          Algunos formatos de celebración de empresa que montamos habitualmente en Galicia — una
-          muestra, no un catálogo cerrado: casi todo se adapta a lo que tu empresa quiere contar.
+          Algunos formatos de celebración de empresa que montamos habitualmente en A Coruña, Vigo,
+          Santiago y toda Galicia — una muestra, no un catálogo cerrado: casi todo se adapta a lo
+          que tu empresa quiere contar.
         </p>
       </section>
 

@@ -11,8 +11,31 @@ import { otrosEventosEjemplos } from "@/data/celebraciones-otros-eventos";
 export const metadata: Metadata = {
   title: "Cumpleaños de Adultos y Celebraciones Privadas en Galicia | Mil Eventos Galicia",
   description:
-    "Cumpleaños de adultos, fincas, aniversarios y celebraciones privadas en Galicia — con espacio, catering, música y animación resueltos para que solo tengas que disfrutar.",
+    "Cumpleaños de adultos, fincas, aniversarios y celebraciones privadas en A Coruña, Vigo, Santiago y toda Galicia — con espacio, catering, música y animación resueltos para que solo tengas que disfrutar.",
 };
+
+const dondeCelebramos = [
+  {
+    titulo: "A Coruña",
+    texto:
+      "Cumpleaños de adultos y fiestas privadas en A Coruña y su área — una finca cerca de la ciudad o un espacio con encanto en pleno centro.",
+  },
+  {
+    titulo: "Vigo y las Rías Baixas",
+    texto:
+      "Celebraciones y cumpleaños de adultos en Vigo y su ría — buscamos el sitio y montamos la fiesta, del cóctel tranquilo a la noche con DJ.",
+  },
+  {
+    titulo: "Santiago",
+    texto:
+      "Cumpleaños, aniversarios y reuniones en Santiago y alrededores, con pazos y fincas a un paso del centro histórico.",
+  },
+  {
+    titulo: "Pontevedra y O Salnés",
+    texto:
+      "Fiestas privadas junto a la ría o en un local con carácter, con el catering y la música resueltos de principio a fin.",
+  },
+];
 
 const queCelebramos = [
   {
@@ -116,6 +139,17 @@ export default function CumpleanosYGruposPage() {
           <div className="mt-6">
             <TarjetasTexto acento="terracota" icono={false} items={otrosEventosEjemplos.map((e) => ({ titulo: e.nombre, texto: e.descripcion }))} />
           </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-5xl px-6 py-12">
+        <h2 className="text-xl font-bold text-terracota-900">Dónde celebramos</h2>
+        <p className="mt-3 max-w-2xl leading-relaxed text-ink-700">
+          Montamos celebraciones privadas por toda Galicia. Estas son las zonas donde más
+          organizamos — buscamos el sitio nosotros, tú solo eliges dónde te apetece celebrar.
+        </p>
+        <div className="mt-6">
+          <TarjetasTexto acento="terracota" icono={false} items={dondeCelebramos} />
         </div>
       </section>
 
