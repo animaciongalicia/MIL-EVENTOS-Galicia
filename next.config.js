@@ -71,7 +71,7 @@ const nextConfig = {
       { source: "/las-5-mejores-actividades-al-aire-libre-para-empresas/:path*", destination: "/actividades/outdoor", permanent: true },
       { source: "/deportes-acuaticos-en-las-rias-baixas/:path*", destination: "/actividades/outdoor", permanent: true },
       { source: "/rutas-de-senderismo-por-las-islas-cies/:path*", destination: "/actividades/outdoor", permanent: true },
-      { source: "/ruta-canones-sil-ribeira-sacra/:path*", destination: "/actividades/outdoor", permanent: true },
+      { source: "/ruta-canones-sil-ribeira-sacra/:path*", destination: "/blog/ribeira-sacra-canones-sil-equipo-empresa", permanent: true },
       { source: "/experiencia-golf/:path*", destination: "/actividades/outdoor", permanent: true },
       { source: "/eventos-en-el-mar-barco/:path*", destination: "/actividades/outdoor", permanent: true },
       { source: "/eventos-nauticos-en-sanxenxo/:path*", destination: "/actividades/outdoor", permanent: true },
