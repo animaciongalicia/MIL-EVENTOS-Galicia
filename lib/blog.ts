@@ -46,11 +46,12 @@ export const PILAR_HREF: Record<Pilar, string> = {
 // --- CATEGORÍA (editorial, la taxonomía navegable del blog) -----------------
 // Agrupa por TIPO de contenido, no por servicio — así no duplica la intención
 // de búsqueda de ninguna pilar y las páginas de categoría sí pueden indexarse.
-export const CATEGORIAS_BLOG = ["guias", "ideas", "errores"] as const;
+export const CATEGORIAS_BLOG = ["casos", "guias", "ideas", "errores"] as const;
 
 export type CategoriaBlog = (typeof CATEGORIAS_BLOG)[number];
 
 export const CATEGORIA_LABELS: Record<CategoriaBlog, string> = {
+  casos: "Casos reales",
   guias: "Guías",
   ideas: "Ideas",
   errores: "Errores a evitar",

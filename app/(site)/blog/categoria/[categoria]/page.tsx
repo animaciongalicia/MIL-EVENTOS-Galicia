@@ -16,6 +16,7 @@ import { gridColsClass } from "@/components/shared/gridCols";
 // Descripción propia por categoría editorial (no habla de un servicio concreto,
 // así no canibaliza ninguna pilar).
 const CATEGORIA_DESC: Record<CategoriaBlog, string> = {
+  casos: "Eventos reales que hemos montado — así los planteamos, con qué formato y para qué equipos.",
   guias: "Guías prácticas para organizar tu evento paso a paso, sin sustos de última hora.",
   ideas: "Ideas y ejemplos para que tu próximo evento no sea uno más de la lista.",
   errores: "Los fallos que más se repiten al organizar un evento — y cómo evitarlos a tiempo.",
