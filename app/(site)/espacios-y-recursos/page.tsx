@@ -128,9 +128,14 @@ const razonesEspacios = [
 export default function EspaciosYRecursosPage() {
   return (
     <>
-      <Hero imagen="/images/sotavento-palexco.jpg"
+      <Hero
+        cinematografico
+        eyebrow="Espacios y recursos"
+        imagen="/images/sotavento-palexco.jpg"
         titulo="Espacios y recursos para tu evento"
         subtitulo="Todo lo que rodea al evento, resuelto."
+        ctaTexto="Cuéntanos tu evento"
+        ctaHref="/contacto"
       />
 
       <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">

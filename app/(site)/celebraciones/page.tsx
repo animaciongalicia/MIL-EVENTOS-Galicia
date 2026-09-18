@@ -65,10 +65,14 @@ export default function CelebracionesPage() {
   return (
     <>
       <Hero
+        cinematografico
         variante="celebraciones"
+        eyebrow="Celebraciones · Empresas y particulares"
         titulo="Celebraciones en Galicia"
         subtitulo="Cenas de empresa, cumpleaños y fiestas que se recuerdan — para empresas y para particulares."
         imagen="/images/celebracion-evento-empresa.jpg"
+        ctaTexto="Cuéntanos tu celebración"
+        ctaHref="/contacto"
       />
 
       <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">

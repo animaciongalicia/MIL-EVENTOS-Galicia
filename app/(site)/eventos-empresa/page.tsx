@@ -143,9 +143,13 @@ export default function EventosEmpresaPage() {
   return (
     <>
       <Hero
+        cinematografico
+        eyebrow="Eventos de empresa · Más de 15 años"
         titulo="Eventos para empresas en Galicia"
         subtitulo="Más de 15 años haciendo que las cosas sucedan."
         imagen="/images/caminata-emrpesas-galicia.jpg"
+        ctaTexto="Cuéntanos tu evento"
+        ctaHref="/contacto"
       />
 
       <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">

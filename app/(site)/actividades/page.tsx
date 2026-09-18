@@ -116,9 +116,14 @@ const factoresOperativos = [
 export default function ActividadesPage() {
   return (
     <>
-      <Hero imagen="/images/team-building-en-galicia.jpg"
+      <Hero
+        cinematografico
+        eyebrow="Actividades para equipos"
+        imagen="/images/barranquismo-en-galicia-para-empresas.jpg"
         titulo="Actividades para tu evento"
         subtitulo="El catálogo de experiencias que le dan forma a un team building, una jornada outdoor o un incentivo."
+        ctaTexto="Cuéntanos tu evento"
+        ctaHref="/contacto"
       />
 
       <section className="mx-auto max-w-5xl px-6 py-12 text-lg leading-relaxed text-ink-700">
