@@ -15,6 +15,8 @@ import {
 } from "@/lib/blog";
 import { IconArrowRight } from "@/components/shared/icons";
 
+const SITE_URL = "https://mileventosgalicia.com";
+
 type PostPageProps = {
   params: { slug: string };
 };
@@ -27,7 +29,23 @@ export function generateMetadata({ params }: PostPageProps): Metadata {
   const post = getPostBySlug(params.slug);
   if (!post) return {};
 
-  return { title: `${post.title} | Mil Eventos Galicia`, description: post.description };
+  const url = `/blog/${post.slug}`;
+  const imagen = post.imagen ? `${SITE_URL}${post.imagen}` : undefined;
+
+  return {
+    title: `${post.title} | Mil Eventos Galicia`,
+    description: post.description,
+    alternates: { canonical: url },
+    openGraph: {
+      type: "article",
+      title: post.title,
+      description: post.description,
+      url,
+      publishedTime: post.fecha,
+      section: CATEGORIA_LABELS[post.categoria],
+      images: imagen ? [imagen] : undefined,
+    },
+  };
 }
 
 export default function PostPage({ params }: PostPageProps) {
@@ -36,9 +54,48 @@ export default function PostPage({ params }: PostPageProps) {
 
   const relacionados = getPostsRelacionados(post.slug);
   const pilarHref = PILAR_HREF[post.pilar];
+  const postUrl = `${SITE_URL}/blog/${post.slug}`;
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BlogPosting",
+        headline: post.title,
+        description: post.description,
+        ...(post.imagen ? { image: `${SITE_URL}${post.imagen}` } : {}),
+        datePublished: post.fecha,
+        dateModified: post.fecha,
+        inLanguage: "es-ES",
+        articleSection: CATEGORIA_LABELS[post.categoria],
+        author: { "@type": "Organization", name: "Mil Eventos Galicia", "@id": `${SITE_URL}/#organization` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+        mainEntityOfPage: { "@type": "WebPage", "@id": postUrl },
+        url: postUrl,
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Inicio", item: SITE_URL },
+          { "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: CATEGORIA_LABELS[post.categoria],
+            item: `${SITE_URL}/blog/categoria/${post.categoria}`,
+          },
+          { "@type": "ListItem", position: 4, name: post.title, item: postUrl },
+        ],
+      },
+    ],
+  };
 
   return (
     <article>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <header className="bg-cream-100 px-6 py-16">
         <div className="mx-auto max-w-5xl">
           <nav className="text-sm text-ink-500">

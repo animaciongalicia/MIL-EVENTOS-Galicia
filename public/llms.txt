@@ -50,7 +50,7 @@ Tres marcas hermanas sin web propia todavía — su presencia informativa comple
 
 ## Blog
 
-- [Blog](https://mileventosgalicia.com/blog): ideas, guías y errores a evitar al organizar eventos de empresa en Galicia. Cada artículo enlaza a su página de servicio (pilar).
+- [Blog](https://mileventosgalicia.com/blog): casos reales de eventos que montamos, ideas, guías y errores a evitar al organizar eventos de empresa en Galicia. Cada artículo enlaza a su página de servicio (pilar).
 
 ## Institucional
 
